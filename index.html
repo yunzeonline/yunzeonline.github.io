@@ -2,364 +2,805 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>陕西云泽在线科技有限公司 - 连接器渠道供应</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陕西云泽在线 - 进口连接器_汽车连接器_线束连接器现货供应商</title>
+<meta name="keywords" content="连接器,进口连接器,汽车连接器,线束连接器,连接器现货,TE,Aptiv,Sumitomo,Yazaki,Molex,KET,JST">
+<meta name="description" content="陕西云泽在线科技有限公司专注进口连接器、汽车连接器、线束连接器现货与期货供应，原厂正品，现货库存，极速响应。">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif;}
-  body{background:#f5f7fa;color:#222;line-height:1.8;padding-bottom:50px;}
-  .header{background:linear-gradient(135deg,#0f4c81,#1a73e8);color:#fff;padding:30px;text-align:center;}
-  .nav{background:#fff;display:flex;justify-content:center;padding:14px;box-shadow:0 2px 10px rgba(0,0,0,0.06);position:sticky;top:0;z-index:10;}
-  .nav button{background:transparent;border:none;padding:10px 24px;border-radius:8px;font-size:15px;cursor:pointer;margin:0 6px;}
-  .nav button.active{background:#1a73e8;color:#fff;}
-  .container{max-width:1100px;margin:30px auto;padding:0 20px;}
-  .card{background:#fff;border-radius:14px;padding:24px;margin-bottom:20px;box-shadow:0 4px 16px rgba(0,0,0,0.06);}
-  .card h2{font-size:18px;color:#1a73e8;margin-bottom:14px;border-left:4px solid #1a73e8;padding-left:10px;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
 
-  .contact-table{width:100%;border-collapse:collapse;margin-top:6px;}
-  .contact-table td{padding:12px 14px;border:1px solid #eee;font-size:15px;}
-  .contact-table td:first-child{background:#f8f9fa;font-weight:500;color:#222;}
+/* 🔥 关键：永远显示滚动条，切换页面不再左右晃动 */
+html {
+  overflow-y: scroll;
+}
 
-  .pro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-  .pro-item{background:#fafbfc;border:1px solid #eee;border-radius:10px;padding:18px;text-align:center;}
+body {
+  background: #F0F4F8;
+  color: #1E293B;
+  line-height: 1.8;
+  padding-bottom: 60px;
+  width: 100%;
+  overflow-x: hidden;
+}
 
-  table{width:100%;border-collapse:collapse;table-layout:fixed;}
-  table th,table td{padding:10px;border:1px solid #eee;text-align:center;word-break:break-all;}
-  table th{background:#f1f5fb;}
-  table td:nth-child(1){width:26%;}
-  table td:nth-child(2){width:16%;}
-  table td:nth-child(3){width:12%;}
-  table td:nth-child(4){width:12%;}
-  table td:nth-child(5){width:16%;}
-  table td:nth-child(6){width:18%;}
+.top-bar {
+  background: #334155;
+  color: #fff;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.header {
+  background: #ffffff;
+  padding: 16px 0;
+  text-align: center;
+  border-bottom: 1px solid #E5E7EB;
+}
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1E293B;
+  letter-spacing: 1px;
+}
+.nav {
+  background: #475569;
+  display: flex;
+  justify-content: center;
+}
+.nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 16px 32px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.nav button.active {
+  background: #1E293B;
+  border-bottom: 3px solid #3B82F6;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.card h2 {
+  font-size: 20px;
+  color: #1E293B;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #EEE;
+}
+.page { display: none; }
+.page.show { display: block; }
 
-  .btn{padding:8px 16px;border-radius:6px;border:none;color:#fff;cursor:pointer;margin-right:6px;}
-  .btn-primary{background:#1a73e8;}
-  .btn-success{background:#02b202;}
-  .btn-danger{background:#e54d42;}
-  .btn-normal{background:#666;}
+.advantage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+.adv-item {
+  background: #F8FAFC;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.04);
+}
+.adv-item h3 {
+  font-size: 16px;
+  color: #1E293B;
+  margin-bottom: 8px;
+}
+.adv-item p {
+  font-size: 14px;
+  color: #64748B;
+  line-height: 1.5;
+}
 
-  .search{width:100%;padding:12px;border-radius:8px;border:1px solid #ddd;margin-bottom:10px;}
-  .pagination{display:flex;justify-content:center;gap:6px;margin-top:10px;flex-wrap:wrap;}
-  .pagination button{padding:6px 12px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;}
-  .pagination button.active{background:#1a73e8;color:#fff;}
+/* 🔥 表格固定宽度，备注缩短，页面不再跳动 */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 14px;
+  table-layout: fixed;
+}
+.table th,
+.table td {
+  padding: 8px 6px;
+  text-align: center;
+  border: 1px solid #EEE;
+  word-break: break-all;
+}
+.table th {
+  background: #F8FAFC;
+}
+/* 前台库存列宽 */
+#stock .table th:nth-child(1){width: 32%;}
+#stock .table th:nth-child(2){width: 17%;}
+#stock .table th:nth-child(3){width: 17%;}
+#stock .table th:nth-child(4){width: 17%;}
+#stock .table th:nth-child(5){width: 17%;}
 
-  .page{display:none;}
-  .page.show{display:block;}
-  .login{max-width:400px;margin:60px auto;background:#fff;padding:30px;border-radius:14px;text-align:center;}
-  #adminBtn{position:fixed;right:0;top:0;width:50px;height:50px;opacity:0.01;cursor:pointer;z-index:9999;}
+/* 后台库存列宽 */
+#admin-stock .table th:nth-child(1){width: 25%;}
+#admin-stock .table th:nth-child(2){width: 15%;}
+#admin-stock .table th:nth-child(3){width: 15%;}
+#admin-stock .table th:nth-child(4){width: 15%;}
+#admin-stock .table th:nth-child(5){width: 15%;}
+#admin-stock .table th:nth-child(6){width: 15%;}
 
-  .visit-info{font-size:16px;color:#02b202;font-weight:bold;margin-bottom:10px;}
-  .footer{position:fixed;left:0;bottom:0;width:100%;background:#fff;text-align:center;padding:10px 0;font-size:14px;color:#666;border-top:1px solid #eee;}
+.table input {
+  width: 90%;
+  padding: 3px;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #EEE;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 8px 14px;
+  background: #3B82F6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 3px;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #2563EB;
+}
+.btn-red { background: #EF4444; }
+.btn-green { background: #10B981; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.stock-add-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.stock-add-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 140px;
+}
+.stock-add-item label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 3px;
+}
+.search-above-table {
+  margin-bottom: 10px;
+}
+.pagination {
+  margin-top: 12px;
+  text-align: center;
+}
+.pagination button {
+  margin: 0 3px;
+}
+
+.service {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.service .item {
+  width: 46px;
+  height: 46px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  cursor: pointer;
+  position: relative;
+}
+.service .tip {
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  display: none;
+}
+.service .item:hover .tip {
+  display: block;
+}
+
+.tel { background: #d9534f; }
+.wx  { background: #07c160; }
+.qq  { background: #1E293B; }
+
+.footer {
+  background: #334155;
+  color: #9CA3AF;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 13px;
+  position: fixed;
+  left:0; right:0; bottom:0;
+}
+
+#login-trigger {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.contact-item {
+  background: #F8FAFC;
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.contact-icon {
+  font-size: 28px;
+  color: #1E293B;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E2E8F0;
+  border-radius: 50%;
+}
+.contact-info h4 {
+  font-size: 16px;
+  color: #1E293B;
+  margin-bottom: 4px;
+}
+.contact-info p {
+  font-size: 14px;
+  color: #64748B;
+  margin: 0;
+}
 </style>
 </head>
+
 <body>
 
-<div id="adminBtn"></div>
+<div class="top-bar">
+进口连接器现货 | TE、Aptiv、Sumitomo、Yazaki、Molex、KET、JST
+</div>
 
 <div class="header">
   <h1>陕西云泽在线科技有限公司</h1>
-  <p>专业汽车连接器 | 工业连接器 | 新能源连接器 | 全国渠道供应</p>
 </div>
 
 <div class="nav">
-  <button class="nav-btn active" onclick="go('home',this)">首页</button>
-  <button class="nav-btn" onclick="go('stock',this)">库存列表</button>
+<button class="active" onclick="show('home')">首页</button>
+<button onclick="show('stock')">现货库存</button>
+<button onclick="show('about')">关于我们</button>
+<button onclick="show('contact')">联系我们</button>
 </div>
+
+<div class="service">
+  <div class="item tel">
+    <span>电</span>
+    <div class="tip" id="service-tel">17729514427</div>
+  </div>
+  <div class="item wx">
+    <span>微</span>
+    <div class="tip" id="service-wx">请在后台填写微信号</div>
+  </div>
+  <div class="item qq" onclick="openQQ()">
+    <span>Q</span>
+    <div class="tip" id="service-qq">353436207</div>
+  </div>
+</div>
+
+<div id="login-trigger" onclick="show('login')"></div>
 
 <div class="container">
 
-  <!-- 首页 -->
-  <div class="page show" id="home">
-    <div class="card">
-      <h2>公司简介</h2>
-      <p>陕西云泽在线科技有限公司专注于汽车、工业及新能源领域连接器供应服务，依托稳定的上游渠道与丰富的行业资源，为客户提供专业的物料匹配、快速询价、现货响应及全国直发服务。公司始终以高效、可靠、合规为服务准则，致力于成为客户值得信赖的长期元器件供应合作伙伴，助力项目高效推进、生产稳定运行。</p>
-    </div>
-    <div class="card">
-      <h2>主营产品</h2>
-      <div class="pro-grid">
-        <div class="pro-item"><h4>汽车连接器</h4><p>车身线束、整车连接器系统</p></div>
-        <div class="pro-item"><h4>工业连接器</h4><p>工控、自动化设备连接器</p></div>
-        <div class="pro-item"><h4>新能源连接器</h4><p>高压、储能、电池连接器</p></div>
-        <div class="pro-item"><h4>连接器端子</h4><p>原装端子、插针、插孔</p></div>
-        <div class="pro-item"><h4>连接器护套</h4><p>防水护套、塑壳、密封件</p></div>
-        <div class="pro-item"><h4>品牌连接器</h4><p>泰科、安波福、莫仕等全系</p></div>
+<!-- 首页 -->
+<div class="page show" id="home">
+  <div class="card">
+    <h2>欢迎光临陕西云泽在线科技有限公司</h2>
+    <p>我司专注进口连接器现货期货供应</p>
+    <br>
+    <p>原厂正品保障｜极速响应</p>
+    <p>现货快速交付｜期货稳定交期</p>
+    <br>
+    <p>主营 TE、Aptiv、Sumitomo、Yazaki、Molex、KET、JST 等国际品牌连接器，</p>
+    <p>专注急单快速交付、批量稳定供货，</p>
+    <p>依托全行业渠道资源，为客户实现闲置物料高效对接与变现，</p>
+    <p>打造高效、可靠、一站式进口连接器供应链服务。</p>
+
+    <div class="advantage">
+      <div class="adv-item">
+        <h3>🎯 优质行业渠道</h3>
+        <p>深耕行业渠道资源，原厂正品保障，价格与交期更具优势。</p>
+      </div>
+      <div class="adv-item">
+        <h3>⚡ 极速响应服务</h3>
+        <p>急单快速响应，现货即时发货，期货准时交付。</p>
+      </div>
+      <div class="adv-item">
+        <h3>📦 全品类覆盖</h3>
+        <p>主营国际一线品牌连接器，型号齐全，满足各类需求。</p>
+      </div>
+      <div class="adv-item">
+        <h3>🤝 闲置物料对接</h3>
+        <p>依托行业资源，为客户提供呆滞物料供需匹配与高效变现。</p>
       </div>
     </div>
-    <div class="card">
-      <h2>联系方式</h2>
-      <table class="contact-table" id="contactShow"></table>
-    </div>
   </div>
+</div>
 
-  <!-- 库存列表 -->
-  <div class="page" id="stock">
-    <div class="card">
-      <h2>库存列表</h2>
-      <input class="search" id="kw" placeholder="搜索型号/品牌" oninput="search()">
-      <table>
-        <thead>
-          <tr>
-            <th>型号</th><th>品牌</th><th>数量</th><th>批次</th><th>发货地</th><th>备注</th>
-          </tr>
-        </thead>
-        <tbody id="list"></tbody>
-      </table>
-      <div class="pagination" id="pageBar"></div>
-    </div>
-  </div>
-
-  <!-- 登录 -->
-  <div class="page" id="loginPage">
-    <div class="login">
-      <h3>管理员登录</h3>
-      <input id="pw" type="password" style="width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #ddd;">
-      <button class="btn btn-primary" onclick="login()">登录</button>
-    </div>
-  </div>
-
-  <!-- 后台 -->
-  <div class="page" id="admin">
-    <div class="card">
-      <h2>系统设置</h2>
-      <div class="visit-info">累计访问次数：<span id="visitCount">0</span> 次</div>
-      <table style="width:100%;border-collapse:collapse;">
+<!-- 现货库存 -->
+<div class="page" id="stock">
+  <div class="card">
+    <h2>现货库存查询</h2>
+    <input placeholder="输入型号搜索" oninput="searchStock()" style="width:300px; margin-bottom:10px;">
+    <table class="table">
+      <thead>
         <tr>
-          <td style="padding:10px;border:1px solid #eee;">修改密码</td>
-          <td style="padding:10px;border:1px solid #eee;"><input id="np" placeholder="新密码" style="width:100%;padding:8px;"></td>
-          <td style="padding:10px;border:1px solid #eee;"><button class="btn btn-success" onclick="setPw()">保存</button></td>
+          <th>型号</th>
+          <th>数量</th>
+          <th>批次</th>
+          <th>仓库</th>
+          <th>备注</th>
         </tr>
-        <tr>
-          <td style="padding:10px;border:1px solid #eee;">导入Excel库存</td>
-          <td style="padding:10px;border:1px solid #eee;"><input type="file" id="excelFile" accept=".xlsx,.xls"></td>
-          <td style="padding:10px;border:1px solid #eee;"><button class="btn btn-primary" onclick="importExcel()">导入库存</button></td>
-        </tr>
-        <tr>
-          <td style="padding:10px;border:1px solid #eee;">清空所有数据</td>
-          <td colspan="2" style="padding:10px;border:1px solid #eee;"><button class="btn btn-danger" onclick="clearAll()">一键清空</button></td>
-        </tr>
-      </table>
-    </div>
+      </thead>
+      <tbody id="stock-table"></tbody>
+    </table>
+    <div class="pagination" id="page-front"></div>
+  </div>
+</div>
 
-    <div class="card">
-      <h2>联系方式设置</h2>
-      <table class="contact-table">
-        <tr><td>联系人</td><td><input id="n" style="width:90%;"></td><td>电话</td><td><input id="p" style="width:90%;"></td></tr>
-        <tr><td>微信1</td><td><input id="w1" style="width:90%;"></td><td>微信2</td><td><input id="w2" style="width:90%;"></td></tr>
-        <tr><td>QQ1</td><td><input id="q1" style="width:90%;"></td><td>QQ2</td><td><input id="q2" style="width:90%;"></td></tr>
-        <tr><td>邮箱</td><td colspan="3"><input id="e" style="width:95%;"></td></tr>
-      </table>
-      <div style="margin-top:12px;">
-        <button class="btn btn-success" onclick="saveContact()">保存</button>
-      </div>
-    </div>
+<!-- 关于我们 -->
+<div class="page" id="about">
+  <div class="card">
+    <h2>关于我们</h2>
+    <p><strong>陕西云泽在线科技有限公司</strong></p>
+    <p>我司专注进口连接器现货期货供应</p>
+    <br>
+    <p>原厂正品保障｜极速响应</p>
+    <p>现货快速交付｜期货稳定交期</p>
+    <br>
+    <p>主营 TE、Aptiv、Sumitomo、Yazaki、Molex、KET、JST 等国际品牌连接器，</p>
+    <p>专注急单快速交付、批量稳定供货，</p>
+    <p>依托全行业渠道资源，为客户实现闲置物料高效对接与变现，</p>
+    <p>打造高效、可靠、一站式进口连接器供应链服务。</p>
+  </div>
+</div>
 
-    <div class="card">
-      <h2>手动添加库存</h2>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;">
-        <div style="flex:1;min-width:180px;">
-          <div>型号</div>
-          <input id="m" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;">
-        </div>
-        <div style="flex:1;min-width:180px;">
-          <div>品牌</div>
-          <input id="b" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;">
-        </div>
-        <div style="flex:1;min-width:180px;">
-          <div>数量</div>
-          <input id="q" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;">
+<!-- 联系我们 -->
+<div class="page" id="contact">
+  <div class="card">
+    <h2>联系我们</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-info">
+          <h4>公司地址</h4>
+          <p id="show-addr">陕西省咸阳市秦都区</p>
         </div>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;">
-        <div style="flex:1;min-width:180px;">
-          <div>批次</div>
-          <input id="ba" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;">
-        </div>
-        <div style="flex:1;min-width:180px;">
-          <div>发货地</div>
-          <input id="f" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;">
-        </div>
-        <div style="flex:1;min-width:180px;">
-          <div>备注</div>
-          <input id="r" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;">
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div class="contact-info">
+          <h4>联系电话</h4>
+          <p id="show-tel">17729514427</p>
         </div>
       </div>
-      <div style="margin-top:12px;">
-        <button class="btn btn-success" onclick="add()">添加库存</button>
+      <div class="contact-item">
+        <div class="contact-icon">💬</div>
+        <div class="contact-info">
+          <h4>客服 QQ</h4>
+          <p id="show-qq">353436207</p>
+        </div>
       </div>
-      <table style="margin-top:12px;">
-        <thead>
-          <tr>
-            <th>型号</th><th>品牌</th><th>数量</th><th>批次</th><th>发货地</th><th>备注</th><th>操作</th>
-          </tr>
-        </thead>
-        <tbody id="adminList"></tbody>
-      </table>
-      <div class="pagination" id="adminPage"></div>
-    </div>
-
-    <div style="text-align:center;margin:20px 0;">
-      <button class="btn btn-normal" onclick="go('home')">返回前台</button>
-      <button class="btn btn-primary" onclick="logout()">退出登录</button>
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info">
+          <h4>电子邮箱</h4>
+          <p id="show-mail">353436207@qq.com</p>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+<!-- 登录 -->
+<div class="page" id="login">
+  <div class="card" style="max-width:400px;margin:0 auto;">
+    <h2>管理员登录</h2>
+    <input type="password" id="pwd" placeholder="请输入密码">
+    <button onclick="login()">登录后台</button>
+    <button class="btn-red" onclick="show('home')">返回</button>
+  </div>
+</div>
+
+<!-- 后台 -->
+<div class="page" id="admin">
+  <div class="card">
+    <h2>后台管理</h2>
+    <button onclick="show('admin-stock')">库存管理</button>
+    <button onclick="show('admin-contact')">联系信息</button>
+    <button onclick="show('admin-pwd')">修改密码</button>
+    <button class="btn-red" onclick="logout()">退出登录</button>
+  </div>
+</div>
+
+<!-- 库存管理 -->
+<div class="page" id="admin-stock">
+  <div class="card">
+    <h2>库存管理</h2>
+    <div class="stock-add-row">
+      <div class="stock-add-item">
+        <label>型号</label>
+        <input placeholder="型号" id="m">
+      </div>
+      <div class="stock-add-item">
+        <label>数量</label>
+        <input placeholder="数量" id="n">
+      </div>
+      <div class="stock-add-item">
+        <label>批次</label>
+        <input placeholder="批次" id="b">
+      </div>
+      <div class="stock-add-item">
+        <label>仓库</label>
+        <input placeholder="仓库" id="w">
+      </div>
+      <div class="stock-add-item">
+        <label>备注</label>
+        <input placeholder="备注" id="r">
+      </div>
+      <button class="btn-green" onclick="addStock()">添加</button>
+    </div>
+    <div style="margin:10px 0;">
+      <input type="file" id="excel" style="width:auto;">
+      <button onclick="importExcel()">Excel导入</button>
+      <button class="btn-red" onclick="clearStock()">清空库存</button>
+    </div>
+    <div class="search-above-table">
+      <input placeholder="输入型号搜索" oninput="searchAdminStock()" style="width:300px;">
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>型号</th>
+          <th>数量</th>
+          <th>批次</th>
+          <th>仓库</th>
+          <th>备注</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="admin-stock-table"></tbody>
+    </table>
+    <div class="pagination" id="page-admin"></div>
+  </div>
+  <button onclick="show('admin')">返回后台</button>
+</div>
+
+<!-- 联系设置 -->
+<div class="page" id="admin-contact">
+  <div class="card">
+    <h2>联系信息</h2>
+    <input placeholder="公司地址" id="set-addr">
+    <input placeholder="联系电话" id="set-tel">
+    <input placeholder="微信号" id="set-wx">
+    <input placeholder="客服QQ" id="set-qq">
+    <input placeholder="电子邮箱" id="set-mail">
+    <button onclick="saveContact()">保存</button>
+  </div>
+  <button onclick="show('admin')">返回</button>
+</div>
+
+<!-- 修改密码 -->
+<div class="page" id="admin-pwd">
+  <div class="card">
+    <h2>修改密码</h2>
+    <input placeholder="当前密码" id="old-pwd">
+    <input placeholder="新密码" id="new-pwd">
+    <button onclick="changePwd()">保存</button>
+  </div>
+  <button onclick="show('admin')">返回</button>
+</div>
 
 </div>
 
-<div class="footer">陕ICP备xxxxxxxx号</div>
+<div class="footer">
+陕西云泽在线科技有限公司 © 版权所有
+</div>
 
-<script src="https://cdn.bootcdn.net/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
-// 访问统计
-let visit = Number(localStorage.getItem("visit") || 0);
-visit += 1;
-localStorage.setItem("visit", visit);
+let stock = JSON.parse(localStorage.getItem('stock') || '[]')
+let isLogin = false
+let searchKeyword = ''
+let adminSearchKeyword = ''
 
-let PWD = localStorage.getItem("SYS_PW") || "123456";
-let currentPage = 1;
-let size = 30;
-let key = "";
-let contact = JSON.parse(localStorage.getItem("CONTACT")) || {};
-let goods = JSON.parse(localStorage.getItem("GOODS")) || [];
+const pageSize = 10
+let frontPage = 1
+let adminPage = 1
 
-adminBtn.onclick = () => { go("loginPage"); pw.value = ""; };
-onload = () => { showContact(); renderList(); };
-
-function go(id,btn){
-  document.querySelectorAll(".page").forEach(p=>p.classList.remove("show"));
-  document.getElementById(id).classList.add("show");
-  
-  document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));
-  if(btn) btn.classList.add("active");
-  
-  currentPage = 1;
-  if(id === "stock") renderList();
-  if(id === "admin") { renderAdminList(); document.getElementById("visitCount").textContent = visit; }
+function show(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('show'))
+  document.getElementById(id).classList.add('show')
+  document.querySelectorAll('.nav button').forEach((btn, i) => {
+    btn.classList.remove('active')
+    if (['home','stock','about','contact'][i] === id) btn.classList.add('active')
+  })
+  if (id === 'stock') { frontPage = 1; renderStock() }
+  if (id === 'admin-stock') { adminPage = 1; renderAdminStock() }
 }
 
-function login(){ pw.value == PWD ? go("admin") : alert("密码错误"); }
-function logout(){ go("home"); pw.value = ""; }
-function setPw(){ if(!np.value)return; PWD = np.value; localStorage.setItem("SYS_PW",PWD); alert("密码修改成功"); np.value = ""; }
-function clearAll(){ if(!confirm("确定清空所有数据？"))return; localStorage.clear(); location.reload(); }
-
-function importExcel(){
-  const file = document.getElementById("excelFile").files[0];
-  if(!file){ alert("请选择Excel文件"); return; }
-  const reader = new FileReader();
-  reader.onload = function(e){
-    const data = new Uint8Array(e.target.result);
-    const wb = XLSX.read(data, {type:"array"});
-    const json = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
-    if(json.length===0){ alert("文件无数据"); return; }
-    goods = json;
-    localStorage.setItem("GOODS", JSON.stringify(goods));
-    currentPage = 1;
-    renderList();
-    renderAdminList();
-    alert("导入成功，共 " + json.length + " 条库存");
-  };
-  reader.readAsArrayBuffer(file);
+function login() {
+  let p = document.getElementById('pwd').value
+  let ok = localStorage.getItem('admin-pwd') || '123456'
+  if (p === ok) { isLogin = true; show('admin-stock') } else alert('密码错误')
 }
 
-function showContact(){
-  contactShow.innerHTML = `
-  <tr><td>联系人</td><td>${contact.n||"-"}</td><td>电话</td><td>${contact.p||"-"}</td></tr>
-  <tr><td>微信1</td><td>${contact.w1||"-"}</td><td>微信2</td><td>${contact.w2||"-"}</td></tr>
-  <tr><td>QQ1</td><td>${contact.q1||"-"}</td><td>QQ2</td><td>${contact.q2||"-"}</td></tr>
-  <tr><td>邮箱</td><td colspan="3">${contact.e||"-"}</td></tr>`;
-}
-function saveContact(){
-  contact={n:n.value,p:p.value,w1:w1.value,w2:w2.value,q1:q1.value,q2:q2.value,e:e.value};
-  localStorage.setItem("CONTACT",JSON.stringify(contact));
-  showContact(); alert("保存成功");
+function logout() {
+  isLogin = false
+  show('home')
 }
 
-function search(){ key = kw.value; currentPage = 1; renderList(); }
-
-function add(){
-  if(!m.value)return alert("请填写型号");
-  let item = { m: m.value, b: b.value, q: q.value, ba: ba.value, f: f.value, r: r.value };
-  goods.unshift(item);
-  localStorage.setItem("GOODS",JSON.stringify(goods));
-  m.value = b.value = q.value = ba.value = f.value = r.value = "";
-  currentPage = 1;
-  renderList();
-  renderAdminList();
-  alert("添加成功");
+function searchStock() {
+  searchKeyword = document.querySelector('#stock input').value.trim()
+  frontPage = 1
+  renderStock()
 }
 
-function edit(i){
-  let o = goods[i];
-  m.value = o.m; b.value = o.b; q.value = o.q; ba.value = o.ba; f.value = o.f; r.value = o.r;
-  goods.splice(i,1);
-  localStorage.setItem("GOODS",JSON.stringify(goods));
-  currentPage = 1;
-  renderList();
-  renderAdminList();
+function searchAdminStock() {
+  adminSearchKeyword = document.querySelector('#admin-stock input').value.trim()
+  adminPage = 1
+  renderAdminStock()
 }
 
-function del(i){
-  if(!confirm("确定删除？")) return;
-  goods.splice(i,1);
-  localStorage.setItem("GOODS",JSON.stringify(goods));
-  currentPage = 1;
-  renderList();
-  renderAdminList();
-}
+function renderStock() {
+  let list = stock.filter(x => (x.model || '').includes(searchKeyword))
+  let total = list.length
+  let totalPage = Math.ceil(total / pageSize)
+  let start = (frontPage - 1) * pageSize
+  let pageList = list.slice(start, start + pageSize)
 
-function getData(){
-  let d = goods;
-  if(key){
-    d = d.filter(x => {
-      let str = (x.m || x.型号 || "") + (x.b || x.品牌 || "") + (x.r || x.备注 || "");
-      return str.includes(key);
-    });
+  let html = pageList.map(i => `
+  <tr>
+    <td>${i.model}</td>
+    <td>${i.num}</td>
+    <td>${i.batch}</td>
+    <td>${i.ware}</td>
+    <td>${i.remark}</td>
+  </tr>`).join('')
+  document.getElementById('stock-table').innerHTML = html || '<tr><td colspan="5">暂无数据</td></tr>'
+
+  let bar = ''
+  if (totalPage > 1) {
+    bar += `<button ${frontPage<=1?'disabled':''} onclick="frontPage=1;renderStock()">首页</button>`
+    bar += `<button ${frontPage<=1?'disabled':''} onclick="frontPage--;renderStock()">上一页</button>`
+    bar += `<span> ${frontPage}/${totalPage} </span>`
+    bar += `<button ${frontPage>=totalPage?'disabled':''} onclick="frontPage++;renderStock()">下一页</button>`
+    bar += `<button ${frontPage>=totalPage?'disabled':''} onclick="frontPage=${totalPage};renderStock()">尾页</button>`
   }
-  return d;
+  document.getElementById('page-front').innerHTML = bar
 }
 
-function renderList(){
-  let data = getData();
-  let total = data.length;
-  let totalPage = Math.ceil(total/size);
-  let start = (currentPage-1)*size;
-  let pageData = data.slice(start, start+size);
-  
-  list.innerHTML = pageData.map(x=>`<tr>
-    <td>${x.m||x.型号||""}</td><td>${x.b||x.品牌||""}</td><td>${x.q||x.数量||""}</td><td>${x.ba||x.批次||""}</td><td>${x.f||x.发货地||""}</td><td>${x.r||x.备注||""}</td></tr>`).join("");
-  
-  renderBar(totalPage, "pageBar");
-}
+function renderAdminStock() {
+  let list = stock.filter(x => (x.model || '').includes(adminSearchKeyword))
+  let total = list.length
+  let totalPage = Math.ceil(total / pageSize)
+  let start = (adminPage - 1) * pageSize
+  let pageList = list.slice(start, start + pageSize)
 
-function renderAdminList(){
-  let data = getData();
-  let total = data.length;
-  let totalPage = Math.ceil(total/size);
-  let start = (currentPage-1)*size;
-  let pageData = data.slice(start, start+size);
-  
-  adminList.innerHTML = pageData.map((x,i)=>{
-    let idx = start + i;
-    return `<tr>
-      <td>${x.m||x.型号||""}</td><td>${x.b||x.品牌||""}</td><td>${x.q||x.数量||""}</td><td>${x.ba||x.批次||""}</td><td>${x.f||x.发货地||""}</td><td>${x.r||x.备注||""}</td>
-      <td><button class="btn btn-primary" onclick="edit(${idx})">修改</button> <button class="btn btn-danger" onclick="del(${idx})">删除</button></td></tr>`;
-  }).join("");
-  
-  renderBar(totalPage, "adminPage");
-}
+  let html = pageList.map((i, idxInPage) => {
+    let k = start + idxInPage
+    return `
+    <tr id="row-${k}">
+      <td><span ondblclick="editCell(this,'model',${k})">${i.model}</span><input style="display:none" onblur="saveCell(this,'model',${k})"></td>
+      <td><span ondblclick="editCell(this,'num',${k})">${i.num}</span><input style="display:none" onblur="saveCell(this,'num',${k})"></td>
+      <td><span ondblclick="editCell(this,'batch',${k})">${i.batch}</span><input style="display:none" onblur="saveCell(this,'batch',${k})"></td>
+      <td><span ondblclick="editCell(this,'ware',${k})">${i.ware}</span><input style="display:none" onblur="saveCell(this,'ware',${k})"></td>
+      <td><span ondblclick="editCell(this,'remark',${k})">${i.remark}</span><input style="display:none" onblur="saveCell(this,'remark',${k})"></td>
+      <td><button class="btn-red" onclick="delRow(${k})">删除</button></td>
+    </tr>`
+  }).join('')
+  document.getElementById('admin-stock-table').innerHTML = html || '<tr><td colspan="6">暂无数据</td></tr>'
 
-function renderBar(totalPage, barId){
-  let html = "";
-  for(let i=1; i<=totalPage; i++){
-    let cls = (i === currentPage) ? "active" : "";
-    html += `<button class="${cls}" onclick="goPage(${i},'${barId}')">${i}</button>`;
+  let bar = ''
+  if (totalPage > 1) {
+    bar += `<button ${adminPage<=1?'disabled':''} onclick="adminPage=1;renderAdminStock()">首页</button>`
+    bar += `<button ${adminPage<=1?'disabled':''} onclick="adminPage--;renderAdminStock()">上一页</button>`
+    bar += `<span> ${adminPage}/${totalPage} </span>`
+    bar += `<button ${adminPage>=totalPage?'disabled':''} onclick="adminPage++;renderAdminStock()">下一页</button>`
+    bar += `<button ${adminPage>=totalPage?'disabled':''} onclick="adminPage=${totalPage};renderAdminStock()">尾页</button>`
   }
-  document.getElementById(barId).innerHTML = html;
+  document.getElementById('page-admin').innerHTML = bar
 }
 
-function goPage(p, barId){
-  currentPage = p;
-  if(barId === "pageBar") renderList();
-  if(barId === "adminPage") renderAdminList();
+function addStock() {
+  let model = document.getElementById('m').value.trim()
+  if (!model) { alert('型号不能为空'); return }
+  stock.unshift({
+    model: model,
+    num: document.getElementById('n').value,
+    batch: document.getElementById('b').value,
+    ware: document.getElementById('w').value,
+    remark: document.getElementById('r').value
+  })
+  localStorage.setItem('stock', JSON.stringify(stock))
+  document.getElementById('m').value = ''
+  document.getElementById('n').value = ''
+  document.getElementById('b').value = ''
+  document.getElementById('w').value = ''
+  document.getElementById('r').value = ''
+  adminPage = 1
+  renderAdminStock()
+  renderStock()
+}
+
+function delRow(k) {
+  if (!confirm('确定删除？')) return
+  stock.splice(k, 1)
+  localStorage.setItem('stock', JSON.stringify(stock))
+  renderAdminStock()
+  renderStock()
+}
+
+function clearStock() {
+  if (!confirm('确定清空所有库存？')) return
+  stock = []
+  localStorage.setItem('stock', JSON.stringify(stock))
+  renderAdminStock()
+  renderStock()
+}
+
+function importExcel() {
+  let file = document.getElementById('excel').files[0]
+  if (!file) { alert('请选择文件'); return }
+  let reader = new FileReader()
+  reader.onload = function(e) {
+    try {
+      let wb = XLSX.read(e.target.result, { type: 'binary' })
+      let sheet = wb.Sheets[wb.SheetNames[0]]
+      let arr = XLSX.utils.sheet_to_json(sheet, { header: 1 })
+      let res = []
+      for (let i=1; i<arr.length; i++) {
+        let row = arr[i]
+        if (!row || !row[0]) continue
+        res.push({
+          model: row[0]+'',
+          num: row[1]||'',
+          batch: row[2]||'',
+          ware: row[3]||'',
+          remark: row[4]||''
+        })
+      }
+      stock = res
+      localStorage.setItem('stock', JSON.stringify(stock))
+      alert(`导入成功 ${res.length} 条`)
+      adminPage = 1
+      frontPage = 1
+      renderAdminStock()
+      renderStock()
+    } catch(e) {
+      alert('导入失败：' + e.message)
+    }
+  }
+  reader.readAsBinaryString(file)
+}
+
+function editCell(span, field, index) {
+  let input = span.nextElementSibling
+  input.value = span.innerText
+  span.style.display = 'none'
+  input.style.display = 'inline-block'
+  input.style.width = '90%'
+  input.focus()
+}
+
+function saveCell(input, field, index) {
+  let val = input.value.trim()
+  stock[index][field] = val
+  localStorage.setItem('stock', JSON.stringify(stock))
+  input.previousElementSibling.innerText = val
+  input.style.display = 'none'
+  input.previousElementSibling.style.display = 'inline'
+  renderStock()
+}
+
+function loadContact() {
+  let addr = localStorage.getItem('addr') || '陕西省咸阳市秦都区'
+  let tel = localStorage.getItem('tel') || '17729514427'
+  let wx   = localStorage.getItem('wx')   || ''
+  let qq   = localStorage.getItem('qq')   || '353436207'
+  let mail = localStorage.getItem('mail') || '353436207@qq.com'
+
+  document.getElementById('show-addr').innerText = addr
+  document.getElementById('show-tel').innerText = tel
+  document.getElementById('show-qq').innerText = qq
+  document.getElementById('show-mail').innerText = mail
+
+  document.getElementById('service-tel').innerText = tel
+  document.getElementById('service-wx').innerText = wx || '请在后台填写微信号'
+  document.getElementById('service-qq').innerText = qq
+
+  document.getElementById('set-addr').value = addr
+  document.getElementById('set-tel').value = tel
+  document.getElementById('set-wx').value = wx
+  document.getElementById('set-qq').value = qq
+  document.getElementById('set-mail').value = mail
+}
+
+function saveContact() {
+  localStorage.setItem('addr', document.getElementById('set-addr').value)
+  localStorage.setItem('tel', document.getElementById('set-tel').value)
+  localStorage.setItem('wx',   document.getElementById('set-wx').value)
+  localStorage.setItem('qq',   document.getElementById('set-qq').value)
+  localStorage.setItem('mail', document.getElementById('set-mail').value)
+  alert('保存成功')
+  loadContact()
+}
+
+function changePwd() {
+  let old = document.getElementById('old-pwd').value
+  let now = localStorage.getItem('admin-pwd') || '123456'
+  if (old !== now) { alert('当前密码错误'); return }
+  localStorage.setItem('admin-pwd', document.getElementById('new-pwd').value)
+  alert('修改成功')
+}
+
+function openQQ() {
+  let qq = document.getElementById('show-qq').innerText || '353436207'
+  window.open(`https://qm.qq.com/cgi-bin/qm/qr?nick=${qq}`, '_blank')
+}
+
+window.onload = function() {
+  renderStock()
+  loadContact()
 }
 </script>
 </body>
