@@ -147,15 +147,53 @@ button:disabled{opacity:.6}
 <div class="pagination" id="news-pagination"></div>
 </div>
 </div>
-<!-- 联系我们 -->
+<!-- 联系我们（已替换为优化样式，信息写死） -->
 <div class="page" id="contact">
 <div class="card">
 <h2>联系我们</h2>
-<div class="contact-grid">
-<div class="contact-item"><div class="contact-icon">📍</div><div class="contact-info"><h4>公司地址</h4><p id="show-addr">陕西省咸阳市秦都区</p></div></div>
-<div class="contact-item"><div class="contact-icon">📞</div><div class="contact-info"><h4>联系电话</h4><p id="show-tel">17729514427</p></div></div>
-<div class="contact-item"><div class="contact-icon">💬</div><div class="contact-info"><h4>客服 QQ</h4><p id="show-qq">353436207</p></div></div>
-<div class="contact-item"><div class="contact-icon">✉️</div><div class="contact-info"><h4>电子邮箱</h4><p id="show-mail">353436207@qq.com</p></div></div>
+<!-- 联系人卡片区域 -->
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:24px;">
+  <!-- 赵经理 卡片 -->
+  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+    <div style="background:#444;color:#fff;padding:14px;display:flex;align-items:center;gap:12px;">
+      <div style="width:36px;height:36px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#444;font-size:18px;">👤</div>
+      <div>
+        <div style="font-size:16px;font-weight:600;">赵经理</div>
+        <div style="font-size:12px;opacity:0.9;">销售经理</div>
+      </div>
+    </div>
+    <div style="padding:14px;font-size:14px;color:#666;line-height:1.8;">
+      <p style="margin:4px 0;"><span style="color:#007bff;">📞</span> 手机：17729514427</p>
+      <p style="margin:4px 0;"><span style="color:#17a2b8;">💬</span> QQ：353436207</p>
+    </div>
+  </div>
+  <!-- 李经理 卡片 -->
+  <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+    <div style="background:#444;color:#fff;padding:14px;display:flex;align-items:center;gap:12px;">
+      <div style="width:36px;height:36px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#444;font-size:18px;">👤</div>
+      <div>
+        <div style="font-size:16px;font-weight:600;">李经理</div>
+        <div style="font-size:12px;opacity:0.9;">业务经理</div>
+      </div>
+    </div>
+    <div style="padding:14px;font-size:14px;color:#666;line-height:1.8;">
+      <p style="margin:4px 0;"><span style="color:#007bff;">📞</span> 手机：15291984414</p>
+      <p style="margin:4px 0;"><span style="color:#17a2b8;">💬</span> QQ：476462701</p>
+    </div>
+  </div>
+</div>
+<!-- 公司地址 + 业务邮箱（独立信息栏） -->
+<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.05);">
+  <div style="display:flex;flex-wrap:wrap;gap:24px;font-size:14px;color:#666;">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="color:#007bff;font-size:18px;">📍</span>
+      <span>公司地址：陕西省咸阳市秦都区世纪大道西渭水华庭综合楼</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="color:#28a745;font-size:18px;">✉️</span>
+      <span>业务邮箱：yunzeonline@163.com</span>
+    </div>
+  </div>
 </div>
 </div>
 </div>
