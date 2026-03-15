@@ -1,1 +1,8955 @@
-[]
+[
+  {
+    "model": "12010300",
+    "num": 10500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12015791",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12015792",
+    "num": 191,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12015793",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12034413",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12040977",
+    "num": 1100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12045699",
+    "num": 2300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12048074",
+    "num": 15000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12048074",
+    "num": 33000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12048159",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12052139",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12052139",
+    "num": 3300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12052139",
+    "num": 15000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12052139",
+    "num": 1550,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12052486",
+    "num": 8800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12059168",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12065287",
+    "num": 49500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12077411",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12089040",
+    "num": 3600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12089290",
+    "num": 700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12110127",
+    "num": "17500",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12110293",
+    "num": 17500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12124075",
+    "num": 17500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12124075",
+    "num": 2070,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12124075",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12124076",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12124685",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12158098",
+    "num": 200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12162000",
+    "num": 8795,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12162144",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12162188",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12162193",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12162197",
+    "num": 27000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12185000",
+    "num": 40,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12185008",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12185126",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12185129",
+    "num": 300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "12185237",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "13819022",
+    "num": 5500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15300014",
+    "num": 1330,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15300014",
+    "num": 7500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15300027",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15300027",
+    "num": 1400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15304719",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15305086",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15317832",
+    "num": 13030,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15318164",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15324973",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15324983",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326631",
+    "num": 1200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326654",
+    "num": 1142,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326655",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326660",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326661",
+    "num": 3680,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326666",
+    "num": 800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326678",
+    "num": 1200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326815",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326910",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15326915",
+    "num": 600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15335987",
+    "num": 300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15336024",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15344052",
+    "num": 1170,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15344052",
+    "num": 1260,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15344052",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15366022",
+    "num": 2600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15487756",
+    "num": 5320,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15494614",
+    "num": "4500",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "15494614",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "0287005.PXCN",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "0495030.ZXA",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "0495040.ZXA",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "0495060.ZXA",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1060-16-0122",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1062-16-0122",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1062-16-0622",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1241380-3",
+    "num": "7000",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1473244-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1473252-1",
+    "num": "500",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1473407-1",
+    "num": 500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0105",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0105",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0105",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0105",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0106",
+    "num": "0",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0106",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0110",
+    "num": 27000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0110",
+    "num": 840,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0110",
+    "num": 336,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1500-0110",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "151-01279=155-30702",
+    "num": 35000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1674742-1",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "171631-1",
+    "num": 15000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "173630-1",
+    "num": "25000",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "173631-1",
+    "num": 45000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "173631-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "174045-2",
+    "num": "150000",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "174056-2",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "174264-2",
+    "num": 25000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1-967616-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1-967642-1",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1-967644-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1-967644-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "1-968857-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "281934-2",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "281934-2",
+    "num": 140000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "281934-3",
+    "num": 60000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "281934-4",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282080-1",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282088-1",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282089-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282104-1",
+    "num": 2600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282105-1",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282106-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282107-1",
+    "num": 2400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282109-1",
+    "num": 3300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282110-1 ",
+    "num": 3800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282403-1",
+    "num": 5400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "282404-1",
+    "num": 2700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "2-964292-1",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "316832-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "368482-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "368503-1",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "5-963715-1",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6040-2111",
+    "num": 6400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6040-2111",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6040-3111",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6070-2481",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6070-2481",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6070-2481",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1001",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1001",
+    "num": 2100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1001",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1001",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1011",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1011",
+    "num": 44000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1011",
+    "num": 32000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1011",
+    "num": 44000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1031",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1041",
+    "num": 144000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1041",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1041",
+    "num": 160,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1131",
+    "num": "4800",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1131",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1136",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1136",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1149",
+    "num": "10000",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6090-1149",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0144",
+    "num": "8000",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0144",
+    "num": "16000",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0144",
+    "num": "0",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0144",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0144",
+    "num": "1500",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0214",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0239",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0239",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0239",
+    "num": "4500",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0240",
+    "num": 600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0240",
+    "num": 4500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0249",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0249",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0249",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0249",
+    "num": 400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0296",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0296",
+    "num": 5200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0325",
+    "num": 5600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0351",
+    "num": 8000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-0514",
+    "num": 8000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-1104",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-1104",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-1716",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-1716",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-1716",
+    "num": 2500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-1716",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-2103",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-2163",
+    "num": 11500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-2780",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-2781",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-2784",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-2830",
+    "num": 14000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3571",
+    "num": 16000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3802",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3802",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3802",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3802",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3802",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3802",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3802",
+    "num": 1700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3810",
+    "num": 2500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3810",
+    "num": 2200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3810",
+    "num": 7000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3810",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3818",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3869",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3869",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3869",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3869",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3870",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3870",
+    "num": 7000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3870",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3870",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3870",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3877",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3885",
+    "num": 200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3885",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3885",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3893",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3893",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3893",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3909",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3909",
+    "num": 800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3917",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3917",
+    "num": 500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3925",
+    "num": 11000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3925",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3933",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3933",
+    "num": 300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-3933",
+    "num": 900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4008",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4010",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4010",
+    "num": 1900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4339",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4339",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4339",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4565",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4589",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4675",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4978",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4978",
+    "num": 1900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-4979",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5070",
+    "num": 3100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5071",
+    "num": 3600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5180",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5180",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5267",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5267",
+    "num": 1300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5267",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5267",
+    "num": 3800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5269",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5269",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5269",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5271",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5271",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5275",
+    "num": 500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5275",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5277",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5279",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5279",
+    "num": 600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5279",
+    "num": 11000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5281",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5281",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5281",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5281",
+    "num": 5500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5283",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5283",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5283",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5287",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5287",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5289",
+    "num": 4800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5289",
+    "num": 1600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5291",
+    "num": 66000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5291",
+    "num": 14000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5291",
+    "num": 100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5293",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5310",
+    "num": 6200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5310",
+    "num": 2400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5585",
+    "num": 8200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5585",
+    "num": 5500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5585",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5594",
+    "num": 3100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5594",
+    "num": 1200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5594",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5594",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5594",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5604",
+    "num": 200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5604",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5613",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5613",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5613",
+    "num": 4500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5622",
+    "num": 2700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5622",
+    "num": 400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5622",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5650",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5650",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5659",
+    "num": 3500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5659",
+    "num": 1700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5659",
+    "num": 23000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5668",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5677",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5677",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5686",
+    "num": 700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5695",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5695",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5695",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5704",
+    "num": 200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-5713",
+    "num": 1600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6050",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6050",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6050",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6053",
+    "num": 2200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6053",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6053",
+    "num": 8800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6056",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6056",
+    "num": 4900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6097",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6559",
+    "num": 4200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6559",
+    "num": 4500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6653",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6653",
+    "num": 4100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6653",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6662",
+    "num": 3800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6662",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6947",
+    "num": 800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6952",
+    "num": 2400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6953",
+    "num": 7600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6953",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6954",
+    "num": 10800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6956",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6957",
+    "num": 3600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6958",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6958",
+    "num": 3100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6959",
+    "num": 6900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6964",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6966",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6970",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6974",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6978",
+    "num": 5900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6978",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-6980",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-7892",
+    "num": 12700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-7895",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6098-8098",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6-176146-6",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6-176146-6",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2181",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2181",
+    "num": 9600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2181",
+    "num": 2100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2181",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2321",
+    "num": 3600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2321",
+    "num": 5400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2321",
+    "num": 5400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2321",
+    "num": 600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2322",
+    "num": 2400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-2451",
+    "num": 2400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-3241",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-3451",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-3451",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-3451",
+    "num": 800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-4181",
+    "num": 1600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-4182",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-4182",
+    "num": 4100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-4771",
+    "num": 4800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-4771",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-4771",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-6181",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-6181",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-6181",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6180-6771",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0070",
+    "num": "2000",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0070",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0070",
+    "num": 27000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0071",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0071",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0073",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0073",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0073",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0076",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0076",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0076",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0076",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0077",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-0077",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6181-6851",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6185-5177",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6185-5424",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6185-5424",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-2171",
+    "num": 7000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-2171",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-2171",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-2171",
+    "num": 2500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-2311",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-2311",
+    "num": 2500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-2311",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-2801",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-3231",
+    "num": 2800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-3271",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-3271",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-3801",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-6801",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-6801",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6187-6801",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0004",
+    "num": 3600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0004",
+    "num": 2800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0066",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0098",
+    "num": 600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0099",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0129",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0129",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0175",
+    "num": 700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0175",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0175",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0266",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0266",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0266",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0266",
+    "num": 15000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0266",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0282",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0327",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0327",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0495",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0589",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0589",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0589",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0589",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0696",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0696",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0696",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0706",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0706",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0706",
+    "num": 600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0706",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0779",
+    "num": 6900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0779",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0779",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-0779",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-4797",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-4920",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-4920",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-4920",
+    "num": 7400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-4920",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-4966",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-5516",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-5540",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-5540",
+    "num": 3600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-5641",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-5775",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-5814",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6188-5814",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0027",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0031",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0039",
+    "num": 300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0039",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0039",
+    "num": 700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0039",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0099",
+    "num": 1200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0099",
+    "num": 1100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0099",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0126",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0126",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0126",
+    "num": 3800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0126",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0129",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0130",
+    "num": 10200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0132",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0134",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0134",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0134",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0136",
+    "num": 4800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0175",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0175",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0175",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0176",
+    "num": 3100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0179",
+    "num": 500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0179",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0179",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0179",
+    "num": 600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0239",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0239",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0249",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0249",
+    "num": 100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0249",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0323",
+    "num": 3700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0372",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0372",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0425",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0429",
+    "num": 2100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0442",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0442",
+    "num": 7200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0442",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0443",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0443",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0443",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0504",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0504",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0504",
+    "num": 3500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0611",
+    "num": 2400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0706",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0706",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0706",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0706",
+    "num": 700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0714",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0715",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0772",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0772",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0772",
+    "num": 4600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0772",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0890",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0891",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0935",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0935",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0935",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0935",
+    "num": 3700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0935",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-0996",
+    "num": 8500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1046",
+    "num": 8800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1046",
+    "num": 1440,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1046",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1046",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1046",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1081",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1081",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1081",
+    "num": 2800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1081",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1083",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1083",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1083",
+    "num": 2100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1083",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1129",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1129",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1129",
+    "num": 1200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1129",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1129",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1129",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1129",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1130",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1133",
+    "num": 500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1134",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1134",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1134",
+    "num": 3300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1134",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1142",
+    "num": 3700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1142",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1142",
+    "num": 4800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1142",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1161",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1161",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1161",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1161",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1231",
+    "num": 6800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1231",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1231",
+    "num": 5600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1240",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1240",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-1240",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-4171",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-4171",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-4171",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-6171",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-6171",
+    "num": 7000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-6905",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-6905",
+    "num": 1400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-6905",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-6907",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-6907",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-6987",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7042",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7042",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7042",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7042",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7100",
+    "num": 3600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7100",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7246",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7401",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7408",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7408",
+    "num": 1300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7409",
+    "num": 5200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7410",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7410",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7426",
+    "num": 3800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7426",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7426",
+    "num": 8000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7449",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7449",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7449",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7469",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7470",
+    "num": 3700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7470",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7471（6189-0779）",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7471（6189-0779）",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7856",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7856",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7895",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6189-7895",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0003",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0003",
+    "num": 300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0003",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0003",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0003",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0009",
+    "num": 300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0009",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0021",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0021",
+    "num": 900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0030",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0030",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0043",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0051",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0054",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0060",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0060",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0249",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6195-0315",
+    "num": 7000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6240-1120",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6240-1131",
+    "num": 12500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6240-5118",
+    "num": 6700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6520-0349",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6520-0349",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6520-0549",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6810-1203",
+    "num": 450,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6810-1203",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6810-1217",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6910-7687",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6918-0323",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6918-0324",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6918-1780",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6918-1833",
+    "num": 8800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6918-1833",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6918-1835",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6918-2128",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6918-2128",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6918-2128",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6920-0081",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "6920-0081",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-1170P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-1470",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-1470",
+    "num": 14000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-1471",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-1471",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-1472",
+    "num": 900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-2020Y",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-2020Y",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3250",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3250",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3250",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3250",
+    "num": 500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3250",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3251",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3251",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3251",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3251",
+    "num": 500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-3251",
+    "num": 1000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4020",
+    "num": 500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4020",
+    "num": 100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4020",
+    "num": 100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4021",
+    "num": 500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4021",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4021",
+    "num": 8000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4021",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4021",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4025",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4026",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4026P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4100-02",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4100-02",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4100-02",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4100-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4101-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4101-02",
+    "num": 400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4103-02",
+    "num": 34000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4110-02",
+    "num": 21000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4112-02",
+    "num": 25000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4112-02",
+    "num": 28000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4231-02",
+    "num": 33600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4231-02",
+    "num": 32000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4231-02",
+    "num": 47900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4231-02",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4415-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4415-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4415-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4415-02",
+    "num": 2700,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4416-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4416-02",
+    "num": 14000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4416-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4416-02",
+    "num": 55000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4416-02",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4416-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4416-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4416-02",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-4417-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-7386-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-7386-02",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-7386-02",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-7387-02",
+    "num": 14000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7114-7387-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7115-1591",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7115-1591",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7115-1591",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1050",
+    "num": 119000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1050",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1180",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1181P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1181P",
+    "num": 15000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1300",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1466-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1466-02",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1466-02",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1471",
+    "num": 36000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1471",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1471",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1471",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1472",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1472",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1472",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1473",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1473",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1473",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1530",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-1530（1410-0096）",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2090Y",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2872",
+    "num": 25000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2873Y",
+    "num": 28000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2873Y",
+    "num": 18000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2873Y",
+    "num": 18000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2873Y",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2990-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2990-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2990-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-2992-02",
+    "num": 27000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": 27000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": 189000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": 102000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": 225000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": 17000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3250",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3251",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-3251",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4020P",
+    "num": 127500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4020P",
+    "num": 202500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4020P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4020P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4020P",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4020P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4021P",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4021P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4022",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4025P",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4025P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4025P",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4025P",
+    "num": 52000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4026P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4026P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4026P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4100-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4100-02",
+    "num": 22500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4100-02",
+    "num": 18000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4101-02",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4101-02",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4102-02",
+    "num": 31500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4102-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4102-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4102-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4103-02",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4103-02",
+    "num": 32000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4103-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4103-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4103-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4111-02",
+    "num": 25200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4111-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4112-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4114-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4114-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4120-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4121-02",
+    "num": 4800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4122-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4220-02（316832-1）",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4220-02（316832-1）",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4220-02（316832-1）",
+    "num": 650,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4231-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4415-02",
+    "num": 7200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4415-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4415-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4416-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4416-02",
+    "num": 17600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4416-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4416-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4416-02",
+    "num": 211500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4416-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4416-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4417-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4417-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4417-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4660-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4660-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4660-02",
+    "num": 45000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4660-02",
+    "num": 60000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4780-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4780-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4780-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4780-02",
+    "num": 44000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-4781-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-7389-02",
+    "num": 16000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-7389-02",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-7389-02",
+    "num": 60000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-7390-02",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-7390-02",
+    "num": 48000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7116-7390-02",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7119-3070",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7122-4123-30",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7122-4123-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7122-6347",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7123-2845",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7123-4220-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7123-4220-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7123-4220-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7123-6347",
+    "num": 8000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7123-6423-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7157-3571-80",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7157-3572-80",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7157-3580-60",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7157-3580-60",
+    "num": 16800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7157-7812",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7157-7812",
+    "num": 13800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7157-7812",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3006-90",
+    "num": 10500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3008-80",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3030-50",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3030-50",
+    "num": 10500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3031-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3031-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3031-90",
+    "num": 48000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3034-50",
+    "num": 104000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3034-50",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3035",
+    "num": 38000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3035",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3035",
+    "num": 28500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3070-80",
+    "num": 170000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3070-80",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3070-80",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3113-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3113-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3113-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3113-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3113-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3165-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3165-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3166-60",
+    "num": 102000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3166-60",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3166-60",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3167-80",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3167-80",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3168-80",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7158-3169-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7160-8234",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7160-8234",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7160-9465",
+    "num": 36000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7161-9787",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7161-9787",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7161-9787",
+    "num": 104000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7161-9787",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0076",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0118",
+    "num": 44000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0118",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0210",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0210",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0349",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0349",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0349",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0395",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0432",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0471",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0472",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0473",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0622",
+    "num": 4500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0797",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-0815",
+    "num": 4400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-1043",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-1075",
+    "num": 7000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-1075",
+    "num": 15000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-1312",
+    "num": 9500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-1312",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-1634",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-1635",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7165-1647",
+    "num": 21000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7183-8049",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7183-8049",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7186-8845",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7186-8846",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7186-8849",
+    "num": 300000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7186-8849",
+    "num": 350,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7187-8846",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7210-0011",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7222-1424-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7222-4220-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-1020",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-1030",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-1060",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-2764-30",
+    "num": 350,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-3030",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-3442-40",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-3442-40",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-5522-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-5570-10",
+    "num": 45000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-5575-10",
+    "num": 45000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-5575-10",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-5846",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6443-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6443-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6443-50",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6443-50",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6443-50",
+    "num": 16000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6444-60",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6444-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6444-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6445-40",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-6466-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-7020-10",
+    "num": 154000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8395-40",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8496-30",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8496-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8496-30",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8497-90",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8497-90",
+    "num": 46000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8497-90",
+    "num": 100000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8497-90",
+    "num": 100000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8497-90",
+    "num": 22000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8631-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8631-30",
+    "num": 32000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8851-30",
+    "num": 26000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8851-30",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8851-30",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8852-30",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8852-30",
+    "num": 28000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8852-30",
+    "num": 44000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8852-30",
+    "num": 100000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8853-30",
+    "num": 190000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8853-30",
+    "num": 45000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8853-30",
+    "num": 110000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8853-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8853-30",
+    "num": 85000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8853-30",
+    "num": 100000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8854-30",
+    "num": 15000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8854-30",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8855-30",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8855-30",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8855-30",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8855-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8856-30",
+    "num": 15000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7282-8856-30",
+    "num": 1200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-1020",
+    "num": 8400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-1020",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-1020",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-1020",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-1060",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-1060",
+    "num": 2100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-1114-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-2090-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-2147-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-2147-30",
+    "num": 4500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-2148-30",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-3243-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-3440-40",
+    "num": 2800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5524-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5524-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5524-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5524-70",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5830",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5830",
+    "num": 3300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5830",
+    "num": 6600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5845",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5845",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5967-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-5971-80",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6134-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6443-40",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6443-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6449-40",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6454-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6454-40",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6458-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6459-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6459-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-6483",
+    "num": 5800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7020-10",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7027-40",
+    "num": 1200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7027-40",
+    "num": 2200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7028-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7031-10",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7198-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7198-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7449",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7449",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7449",
+    "num": 900,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7449-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7596",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7596",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-7596",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8397-40",
+    "num": 100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8397-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8397-40",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8397-40",
+    "num": 3600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8398-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": 8300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": 12200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8497-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8630",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8630",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8630",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8630",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8630-30",
+    "num": 28000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8630-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8660",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8660",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8660",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8850-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8850-30",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8850-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8851-30",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8851-30",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8851-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8851-30",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8852-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8852-30",
+    "num": 4800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8853-30",
+    "num": 510,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8853-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8853-30",
+    "num": 2400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8853-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8853-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8854-30",
+    "num": 1200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8855-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8855-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8855-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8855-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-8858-30",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9028-30",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9029-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9029-40",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9029-40",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9040-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9043-60",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9068-90",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9068-90",
+    "num": 3432,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9076-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9076-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9076-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9088-30",
+    "num": 2080,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7283-9088-30",
+    "num": 600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7286-1238-30",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7B58-3070-80",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7B58-3070-80",
+    "num": 1500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7C82-5524-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7C82-5524-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7C82-5524-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "7C83-5524-70",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0457",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0457",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0457",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0458",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0458",
+    "num": 2000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0460",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0460",
+    "num": 3200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0460",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0460",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0461",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0461",
+    "num": 6160,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0461",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0461",
+    "num": 3080,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0464",
+    "num": 3080,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0465",
+    "num": 3080,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0468",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0468",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-0468",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1427",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1429",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1429",
+    "num": 9,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1469",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1470",
+    "num": 600,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1471",
+    "num": 1200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1472",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1547",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1547",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1571",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1572",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1572",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1573",
+    "num": 9000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1573",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-1710",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-2730",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-2876",
+    "num": 8000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-2920",
+    "num": 7500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-2972",
+    "num": 4200,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3067",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3067",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3067",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3067",
+    "num": 2100,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3067",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3068",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3177",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3178",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3382",
+    "num": 3000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3382",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3382",
+    "num": 8000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3382",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3391",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3391",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3391",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3455",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3455",
+    "num": 400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3456",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3617",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3617",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3622",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3622",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3623",
+    "num": 2300,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3623",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3623",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3624",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3624",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3624",
+    "num": 1800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3624",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3624",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3625",
+    "num": 2310,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3629",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3629",
+    "num": 1540,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3629",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3803",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3803",
+    "num": 1764,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3807",
+    "num": 2352,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3807",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3807",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-3808",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-4027",
+    "num": 1260,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-4029",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-4030",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-4405",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-4444",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-4445",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-4445",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8100-4445",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4272",
+    "num": 4800,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4282",
+    "num": 60,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4282",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4282",
+    "num": 2400,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4492",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4492",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4502",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4512",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4562",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4562",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4562",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4924",
+    "num": 8000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4924",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4925",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4925",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4925",
+    "num": 28000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-4925",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-5169",
+    "num": 15000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-5271",
+    "num": 12500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-5307",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-5379",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8230-5380",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0123",
+    "num": 52000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0128",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0128",
+    "num": 17500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0213",
+    "num": 7000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0213",
+    "num": 60000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0214",
+    "num": 25000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0215",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0215",
+    "num": 36000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0263",
+    "num": 16000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0263",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0263",
+    "num": 4000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0264",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0264",
+    "num": 10000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0264",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0264",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0287",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0287",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0287",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0287",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0368",
+    "num": 24000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0368",
+    "num": 20000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0370",
+    "num": 35000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0371",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0371",
+    "num": 25000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0371",
+    "num": 60000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0447",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0490",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0541",
+    "num": 60000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0541",
+    "num": 6000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0543",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0552",
+    "num": 54000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0552",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0552",
+    "num": 44000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0552",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0629",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-0629",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4092",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4182",
+    "num": 25000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4242",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4412",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4412",
+    "num": 208000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4412",
+    "num": 72000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4422",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4422",
+    "num": 37500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4882",
+    "num": 80000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4882",
+    "num": 160000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4892",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4922",
+    "num": 100000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4922",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4922",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4932",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4932",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4932",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4942",
+    "num": 85000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4942",
+    "num": 45000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4942",
+    "num": 85000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "8240-4992",
+    "num": 45000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "936289-2",
+    "num": 25500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "936293-2",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "936348-1",
+    "num": 110500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "936429-2",
+    "num": 42500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "964269-2",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "967056-1",
+    "num": 42500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "DT04-12PA-CE02",
+    "num": 35000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "DT04-2P-CE02",
+    "num": 28000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "DT06-08SA-CE01",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "DTM04-6P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "FW-C-2F-B",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "FW-C-8F-B",
+    "num": 3500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG620393",
+    "num": 35000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG622226",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG622951",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG631157",
+    "num": 94500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG631233-7",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG631859-1",
+    "num": 35000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG632230-1",
+    "num": 25000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG640322-5",
+    "num": 37500,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG641156-4",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG641234-5",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG641310-5",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG651050",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG651343-5",
+    "num": 5000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG680713",
+    "num": 70000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG680714",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "MG681266",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-A-3F-GR",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-A-B3F-B",
+    "num": 25000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-A-B3F-B",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-A-B3F-B",
+    "num": 28000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-A-B3F-B",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-F-300",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-F-300",
+    "num": 29000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-F-300",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-300",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-300",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-300",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-800",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-B200",
+    "num": 30000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-B200",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-B200",
+    "num": 50000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-B300",
+    "num": 120000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-B300",
+    "num": 110000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "QLW-W-D",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "RFW-F-125",
+    "num": 25000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "RFW-M-125",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "ST730498-3",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "ST730624-3",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "ST730722-3",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "ST740485-3",
+    "num": 14000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "ST740673-3",
+    "num": 12000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "ST740687-3",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "WM-12S",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "WM-2P",
+    "num": 40000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "WM-2S",
+    "num": 48000,
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  },
+  {
+    "model": "WP-4P",
+    "num": "",
+    "batch": "",
+    "ware": "",
+    "remark": ""
+  }
+]
