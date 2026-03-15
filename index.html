@@ -50,7 +50,7 @@ button:disabled{opacity:.6}
 .stock-add-item label{font-size:13px;color:#666;margin-bottom:3px}
 .pagination{margin-top:12px;text-align:center}
 .pagination button{margin:0 3px}
-.highlight{background-color:#fff49e;padding:0;border-radius:0}
+.highlight{background-color:#f0f8ff;padding:0;border-radius:0}
 .service{position:fixed;right:15px;top:50%;transform:translateY(-50%);z-index:999;display:flex;flex-direction:column;gap:10px}
 .service .item{width:46px;height:46px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;cursor:pointer}
 .service .tip{position:absolute;right:55px;top:50%;transform:translateY(-50%);background:#333;color:#fff;padding:4px 8px;border-radius:4px;white-space:nowrap;display:none;z-index:10}
@@ -82,6 +82,8 @@ button:disabled{opacity:.6}
 .visit-count{background:#f0f8ff;padding:12px;border-radius:8px;margin-bottom:20px;border:1px solid #e6f7ff;}
 .visit-count p{font-size:14px;margin:6px 0;color:#333;}
 .visit-count .total{font-size:16px;font-weight:700;color:#007bff;}
+/* 新增库存保存按钮样式 */
+.save-stock-btn{margin-top:10px;background:#28a745!important;}
 </style>
 </head>
 <body>
@@ -184,7 +186,7 @@ button:disabled{opacity:.6}
 <button class="btn-red" onclick="logout()">退出登录</button>
 </div>
 </div>
-<!-- 库存管理 -->
+<!-- 库存管理（新增全网保存按钮） -->
 <div class="page" id="admin-stock">
 <div class="card">
 <h2>库存管理</h2>
@@ -196,6 +198,8 @@ button:disabled{opacity:.6}
 <div class="stock-add-item"><label>备注</label><input placeholder="备注" id="r"></div>
 <button class="btn-green" onclick="addStock()">添加</button>
 </div>
+<!-- 新增全网保存库存按钮 -->
+<button class="btn-green save-stock-btn" onclick="saveStockToGithub()">保存库存到全网（复制JSON）</button>
 <div style="margin:10px 0;"><input type="file" id="excel" style="width:auto;"><button onclick="importExcel()">Excel导入</button><button class="btn-red" onclick="clearStock()">清空库存</button></div>
 <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
 <label style="font-weight:500;">查询：</label>
@@ -236,32 +240,27 @@ button:disabled{opacity:.6}
 <div class="footer">陕西云泽在线科技有限公司 © 版权所有</div>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
-let stock = JSON.parse(localStorage.getItem('stock') || '[]')
-let isLogin = false
-const pageSize = 10
-let frontPage = 1
-let adminPage = 1
-
-// ========== 新增：访问次数统计核心代码 ==========
-// 初始化访问统计数据
+// ========== 核心配置：你的库存文件地址（不用改） ==========
+const STOCK_URL = "https://www.yunzeonline.com/stock.json";
+// ========== 全局变量 ==========
+let stock = [];
+let isLogin = false;
+const pageSize = 10;
+let frontPage = 1;
+let adminPage = 1;
+// ========== 访问次数统计核心代码 ==========
 function initVisitCount() {
   let visitData = JSON.parse(localStorage.getItem('visitCount') || '{"total":0,"home":0,"stock":0,"news":0,"contact":0}');
   localStorage.setItem('visitCount', JSON.stringify(visitData));
   return visitData;
 }
-// 统计页面访问次数
 function countVisit(pageId) {
   let visitData = initVisitCount();
-  // 对应页面计数+1
   if (visitData[pageId] !== undefined) visitData[pageId]++;
-  // 总访问数+1
   visitData.total++;
-  // 保存到本地
   localStorage.setItem('visitCount', JSON.stringify(visitData));
-  // 若当前是后台页，刷新统计显示
   if (document.getElementById('admin').classList.contains('show')) renderVisitCount();
 }
-// 后台渲染访问统计数据
 function renderVisitCount() {
   let visitData = initVisitCount();
   document.getElementById('total-visit').innerText = visitData.total;
@@ -270,242 +269,268 @@ function renderVisitCount() {
   document.getElementById('news-visit').innerText = visitData.news;
   document.getElementById('contact-visit').innerText = visitData.contact;
 }
-// ========== 访问统计代码结束 ==========
-
-// 行业资讯数据 + 分页
+// ========== 库存全网同步核心代码 ==========
+// 从GitHub仓库加载库存（所有设备共用）
+async function loadStockFromGithub() {
+  try {
+    let res = await fetch(STOCK_URL + '?t=' + new Date().getTime()); // 防止缓存
+    let data = await res.json();
+    stock = Array.isArray(data) ? data : [];
+  } catch (e) {
+    stock = [];
+    alert('加载库存失败，将使用空库存');
+  }
+  renderStock();
+  renderAdminStock();
+  setUpdateTime();
+}
+// 保存库存为JSON，复制后更新到GitHub仓库
+function saveStockToGithub() {
+  if (stock.length === 0) {
+    alert('库存为空，无需保存');
+    return;
+  }
+  let json = JSON.stringify(stock, null, 2);
+  // 复制到剪贴板
+  navigator.clipboard.writeText(json).then(() => {
+    prompt('库存JSON已复制，打开下面地址粘贴更新：\n' + 'https://github.com/yunzeonline/yunzeonline.github.io/edit/main/stock.json', json);
+  }).catch(() => {
+    prompt('库存JSON复制失败，请手动复制：\n', json);
+  });
+}
+// ========== 行业资讯数据 + 分页 ==========
 const newsData = [
 {title:"进口连接器行业2026年发展趋势与市场分析",date:"2026-03-15",content:`<p>进入2026年，随着全球新能源汽车、工业自动化、智能装备以及消费电子产业的快速扩张，进口连接器作为连接各类电子元器件、构成电路系统的关键基础元件，市场需求持续保持旺盛态势。尤其是在汽车电子、工控设备、通讯基础设施、医疗仪器等领域，连接器的技术门槛与应用价值进一步凸显。</p><p>从今年行业发展趋势来看，小型化与高密度成为主流方向。为适应电子产品向轻薄、短小、集成化发展的需求，连接器体积不断缩小，引脚密度大幅提升。这对进口连接器的精密制造工艺、材料稳定性以及兼容性提出了更高要求，TE、Aptiv、JST、Sumitomo、Yazaki、Molex等国际品牌在这一领域依然具备不可替代的技术优势。</p><p>高频率与高信号完整性需求快速增长，在5G通信、服务器、工业控制、车载娱乐等系统中，信号传输的速度、稳定性和抗干扰能力直接决定产品性能，高频连接器成为标配。能够稳定供应高规格、高品质进口连接器的渠道，在市场上更受客户欢迎。</p><p>特殊环境适应性连接器需求持续上升，无论是车载、户外工业设备、轨道交通还是医疗设备，对连接器的防水、防尘、耐高温、耐低温、抗震动等性能要求越来越严格，具备相关认证与技术积累的进口产品更具竞争力。</p><p>陕西云泽在线科技有限公司长期专注进口连接器现货与期货供应，能够第一时间捕捉市场变化与技术方向。我们不仅为客户提供稳定的现货库存，也致力于为项目端提供整体配套解决方案，帮助企业有效降低供应链管理成本、库存积压风险与采购不确定性，成为客户值得信赖的长期合作伙伴。</p>`},
 {title:"汽车线束行业升级背景下，进口连接器扮演的关键角色",date:"2026-03-14",content:`<p>汽车线束是整车电路的“神经网络”，连接器则是这个网络的关键节点。随着汽车产业向电动化、智能化、网联化加速转型，汽车线束结构日益复杂，功能模块不断增多，对连接器的质量、可靠性以及种类多样性提出了前所未有的挑战。2026年，汽车线束行业对进口连接器的依赖依然明显，尤其是在高端车型与核心系统中。</p><p>新能源汽车800V高压平台的普及，让高压系统连接器成为刚需。高压系统对连接器的耐压、耐流、绝缘性能以及散热设计要求极高，国内目前在这一领域的配套能力与一致性水平仍有提升空间，因此TE、Aptiv、Yazaki等国际品牌在新能源主机厂中的应用依然广泛。</p><p>智能驾驶与车载娱乐系统的升级，带来了大量高速传输连接器与板对板连接器的需求。摄像头、毫米波雷达、激光雷达、车载显示屏、域控制器等设备的接入，使得线束数量大幅增加，连接器种类更加丰富，这就要求供应商必须具备完整的产品线与多品牌整合能力。</p><p>陕西云泽在线科技有限公司深耕汽车连接器领域多年，常备大量TE、Aptiv、JST、Yazaki等国际品牌现货，可实现项目级快速响应与交付。无论是常规车型还是新势力车型，无论是低速线束还是高速线束，我们都能为企业提供匹配度高、稳定性强的连接器配套方案，助力客户提升产品竞争力。</p>`},
 {title:"工业4.0时代，进口连接器与国产连接器的差异化布局",date:"2026-03-13",content:`<p>随着工业4.0与智能制造在全球范围内的深入推进，工业连接器市场呈现出“分层竞争、协同发展”的新格局。国内连接器制造企业在中低端领域已经具备较强的竞争力，产品性价比高、供货灵活；但在高端、高可靠性、特殊工况的应用场景中，进口连接器依然占据主导地位。</p><p>进口连接器的核心优势主要体现在材料与工艺的稳定性。在高温、高湿、强腐蚀、强震动等恶劣工业环境中，进口连接器能长期保持稳定的接触电阻与机械性能，极少出现接触不良、氧化、断裂等隐患，这是众多国内产品难以在短时间内超越的关键。</p><p>国际主流连接器厂商拥有几十年的行业经验，在标准制定、仿真设计、可靠性验证、成本控制等方面形成了完整体系。客户在使用过程中，不仅能买到产品，更能获得完善的技术支持。对于医疗、轨道交通、航空航天、能源装备等对安全性和合规性要求极高的领域，进口品牌的认证体系更具权威性，能够有效降低客户的合规风险与项目风险。</p><p>陕西云泽在线科技有限公司立足市场需求，打造“进口连接器现货+定制化方案”的服务模式，可为工业机器人、智能产线、测控设备、精密电源等场景提供原厂正品进口连接器，并根据客户实际应用环境提供选型建议、替代方案以及技术支持，帮助客户在保证稳定性的前提下，合理优化采购成本。</p>`},
 {title:"如何挑选靠谱的进口连接器供应商？行业避坑指南",date:"2026-03-12",content:`<p>在进口连接器的采购过程中，企业最常遇到的问题无非是：真假难辨、价格波动大、交期不稳定、售后无保障。尤其是在行业竞争激烈、利润空间被压缩的当下，选择一个靠谱的供应商，无异于为供应链上了一道“保险”。</p><p>正规的供应商通常拥有原厂授权代理、稳定的供应链渠道、以及清晰的进货链路。避免选择只有口头承诺或渠道不明的商家，这类渠道极易出现假货、翻新件或批次混乱的情况。优秀的供应商不仅库存数据真实，更能提供清晰的批次信息、生产日期以及可验证的仓储记录。</p><p>在项目执行中，急单和临时变更是常态。供应商是否有现货储备、能否提供替代方案、能否在24-72小时内给出明确交期与报价，直接关系到项目进度。能够实现现货当日发、期货跟进快的渠道，更值得长期合作。</p><p>进口连接器的选型涉及引脚定义、适配性、环境耐受性、电磁兼容性等多个维度，有经验的供应商能提供从选型咨询、方案比对到故障排查的一站式服务。陕西云泽在线科技有限公司坚持诚信为本、品质为先的经营理念，承诺所有进口连接器均为原厂正品或正规渠道供应，支持实单验证与批次追溯，为每一位客户提供长期、稳定、可靠的采购保障。</p>`}
-]
-const NEWS_PER_PAGE = 2
-let newsPage = 1
+];
+const NEWS_PER_PAGE = 2;
+let newsPage = 1;
 function renderNews() {
-  const total = newsData.length
-  const totalPage = Math.ceil(total / NEWS_PER_PAGE)
-  const start = (newsPage - 1) * NEWS_PER_PAGE
-  const pageItems = newsData.slice(start, start + NEWS_PER_PAGE)
-  let html = ''
+  const total = newsData.length;
+  const totalPage = Math.ceil(total / NEWS_PER_PAGE);
+  const start = (newsPage - 1) * NEWS_PER_PAGE;
+  const pageItems = newsData.slice(start, start + NEWS_PER_PAGE);
+  let html = '';
   pageItems.forEach(item => {
-    html += `<div class="news-item"><h3>${item.title}</h3><div class="date">${item.date}</div>${item.content}</div>`
-  })
-  document.getElementById('news-container').innerHTML = html
-  let bar = ''
+    html += `<div class="news-item"><h3>${item.title}</h3><div class="date">${item.date}</div>${item.content}</div>`;
+  });
+  document.getElementById('news-container').innerHTML = html;
+  let bar = '';
   if (totalPage > 1) {
-    bar += `<button ${newsPage<=1?'disabled':''} onclick="goNewsPage(1)">首页</button>`
-    bar += `<button ${newsPage<=1?'disabled':''} onclick="goNewsPage(newsPage-1)">上一页</button>`
-    bar += `<span> ${newsPage}/${totalPage} </span>`
-    bar += `<button ${newsPage>=totalPage?'disabled':''} onclick="goNewsPage(newsPage+1)">下一页</button>`
-    bar += `<button ${newsPage>=totalPage?'disabled':''} onclick="goNewsPage(${totalPage})">尾页</button>`
+    bar += `<button ${newsPage<=1?'disabled':''} onclick="goNewsPage(1)">首页</button>`;
+    bar += `<button ${newsPage<=1?'disabled':''} onclick="goNewsPage(newsPage-1)">上一页</button>`;
+    bar += `<span> ${newsPage}/${totalPage} </span>`;
+    bar += `<button ${newsPage>=totalPage?'disabled':''} onclick="goNewsPage(newsPage+1)">下一页</button>`;
+    bar += `<button ${newsPage>=totalPage?'disabled':''} onclick="goNewsPage(${totalPage})">尾页</button>`;
   }
-  document.getElementById('news-pagination').innerHTML = bar
+  document.getElementById('news-pagination').innerHTML = bar;
 }
-function goNewsPage(p) { newsPage = p; renderNews() }
-// 其他原有逻辑
-function getUpdateTime() { return localStorage.getItem('lastUpdateTime') || '' }
+function goNewsPage(p) { newsPage = p; renderNews(); }
+// ========== 通用工具方法 ==========
+function getUpdateTime() { return localStorage.getItem('lastUpdateTime') || ''; }
 function setUpdateTime() {
-  let now = new Date()
-  let timeStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0') + ' ' + String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0')
-  localStorage.setItem('lastUpdateTime', timeStr)
-  showUpdateTime()
+  let now = new Date();
+  let timeStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0') + ' ' + String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0');
+  localStorage.setItem('lastUpdateTime', timeStr);
+  showUpdateTime();
 }
 function showUpdateTime() {
-  let t = getUpdateTime()
-  let el = document.getElementById('update-time')
-  if (el && t) el.textContent = '最后更新：' + t
+  let t = getUpdateTime();
+  let el = document.getElementById('update-time');
+  if (el && t) el.textContent = '最后更新：' + t;
 }
 function cleanText(s) {
-  if (!s) return ''
-  return s.toString().replace(/[- .]/g, '').toLowerCase()
+  if (!s) return '';
+  return s.toString().replace(/[- .]/g, '').toLowerCase();
 }
 function highlightMatch(original, keyword) {
-  if (!keyword) return original
-  let cleanOriginal = cleanText(original)
-  let cleanKey = cleanText(keyword)
-  let idx = cleanOriginal.indexOf(cleanKey)
-  if (idx === -1) return original
-  let count = 0, start = -1, end = -1
+  if (!keyword) return original;
+  let cleanOriginal = cleanText(original);
+  let cleanKey = cleanText(keyword);
+  let idx = cleanOriginal.indexOf(cleanKey);
+  if (idx === -1) return original;
+  let count = 0, start = -1, end = -1;
   for (let i = 0; i < original.length; i++) {
-    let c = original[i]
-    if (!/[0-9a-zA-Z]/.test(c)) continue
-    if (count === idx) start = i
-    if (count === idx + cleanKey.length - 1) { end = i + 1; break }
-    count++
+    let c = original[i];
+    if (!/[0-9a-zA-Z]/.test(c)) continue;
+    if (count === idx) start = i;
+    if (count === idx + cleanKey.length - 1) { end = i + 1; break; }
+    count++;
   }
-  if (end === -1) end = original.length
-  return original.slice(0, start) + '<span class="highlight">' + original.slice(start, end) + '</span>' + original.slice(end)
+  if (end === -1) end = original.length;
+  return original.slice(0, start) + '<span class="highlight">' + original.slice(start, end) + '</span>' + original.slice(end);
 }
-// 改造show方法：新增访问统计
+// ========== 页面切换方法 ==========
 function show(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('show'))
-  document.getElementById(id).classList.add('show')
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
   document.querySelectorAll('.nav button').forEach((btn, i) => {
-    btn.classList.remove('active')
-    if (['home','stock','news','contact'][i] === id) btn.classList.add('active')
-  })
-  if (id === 'stock') { frontPage = 1; renderStock() }
-  if (id === 'admin-stock') { adminPage = 1; renderAdminStock() }
-  if (id === 'news') renderNews()
-  // 新增：非后台/登录页，统计访问
+    btn.classList.remove('active');
+    if (['home','stock','news','contact'][i] === id) btn.classList.add('active');
+  });
+  if (id === 'stock') { frontPage = 1; renderStock(); }
+  if (id === 'admin-stock') { adminPage = 1; renderAdminStock(); }
+  if (id === 'news') renderNews();
   if (['home','stock','news','contact'].includes(id)) countVisit(id);
-  // 新增：后台页，渲染统计数据
   if (id === 'admin') renderVisitCount();
 }
+// ========== 管理员登录/退出 ==========
 function login() {
-  let p = document.getElementById('pwd').value
-  let ok = localStorage.getItem('admin-pwd') || '123456'
-  if (p === ok) { isLogin = true; show('admin') } else alert('密码错误')
+  let p = document.getElementById('pwd').value;
+  let ok = localStorage.getItem('admin-pwd') || '123456';
+  if (p === ok) { isLogin = true; show('admin'); } else alert('密码错误');
 }
-function logout() { isLogin = false; show('home') }
-function searchStock() { frontPage = 1; renderStock() }
-function searchAdminStock() { adminPage = 1; renderAdminStock() }
+function logout() { isLogin = false; show('home'); }
+// ========== 库存搜索/渲染 ==========
+function searchStock() { frontPage = 1; renderStock(); }
+function searchAdminStock() { adminPage = 1; renderAdminStock(); }
 function renderStock() {
-  let keyword = cleanText(document.getElementById('front-search')?.value || '')
-  let list = stock.filter(item => cleanText(item.model).includes(keyword))
-  let total = list.length
-  let totalPage = Math.ceil(total / pageSize)
-  let start = (frontPage - 1) * pageSize
-  let pageList = list.slice(start, start + pageSize)
-  let html = pageList.map(i => `<tr><td>${highlightMatch(i.model, document.getElementById('front-search')?.value || '')}</td><td>${i.num}</td><td>${i.batch}</td><td>${i.ware}</td><td>${i.remark}</td></tr>`).join('')
-  document.getElementById('stock-table').innerHTML = html || '<tr><td colspan="5">暂无数据</td></tr>'
-  renderPagination('front', totalPage, frontPage)
+  let keyword = cleanText(document.getElementById('front-search')?.value || '');
+  let list = stock.filter(item => cleanText(item.model).includes(keyword));
+  let total = list.length;
+  let totalPage = Math.ceil(total / pageSize);
+  let start = (frontPage - 1) * pageSize;
+  let pageList = list.slice(start, start + pageSize);
+  let html = pageList.map(i => `<tr><td>${highlightMatch(i.model, document.getElementById('front-search')?.value || '')}</td><td>${i.num}</td><td>${i.batch}</td><td>${i.ware}</td><td>${i.remark}</td></tr>`).join('');
+  document.getElementById('stock-table').innerHTML = html || '<tr><td colspan="5">暂无库存数据</td></tr>';
+  renderPagination('front', totalPage, frontPage);
 }
 function renderAdminStock() {
-  let keyword = cleanText(document.getElementById('admin-search')?.value || '')
-  let list = stock.filter(item => cleanText(item.model).includes(keyword))
-  let total = list.length
-  let totalPage = Math.ceil(total / pageSize)
-  let start = (adminPage - 1) * pageSize
-  let pageList = list.slice(start, start + pageSize)
+  let keyword = cleanText(document.getElementById('admin-search')?.value || '');
+  let list = stock.filter(item => cleanText(item.model).includes(keyword));
+  let total = list.length;
+  let totalPage = Math.ceil(total / pageSize);
+  let start = (adminPage - 1) * pageSize;
+  let pageList = list.slice(start, start + pageSize);
   let html = pageList.map((i, idxInPage) => {
-    let k = start + idxInPage
-    return `<tr id="row-${k}"><td><span ondblclick="editCell(this,'model',${k})">${highlightMatch(i.model, document.getElementById('admin-search')?.value || '')}</span><input style="display:none" onblur="saveCell(this,'model',${k})"></td><td><span ondblclick="editCell(this,'num',${k})">${i.num}</span><input style="display:none" onblur="saveCell(this,'num',${k})"></td><td><span ondblclick="editCell(this,'batch',${k})">${i.batch}</span><input style="display:none" onblur="saveCell(this,'batch',${k})"></td><td><span ondblclick="editCell(this,'ware',${k})">${i.ware}</span><input style="display:none" onblur="saveCell(this,'ware',${k})"></td><td><span ondblclick="editCell(this,'remark',${k})">${i.remark}</span><input style="display:none" onblur="saveCell(this,'remark',${k})"></td><td><button class="btn-red" onclick="delRow(${k})">删除</button></td></tr>`
-  }).join('')
-  document.getElementById('admin-stock-table').innerHTML = html || '<tr><td colspan="6">暂无数据</td></tr>'
-  renderPagination('admin', totalPage, adminPage)
+    let k = start + idxInPage;
+    return `<tr id="row-${k}"><td><span ondblclick="editCell(this,'model',${k})">${highlightMatch(i.model, document.getElementById('admin-search')?.value || '')}</span><input style="display:none" onblur="saveCell(this,'model',${k})"></td><td><span ondblclick="editCell(this,'num',${k})">${i.num}</span><input style="display:none" onblur="saveCell(this,'num',${k})"></td><td><span ondblclick="editCell(this,'batch',${k})">${i.batch}</span><input style="display:none" onblur="saveCell(this,'batch',${k})"></td><td><span ondblclick="editCell(this,'ware',${k})">${i.ware}</span><input style="display:none" onblur="saveCell(this,'ware',${k})"></td><td><span ondblclick="editCell(this,'remark',${k})">${i.remark}</span><input style="display:none" onblur="saveCell(this,'remark',${k})"></td><td><button class="btn-red" onclick="delRow(${k})">删除</button></td></tr>`;
+  }).join('');
+  document.getElementById('admin-stock-table').innerHTML = html || '<tr><td colspan="6">暂无库存数据</td></tr>';
+  renderPagination('admin', totalPage, adminPage);
 }
+// ========== 分页渲染 ==========
 function renderPagination(which, totalPage, current) {
-  let bar = ''
+  let bar = '';
   if (totalPage > 1) {
-    bar += `<button ${current<=1?'disabled':''} onclick="goPage('${which}',1)">首页</button>`
-    bar += `<button ${current<=1?'disabled':''} onclick="goPage('${which}',${current-1})">上一页</button>`
-    bar += `<span> ${current}/${totalPage} </span>`
-    bar += `<button ${current>=totalPage?'disabled':''} onclick="goPage('${which}',${current+1})">下一页</button>`
-    bar += `<button ${current>=totalPage?'disabled':''} onclick="goPage('${which}',${totalPage})">尾页</button>`
+    bar += `<button ${current<=1?'disabled':''} onclick="goPage('${which}',1)">首页</button>`;
+    bar += `<button ${current<=1?'disabled':''} onclick="goPage('${which}',${current-1})">上一页</button>`;
+    bar += `<span> ${current}/${totalPage} </span>`;
+    bar += `<button ${current>=totalPage?'disabled':''} onclick="goPage('${which}',${current+1})">下一页</button>`;
+    bar += `<button ${current>=totalPage?'disabled':''} onclick="goPage('${which}',${totalPage})">尾页</button>`;
   }
-  document.getElementById(which === 'front' ? 'page-front' : 'page-admin').innerHTML = bar
+  document.getElementById(which === 'front' ? 'page-front' : 'page-admin').innerHTML = bar;
 }
 function goPage(which, page) {
-  if (which === 'front') { frontPage = page; renderStock() }
-  else { adminPage = page; renderAdminStock() }
+  if (which === 'front') { frontPage = page; renderStock(); }
+  else { adminPage = page; renderAdminStock(); }
 }
+// ========== 库存操作（添加/删除/编辑/清空/导入） ==========
 function addStock() {
-  let model = document.getElementById('m').value.trim()
-  if (!model) { alert('型号不能为空'); return }
-  stock.unshift({model:model, num:document.getElementById('n').value, batch:document.getElementById('b').value, ware:document.getElementById('w').value, remark:document.getElementById('r').value})
-  localStorage.setItem('stock', JSON.stringify(stock))
-  setUpdateTime()
-  document.getElementById('m').value=''
-  document.getElementById('n').value=''
-  document.getElementById('b').value=''
-  document.getElementById('w').value=''
-  document.getElementById('r').value=''
-  adminPage=1;renderAdminStock();renderStock()
+  let model = document.getElementById('m').value.trim();
+  if (!model) { alert('型号不能为空'); return; }
+  stock.unshift({model:model, num:document.getElementById('n').value, batch:document.getElementById('b').value, ware:document.getElementById('w').value, remark:document.getElementById('r').value});
+  document.getElementById('m').value='';
+  document.getElementById('n').value='';
+  document.getElementById('b').value='';
+  document.getElementById('w').value='';
+  document.getElementById('r').value='';
+  adminPage=1;renderAdminStock();renderStock();
+  alert('库存添加成功，需点击【保存库存到全网】同步到所有设备');
 }
 function delRow(k) {
-  if (!confirm('确定删除？')) return
-  stock.splice(k,1)
-  localStorage.setItem('stock',JSON.stringify(stock))
-  setUpdateTime()
-  renderAdminStock();renderStock()
+  if (!confirm('确定删除该条库存？')) return;
+  stock.splice(k,1);
+  adminPage=1;renderAdminStock();renderStock();
+  alert('库存删除成功，需点击【保存库存到全网】同步到所有设备');
 }
 function clearStock() {
-  if (!confirm('确定清空所有库存？')) return
-  stock=[]
-  localStorage.setItem('stock','[]')
-  setUpdateTime()
-  renderAdminStock();renderStock()
+  if (!confirm('确定清空所有库存？此操作不可恢复！')) return;
+  stock=[];
+  adminPage=1;renderAdminStock();renderStock();
+  alert('库存清空成功，需点击【保存库存到全网】同步到所有设备');
 }
 function importExcel() {
-  let file=document.getElementById('excel').files[0]
-  if(!file){alert('请选择文件');return}
-  let reader=new FileReader()
+  let file=document.getElementById('excel').files[0];
+  if(!file){alert('请选择Excel文件');return;}
+  let reader=new FileReader();
   reader.onload=e=>{
     try{
-      let wb=XLSX.read(e.target.result,{type:'binary'})
-      let sheet=wb.Sheets[wb.SheetNames[0]]
-      let arr=XLSX.utils.sheet_to_json(sheet,{header:1})
-      let res=[]
+      let wb=XLSX.read(e.target.result,{type:'binary'});
+      let sheet=wb.Sheets[wb.SheetNames[0]];
+      let arr=XLSX.utils.sheet_to_json(sheet,{header:1});
+      let res=[];
       for(let i=1;i<arr.length;i++){
-        let row=arr[i]
-        if(!row||!row[0])continue
-        res.push({model:row[0]+'',num:row[1]||'',batch:row[2]||'',ware:row[3]||'',remark:row[4]||''})
+        let row=arr[i];
+        if(!row||!row[0])continue;
+        res.push({model:row[0]+'',num:row[1]||'',batch:row[2]||'',ware:row[3]||'',remark:row[4]||''});
       }
-      stock=res
-      localStorage.setItem('stock',JSON.stringify(stock))
-      setUpdateTime()
-      alert(`导入成功 ${res.length} 条`)
-      adminPage=1;frontPage=1;renderAdminStock();renderStock()
-    }catch(e){alert('导入失败：'+e.message)}
-  }
-  reader.readAsBinaryString(file)
+      stock=res;
+      adminPage=1;frontPage=1;renderAdminStock();renderStock();
+      alert(`导入成功 ${res.length} 条库存，需点击【保存库存到全网】同步到所有设备`);
+    }catch(e){alert('导入失败：'+e.message);}
+  };
+  reader.readAsBinaryString(file);
 }
 function editCell(span,field,index){
-  let input=span.nextElementSibling
-  input.value=span.innerText
-  span.style.display='none'
-  input.style.display='inline-block'
-  input.style.width='90%'
-  input.focus()
+  let input=span.nextElementSibling;
+  input.value=span.innerText;
+  span.style.display='none';
+  input.style.display='inline-block';
+  input.focus();
 }
 function saveCell(input,field,index){
-  let val=input.value.trim()
-  stock[index][field]=val
-  localStorage.setItem('stock',JSON.stringify(stock))
-  setUpdateTime()
-  input.previousElementSibling.innerText=val
-  input.style.display='none'
-  input.previousElementSibling.style.display='inline'
-  renderStock()
-  renderAdminStock()
+  let val=input.value.trim();
+  stock[index][field]=val;
+  input.previousElementSibling.innerText=val;
+  input.style.display='none';
+  input.previousElementSibling.style.display='inline';
+  renderStock();
+  renderAdminStock();
+  alert('库存编辑成功，需点击【保存库存到全网】同步到所有设备');
 }
+// ========== 联系信息管理 ==========
 function loadContact(){
-  let addr=localStorage.getItem('addr')||'陕西省咸阳市秦都区'
-  let tel=localStorage.getItem('tel')||'17729514427'
-  let qq=localStorage.getItem('qq')||'353436207'
-  let mail=localStorage.getItem('mail')||'353436207@qq.com'
-  document.getElementById('show-addr').innerText=addr
-  document.getElementById('show-tel').innerText=tel
-  document.getElementById('show-qq').innerText=qq
-  document.getElementById('show-mail').innerText=mail
-  document.getElementById('set-addr').value=addr
-  document.getElementById('set-tel').value=tel
-  document.getElementById('set-qq').value=qq
-  document.getElementById('set-mail').value=mail
+  let addr=localStorage.getItem('addr')||'陕西省咸阳市秦都区';
+  let tel=localStorage.getItem('tel')||'17729514427';
+  let qq=localStorage.getItem('qq')||'353436207';
+  let mail=localStorage.getItem('mail')||'353436207@qq.com';
+  document.getElementById('show-addr').innerText=addr;
+  document.getElementById('show-tel').innerText=tel;
+  document.getElementById('show-qq').innerText=qq;
+  document.getElementById('show-mail').innerText=mail;
+  document.getElementById('set-addr').value=addr;
+  document.getElementById('set-tel').value=tel;
+  document.getElementById('set-qq').value=qq;
+  document.getElementById('set-mail').value=mail;
 }
 function saveContact(){
-  localStorage.setItem('addr',document.getElementById('set-addr').value)
-  localStorage.setItem('tel',document.getElementById('set-tel').value)
-  localStorage.setItem('qq',document.getElementById('set-qq').value)
-  localStorage.setItem('mail',document.getElementById('set-mail').value)
-  alert('保存成功')
-  loadContact()
+  localStorage.setItem('addr',document.getElementById('set-addr').value);
+  localStorage.setItem('tel',document.getElementById('set-tel').value);
+  localStorage.setItem('qq',document.getElementById('set-qq').value);
+  localStorage.setItem('mail',document.getElementById('set-mail').value);
+  loadContact();
+  alert('联系信息保存成功');
 }
+// ========== 密码修改 ==========
 function changePwd(){
-  let old=document.getElementById('old-pwd').value
-  let now=localStorage.getItem('admin-pwd')||'123456'
-  if(old!==now){alert('当前密码错误');return}
-  localStorage.setItem('admin-pwd',document.getElementById('new-pwd').value)
-  alert('修改成功')
+  let old=document.getElementById('old-pwd').value;
+  let now=localStorage.getItem('admin-pwd')||'123456';
+  if(old!==now){alert('当前密码错误');return;}
+  localStorage.setItem('admin-pwd',document.getElementById('new-pwd').value);
+  alert('密码修改成功，请重新登录');
+  show('login');
 }
+// ========== 页面加载初始化 ==========
 window.onload=function(){
-  showUpdateTime()
-  renderStock()
-  loadContact()
-  // 初始化首页访问统计
+  loadContact();
+  initVisitCount();
   countVisit('home');
-}
+  loadStockFromGithub(); // 优先加载全网库存
+  renderNews();
+};
 </script>
 </body>
 </html>
