@@ -14,7 +14,6 @@
   font-family: "Microsoft YaHei", sans-serif;
 }
 
-/* 🔥 关键：永远显示滚动条，切换页面不再左右晃动 */
 html {
   overflow-y: scroll;
 }
@@ -109,7 +108,6 @@ body {
   line-height: 1.5;
 }
 
-/* 🔥 表格固定宽度，备注缩短，页面不再跳动 */
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -127,14 +125,13 @@ body {
 .table th {
   background: #F8FAFC;
 }
-/* 前台库存列宽 */
+
 #stock .table th:nth-child(1){width: 32%;}
 #stock .table th:nth-child(2){width: 17%;}
 #stock .table th:nth-child(3){width: 17%;}
 #stock .table th:nth-child(4){width: 17%;}
 #stock .table th:nth-child(5){width: 17%;}
 
-/* 后台库存列宽 */
 #admin-stock .table th:nth-child(1){width: 25%;}
 #admin-stock .table th:nth-child(2){width: 15%;}
 #admin-stock .table th:nth-child(3){width: 15%;}
@@ -203,6 +200,7 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   margin: 0 3px;
 }
 
+/* 右侧悬浮客服栏 */
 .service {
   position: fixed;
   right: 15px;
@@ -223,7 +221,7 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   color: #fff;
   font-weight: bold;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  cursor: pointer;
+  cursor: default;
   position: relative;
 }
 .service .tip {
@@ -237,8 +235,38 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   border-radius: 4px;
   white-space: nowrap;
   display: none;
+  z-index: 10;
 }
 .service .item:hover .tip {
+  display: block;
+}
+
+/* 微信悬浮二维码（鼠标放上去就显示） */
+.wx-hover-card {
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 9999;
+}
+.wx-hover-card img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+.wx-hover-card p {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: 6px;
+}
+.item.wx:hover .wx-hover-card {
   display: block;
 }
 
@@ -325,15 +353,22 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
 <div class="service">
   <div class="item tel">
     <span>电</span>
-    <div class="tip" id="service-tel">17729514427</div>
+    <div class="tip">17729514427</div>
   </div>
+
   <div class="item wx">
     <span>微</span>
-    <div class="tip" id="service-wx">请在后台填写微信号</div>
+    <div class="tip">扫码加微信</div>
+    <!-- 这里改成你本地的图片文件名 -->
+    <div class="wx-hover-card">
+      <img src="wechat-qr.jpg" alt="微信二维码">
+      <p>扫一扫加我微信</p>
+    </div>
   </div>
-  <div class="item qq" onclick="openQQ()">
+
+  <div class="item qq">
     <span>Q</span>
-    <div class="tip" id="service-qq">353436207</div>
+    <div class="tip">353436207</div>
   </div>
 </div>
 
@@ -755,7 +790,6 @@ function saveCell(input, field, index) {
 function loadContact() {
   let addr = localStorage.getItem('addr') || '陕西省咸阳市秦都区'
   let tel = localStorage.getItem('tel') || '17729514427'
-  let wx   = localStorage.getItem('wx')   || ''
   let qq   = localStorage.getItem('qq')   || '353436207'
   let mail = localStorage.getItem('mail') || '353436207@qq.com'
 
@@ -764,13 +798,8 @@ function loadContact() {
   document.getElementById('show-qq').innerText = qq
   document.getElementById('show-mail').innerText = mail
 
-  document.getElementById('service-tel').innerText = tel
-  document.getElementById('service-wx').innerText = wx || '请在后台填写微信号'
-  document.getElementById('service-qq').innerText = qq
-
   document.getElementById('set-addr').value = addr
   document.getElementById('set-tel').value = tel
-  document.getElementById('set-wx').value = wx
   document.getElementById('set-qq').value = qq
   document.getElementById('set-mail').value = mail
 }
@@ -778,7 +807,6 @@ function loadContact() {
 function saveContact() {
   localStorage.setItem('addr', document.getElementById('set-addr').value)
   localStorage.setItem('tel', document.getElementById('set-tel').value)
-  localStorage.setItem('wx',   document.getElementById('set-wx').value)
   localStorage.setItem('qq',   document.getElementById('set-qq').value)
   localStorage.setItem('mail', document.getElementById('set-mail').value)
   alert('保存成功')
@@ -791,11 +819,6 @@ function changePwd() {
   if (old !== now) { alert('当前密码错误'); return }
   localStorage.setItem('admin-pwd', document.getElementById('new-pwd').value)
   alert('修改成功')
-}
-
-function openQQ() {
-  let qq = document.getElementById('show-qq').innerText || '353436207'
-  window.open(`https://qm.qq.com/cgi-bin/qm/qr?nick=${qq}`, '_blank')
 }
 
 window.onload = function() {
