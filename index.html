@@ -9,8 +9,6 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
 html{overflow-y:scroll}
 body{background:#F5F7FA;color:#333;line-height:1.8;padding-bottom:60px;width:100%;overflow-x:hidden}
-
-/* 顶部通栏（方案一：紧凑商务风格） */
 .top-banner {
   background: #004085;
   color: #fff;
@@ -42,7 +40,6 @@ body{background:#F5F7FA;color:#333;line-height:1.8;padding-bottom:60px;width:100
   opacity: 0.9;
   color: #cce0ff;
 }
-/* 导航栏 */
 .nav {
   display: flex;
   gap: 0;
@@ -65,7 +62,6 @@ body{background:#F5F7FA;color:#333;line-height:1.8;padding-bottom:60px;width:100
   background: #0056b3;
   color: #fff;
 }
-/* 汉堡菜单（手机端） */
 .hamburger {
   display: none;
   background: none;
@@ -103,31 +99,16 @@ body{background:#F5F7FA;color:#333;line-height:1.8;padding-bottom:60px;width:100
   background: #0056b3;
   color: #fff;
 }
-
-/* 响应式 */
 @media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
-  .company-name {
-    font-size: 16px;
-  }
-  .company-slogan {
-    display: none;
-  }
+  .nav {display: none;}
+  .hamburger {display: block;}
+  .company-name {font-size: 16px;}
+  .company-slogan {display: none;}
 }
 @media (min-width: 769px) {
-  .company-slogan {
-    display: block;
-  }
-  .mobile-menu {
-    display: none !important;
-  }
+  .company-slogan {display: block;}
+  .mobile-menu {display: none !important;}
 }
-
 .container{max-width:1200px;margin:0 auto;padding:20px}
 .card{background:#fff;border-radius:8px;padding:24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
 .card h2{font-size:22px;color:#222;margin-bottom:16px}
@@ -207,7 +188,6 @@ button:disabled{opacity:.6}
 </style>
 </head>
 <body>
-<!-- 顶部通栏 -->
 <div class="top-banner">
   <div class="banner-inner">
     <div class="company-info">
@@ -229,7 +209,6 @@ button:disabled{opacity:.6}
     <button onclick="show('contact');closeMobileMenu()">联系我们</button>
   </div>
 </div>
-
 <div class="service">
 <div class="item tel" onclick="window.open('tel:17729514427')"><span>电</span><div class="tip">17729514427</div></div>
 <div class="item wx"><span>微</span><div class="tip">扫码加微信</div><div class="wx-hover-card"><img src="wechat-qr.jpg"><p>扫一扫加我微信</p></div></div>
@@ -237,7 +216,6 @@ button:disabled{opacity:.6}
 </div>
 <div id="login-trigger" onclick="show('login')"></div>
 <div class="container">
-<!-- 首页 -->
 <div class="page show" id="home">
 <div class="card">
 <h2>欢迎光临陕西云泽在线科技有限公司</h2>
@@ -256,14 +234,13 @@ button:disabled{opacity:.6}
 </div>
 </div>
 </div>
-<!-- 现货库存 -->
 <div class="page" id="stock">
 <div class="card">
 <h2>现货库存查询</h2>
 <div class="search-row">
   <div class="search-left">
     <label style="font-weight:500;">单型号查询：</label>
-    <input id="front-search" placeholder="输入单个型号搜索（支持忽略横杠/点/空格）" oninput="searchStock()" style="flex:1;">
+    <input id="front-search" placeholder="输入单个型号搜索（支持忽略横杠/点/空格）" oninput="searchStock()" onclick="clearBatchSearchState()" style="flex:1;">
     <button onclick="openBatchSearch()" style="margin-left:8px;">多料号查询</button>
   </div>
   <div class="update-time" id="update-time"></div>
@@ -287,7 +264,6 @@ button:disabled{opacity:.6}
 <div class="pagination" id="page-front"></div>
 </div>
 </div>
-<!-- 行业资讯 -->
 <div class="page" id="news">
 <div class="card">
 <h2>行业资讯</h2>
@@ -295,7 +271,6 @@ button:disabled{opacity:.6}
 <div class="pagination" id="news-pagination"></div>
 </div>
 </div>
-<!-- 联系我们 -->
 <div class="page" id="contact">
 <div class="card">
 <h2>联系我们</h2>
@@ -341,7 +316,6 @@ button:disabled{opacity:.6}
 </div>
 </div>
 </div>
-<!-- 登录 -->
 <div class="page" id="login">
 <div class="card" style="max-width:400px;margin:0 auto;">
 <h2>管理员登录</h2>
@@ -350,7 +324,6 @@ button:disabled{opacity:.6}
 <button class="btn-red" onclick="show('home')">返回</button>
 </div>
 </div>
-<!-- 后台管理 -->
 <div class="page" id="admin">
 <div class="card">
 <h2>后台管理</h2>
@@ -367,7 +340,6 @@ button:disabled{opacity:.6}
 <button class="btn-red" onclick="logout()">退出登录</button>
 </div>
 </div>
-<!-- 库存管理 -->
 <div class="page" id="admin-stock">
 <div class="card">
 <h2>库存管理</h2>
@@ -393,7 +365,6 @@ button:disabled{opacity:.6}
 </div>
 <button onclick="show('admin')">返回后台</button>
 </div>
-<!-- 联系设置 -->
 <div class="page" id="admin-contact">
 <div class="card">
 <h2>联系信息</h2>
@@ -406,7 +377,6 @@ button:disabled{opacity:.6}
 </div>
 <button onclick="show('admin')">返回</button>
 </div>
-<!-- 修改密码 -->
 <div class="page" id="admin-pwd">
 <div class="card">
 <h2>修改密码</h2>
@@ -420,7 +390,6 @@ button:disabled{opacity:.6}
 <div class="footer">陕西云泽在线科技有限公司 © 版权所有</div>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
-// 手机菜单控制
 function toggleMobileMenu() {
   const menu = document.getElementById('mobileMenu');
   menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
@@ -428,16 +397,13 @@ function toggleMobileMenu() {
 function closeMobileMenu() {
   document.getElementById('mobileMenu').style.display = 'none';
 }
-
-// 核心配置
 const STOCK_URL = "https://www.yunzeonline.com/stock.json";
 let stock = [];
 let isLogin = false;
 const pageSize = 10;
 let frontPage = 1;
 let adminPage = 1;
-
-// 访问统计
+let batchSearchKeywords = [];
 function initVisitCount() {
   let visitData = JSON.parse(localStorage.getItem('visitCount') || '{"total":0,"home":0,"stock":0,"news":0,"contact":0}');
   localStorage.setItem('visitCount', JSON.stringify(visitData));
@@ -458,11 +424,9 @@ function renderVisitCount() {
   document.getElementById('news-visit').innerText = visitData.news;
   document.getElementById('contact-visit').innerText = visitData.contact;
 }
-
-// 库存同步
 async function loadStockFromGithub() {
   try {
-    let res = await fetch(STOCK_URL + '?t=' + new Date().getTime());
+    let res = await fetch(STOCK_URL + '?t=' + new Date().getTime(), {cache: 'no-store'});
     let data = await res.json();
     stock = Array.isArray(data) ? data : [];
   } catch (e) {
@@ -485,8 +449,6 @@ function saveStockToGithub() {
     prompt('库存JSON复制失败，请手动复制：\n', json);
   });
 }
-
-// 行业资讯
 const newsData = [
 {title:"进口连接器行业2026年发展趋势与市场分析",date:"2026-03-15",content:`<p>进入2026年，随着全球新能源汽车、工业自动化、智能装备以及消费电子产业的快速扩张，进口连接器作为连接各类电子元器件、构成电路系统的关键基础元件，市场需求持续保持旺盛态势。尤其是在汽车电子、工控设备、通讯基础设施、医疗仪器等领域，连接器的技术门槛与应用价值进一步凸显。</p><p>从今年行业发展趋势来看，小型化与高密度成为主流方向。为适应电子产品向轻薄、短小、集成化发展的需求，连接器体积不断缩小，引脚密度大幅提升。这对进口连接器的精密制造工艺、材料稳定性以及兼容性提出了更高要求，TE、Aptiv、JST、Sumitomo、Yazaki、Molex等国际品牌在这一领域依然具备不可替代的技术优势。</p><p>高频率与高信号完整性需求快速增长，在5G通信、服务器、工业控制、车载娱乐等系统中，信号传输的速度、稳定性和抗干扰能力直接决定产品性能，高频连接器成为标配。能够稳定供应高规格、高品质进口连接器的渠道，在市场上更受客户欢迎。</p><p>特殊环境适应性连接器需求持续上升，无论是车载、户外工业设备、轨道交通还是医疗设备，对连接器的防水、防尘、耐高温、耐低温、抗震动等性能要求越来越严格，具备相关认证与技术积累的进口产品更具竞争力。</p><p>陕西云泽在线科技有限公司长期专注进口连接器现货与期货供应，能够第一时间捕捉市场变化与技术方向。我们不仅为客户提供稳定的现货库存，也致力于为项目端提供整体配套解决方案，帮助企业有效降低供应链管理成本、库存积压风险与采购不确定性，成为客户值得信赖的长期合作伙伴。</p>`},
 {title:"汽车线束行业升级背景下，进口连接器扮演的关键角色",date:"2026-03-14",content:`<p>汽车线束是整车电路的“神经网络”，连接器则是这个网络的关键节点。随着汽车产业向电动化、智能化、网联化加速转型，汽车线束结构日益复杂，功能模块不断增多，对连接器的质量、可靠性以及种类多样性提出了前所未有的挑战。2026年，汽车线束行业对进口连接器的依赖依然明显，尤其是在高端车型与核心系统中。</p><p>新能源汽车800V高压平台的普及，让高压系统连接器成为刚需。高压系统对连接器的耐压、耐流、绝缘性能以及散热设计要求极高，国内目前在这一领域的配套能力与一致性水平仍有提升空间，因此TE、Aptiv、Yazaki等国际品牌在新能源主机厂中的应用依然广泛。</p><p>智能驾驶与车载娱乐系统的升级，带来了大量高速传输连接器与板对板连接器的需求。摄像头、毫米波雷达、激光雷达、车载显示屏、域控制器等设备的接入，使得线束数量大幅增加，连接器种类更加丰富，这就要求供应商必须具备完整的产品线与多品牌整合能力。</p><p>陕西云泽在线科技有限公司深耕汽车连接器领域多年，常备大量TE、Aptiv、JST、Yazaki等国际品牌现货，可实现项目级快速响应与交付。无论是常规车型还是新势力车型，无论是低速线束还是高速线束，我们都能为企业提供匹配度高、稳定性强的连接器配套方案，助力客户提升产品竞争力。</p>`},
@@ -516,8 +478,6 @@ function renderNews() {
   document.getElementById('news-pagination').innerHTML = bar;
 }
 function goNewsPage(p) { newsPage = p; renderNews(); }
-
-// 工具方法
 function getUpdateTime() { return localStorage.getItem('lastUpdateTime') || ''; }
 function setUpdateTime() {
   let now = new Date();
@@ -551,8 +511,6 @@ function highlightMatch(original, keyword) {
   if (end === -1) end = original.length;
   return original.slice(0, start) + '<span class="highlight">' + original.slice(start, end) + '</span>' + original.slice(end);
 }
-
-// 页面切换
 function show(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('show'));
   document.getElementById(id).classList.add('show');
@@ -564,22 +522,22 @@ function show(id) {
     btn.classList.remove('active');
     if (['home','stock','news','contact'][i] === id) btn.classList.add('active');
   });
-  if (id === 'stock') { frontPage = 1; renderStock(); }
+  if (id === 'stock') { 
+    frontPage = 1; 
+    clearBatchSearchState();
+    renderStock(); 
+  }
   if (id === 'admin-stock') { adminPage = 1; renderAdminStock(); }
   if (id === 'news') renderNews();
   if (['home','stock','news','contact'].includes(id)) countVisit(id);
   if (id === 'admin') renderVisitCount();
 }
-
-// 登录/退出
 function login() {
   let p = document.getElementById('pwd').value;
   let ok = localStorage.getItem('admin-pwd') || '123456';
   if (p === ok) { isLogin = true; show('admin'); } else alert('密码错误');
 }
 function logout() { isLogin = false; show('home'); }
-
-// 多料号查询弹窗
 function openBatchSearch() {
   document.getElementById('batch-modal').style.display = 'flex';
   document.getElementById('batch-search-input').value = '';
@@ -587,9 +545,20 @@ function openBatchSearch() {
 function closeBatchSearch() {
   document.getElementById('batch-modal').style.display = 'none';
 }
+// 新增：点击单型号输入框时，清空多料号查询状态
+function clearBatchSearchState() {
+  batchSearchKeywords = [];
+  document.getElementById('batch-search-input').value = '';
+  closeBatchSearch();
+  // 无输入时显示全部库存
+  if (!document.getElementById('front-search').value.trim()) {
+    frontPage = 1;
+    renderStock();
+  }
+}
 function searchStock() {
   frontPage = 1;
-  closeBatchSearch();
+  clearBatchSearchState();
   renderStock();
 }
 function searchAdminStock() {
@@ -599,25 +568,24 @@ function searchAdminStock() {
 function batchSearchStock() {
   frontPage = 1;
   document.getElementById('front-search').value = '';
+  const inputVal = document.getElementById('batch-search-input').value;
+  batchSearchKeywords = inputVal.replace(/[\n,，;；\s]+/g, '|').split('|').filter(item => cleanText(item) !== '');
   closeBatchSearch();
   renderStock();
 }
-
-// 库存渲染
+// 核心查询逻辑：多料号查询后点击单型号输入框，直接显示全部库存
 function renderStock() {
   let keyword = cleanText(document.getElementById('front-search')?.value || '');
-  let batchInput = document.getElementById('batch-search-input')?.value || '';
-  let batchKeywords = batchInput.replace(/[\n,，;；\s]+/g, '|').split('|').filter(item => cleanText(item) !== '');
-  
-  let list = stock.filter(item => {
-    let cleanModel = cleanText(item.model);
-    if (keyword) {
-      return cleanModel.includes(keyword);
-    } else if (batchKeywords.length > 0) {
-      return batchKeywords.some(k => cleanModel.includes(cleanText(k)));
-    }
-    return true;
-  });
+  let list = stock;
+
+  // 优先级：单型号查询 > 多料号查询 > 显示全部
+  if (keyword) {
+    list = stock.filter(item => cleanText(item.model).includes(keyword));
+  } else if (batchSearchKeywords.length > 0) {
+    list = stock.filter(item => batchSearchKeywords.some(k => cleanText(item.model).includes(cleanText(k))));
+  } else {
+    list = stock; // 多料号查询后点击单型号输入框（无输入），显示全部库存
+  }
 
   let total = list.length;
   let totalPage = Math.ceil(total / pageSize);
@@ -656,8 +624,6 @@ function goPage(which, page) {
   if (which === 'front') { frontPage = page; renderStock(); }
   else { adminPage = page; renderAdminStock(); }
 }
-
-// 库存操作
 function addStock() {
   let model = document.getElementById('m').value.trim();
   if (!model) { alert('型号不能为空'); return; }
@@ -721,8 +687,6 @@ function saveCell(input,field,index){
   renderAdminStock();
   alert('库存编辑成功，需点击【保存库存到全网】同步到所有设备');
 }
-
-// 联系信息
 function loadContact(){
   let addr=localStorage.getItem('addr')||'陕西省咸阳市秦都区';
   let tel=localStorage.getItem('tel')||'17729514427';
@@ -741,25 +705,19 @@ function saveContact(){
   loadContact();
   alert('联系信息保存成功');
 }
-
-// 修改密码
 function changePwd(){
   let old=document.getElementById('old-pwd').value;
   let now=localStorage.getItem('admin-pwd')||'123456';
   if(old!==now){alert('当前密码错误');return;}
   localStorage.setItem('admin-pwd',document.getElementById('new-pwd').value);
   alert('密码修改成功，请重新登录');
-  show('login');
+  logout();
 }
-
-// 初始化
-window.onload=function(){
-  loadContact();
-  initVisitCount();
-  countVisit('home');
+window.onload = function() {
   loadStockFromGithub();
-  renderNews();
-};
+  loadContact();
+  showUpdateTime();
+}
 </script>
 </body>
 </html>
