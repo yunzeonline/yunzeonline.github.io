@@ -4,27 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>陕西云泽在线科技有限公司 - 连接器现货库存查询</title>
-<meta name="keywords" content="连接器,进口连接器,汽车连接器,线束连接器,连接器现货,TE,Aptiv,JST,Sumitomo,Yazaki,Molex,KET,JAE,JAM,Bosch">
-<meta name="description" content="陕西云泽在线科技有限公司专注进口连接器现货与期货供应，原厂正品，现货库存，极速响应。">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
 html{overflow-y:scroll}
-body{background:#F0F4F8;color:#1E293B;line-height:1.8;padding-bottom:60px;width:100%;overflow-x:hidden}
-.top-bar{background:#334155;color:#fff;text-align:center;padding:6px 0;font-size:14px}
+body{background:#F0F0F0;color:#1E293B;line-height:1.8;padding-bottom:60px;width:100%;overflow-x:hidden}
+.top-bar{background:#333;color:#fff;text-align:center;padding:6px 0;font-size:14px}
 .header{background:#fff;padding:16px 0;text-align:center;border-bottom:1px solid #E5E7EB}
 .header h1{font-size:32px;font-weight:700;color:#1E293B;letter-spacing:1px}
-.nav{background:#475569;display:flex;justify-content:center}
+.nav{background:#444;display:flex;justify-content:center}
 .nav button{background:none;border:none;color:#fff;padding:16px 32px;font-size:16px;cursor:pointer}
-.nav button.active{background:#1E293B;border-bottom:3px solid #3B82F6}
+.nav button.active{background:#222;border-bottom:3px solid #007bff}
 .container{max-width:1080px;margin:0 auto;padding:20px}
 .card{background:#fff;border-radius:10px;padding:20px 24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
-.card h2{font-size:20px;color:#1E293B;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #EEE}
+.card h2{font-size:20px;color:#1E293B;margin-bottom:14px;}
 .page{display:none}
 .page.show{display:block}
 .advantage{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
 .adv-item{background:#F8FAFC;border-radius:8px;padding:18px;box-shadow:0 1px 5px rgba(0,0,0,0.04)}
 .adv-item h3{font-size:16px;color:#1E293B;margin-bottom:8px}
-.adv-item p{font-size:14px;color:#64748B;line-height:1.5}
+.adv-item p{font-size:14px;color:#666;line-height:1.5}
 .table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px;table-layout:fixed}
 .table th,.table td{padding:8px 6px;text-align:center;border:1px solid #EEE;word-break:break-all}
 .table th{background:#F8FAFC}
@@ -41,23 +39,19 @@ body{background:#F0F4F8;color:#1E293B;line-height:1.8;padding-bottom:60px;width:
 #admin-stock .table th:nth-child(6){width:15%}
 .table input{width:90%;padding:3px;border:1px solid #DDD;border-radius:4px;text-align:center}
 input{padding:10px;width:100%;border:1px solid #EEE;border-radius:6px;margin-bottom:10px}
-button{padding:8px 14px;background:#3B82F6;color:#fff;border:none;border-radius:6px;cursor:pointer;margin:0 3px;font-size:14px;transition:background .2s}
-button:hover{background:#2563EB}
-.btn-red{background:#EF4444}
-.btn-green{background:#10B984}
-button:disabled{opacity:.6;cursor:not-allowed}
+button{padding:8px 14px;background:#007bff;color:#fff;border:none;border-radius:6px;cursor:pointer;margin:0 3px;font-size:14px}
+button:hover{background:#0062cc}
+.btn-red{background:#dc3545}
+.btn-green{background:#28a745}
+button:disabled{opacity:.6}
 .stock-add-row{display:flex;gap:10px;align-items:flex-end;margin-bottom:10px}
 .stock-add-item{flex:1;display:flex;flex-direction:column;max-width:140px}
 .stock-add-item label{font-size:13px;color:#666;margin-bottom:3px}
-.search-above-table{margin-bottom:10px}
 .pagination{margin-top:12px;text-align:center}
 .pagination button{margin:0 3px}
-
-/* 搜索高亮样式 */
-.highlight{background-color: #fff49e; padding: 0; border-radius: 0;}
-
+.highlight{background-color: #fff49e; padding:0; border-radius:0;}
 .service{position:fixed;right:15px;top:50%;transform:translateY(-50%);z-index:999;display:flex;flex-direction:column;gap:10px}
-.service .item{width:46px;height:46px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:0 3px 10px rgba(0,0,0,0.15);cursor:default;position:relative}
+.service .item{width:46px;height:46px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;cursor:pointer}
 .service .tip{position:absolute;right:55px;top:50%;transform:translateY(-50%);background:#333;color:#fff;padding:4px 8px;border-radius:4px;white-space:nowrap;display:none;z-index:10}
 .service .item:hover .tip{display:block}
 .wx-hover-card{position:absolute;right:55px;top:50%;transform:translateY(-50%);width:200px;background:#fff;padding:12px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.2);display:none;z-index:9999}
@@ -65,20 +59,36 @@ button:disabled{opacity:.6;cursor:not-allowed}
 .wx-hover-card p{text-align:center;font-size:12px;color:#666;margin-top:6px}
 .item.wx:hover .wx-hover-card{display:block}
 .tel{background:#d9534f}
-.wx{background:#07c160}
-.qq{background:#1E293B}
-.footer{background:#334155;color:#9CA3AF;text-align:center;padding:16px 0;font-size:13px;position:fixed;left:0;right:0;bottom:0}
+.wx{background:#28a745}
+.qq{background:#17a2b8}
+.footer{background:#333;color:#aaa;text-align:center;padding:16px 0;font-size:13px;position:fixed;left:0;right:0;bottom:0}
 #login-trigger{position:fixed;right:10px;top:10px;width:20px;height:20px;opacity:0;cursor:pointer}
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
 .contact-item{background:#F8FAFC;border-radius:8px;padding:18px;display:flex;align-items:center;gap:16px;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
 .contact-icon{font-size:28px;color:#1E293B;width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#E2E8F0;border-radius:50%}
 .contact-info h4{font-size:16px;color:#1E293B;margin-bottom:4px}
-.contact-info p{font-size:14px;color:#64748B;margin:0}
+.contact-info p{font-size:14px;color:#666}
+
+.search-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.search-left{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.update-time{
+  font-size:14px;
+  color:#666;
+}
 </style>
 </head>
 <body>
 
-<div class="top-bar">进口连接器现现货 | TE/Aptiv/JST/Sumitomo/Yazaki/Molex/KET/JAE/JAM/Bosch</div>
+<div class="top-bar">进口连接器现货库存查询 | TE/Aptiv/JST/Sumitomo/Yazaki/Molex/KET/JAE/JAM/Bosch</div>
 <div class="header"><h1>陕西云泽在线科技有限公司</h1></div>
 <div class="nav">
 <button class="active" onclick="show('home')">首页</button>
@@ -88,16 +98,9 @@ button:disabled{opacity:.6;cursor:not-allowed}
 </div>
 
 <div class="service">
-<div class="item tel"><span>电</span><div class="tip">17729514427</div></div>
-<div class="item wx">
-<span>微</span>
-<div class="tip">扫码加微信</div>
-<div class="wx-hover-card">
-<img src="wechat-qr.jpg" alt="微信二维码">
-<p>扫一扫加我微信</p>
-</div>
-</div>
-<div class="item qq"><span>Q</span><div class="tip">353436207</div></div>
+<div class="item tel" onclick="window.open('tel:17729514427')"><span>电</span><div class="tip">17729514427</div></div>
+<div class="item wx"><span>微</span><div class="tip">扫码加微信</div><div class="wx-hover-card"><img src="wechat-qr.jpg"><p>扫一扫加我微信</p></div></div>
+<div class="item qq" onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=353436207&site=qq&menu=yes','_blank')"><span>Q</span><div class="tip">353436207</div></div>
 </div>
 
 <div id="login-trigger" onclick="show('login')"></div>
@@ -128,7 +131,15 @@ button:disabled{opacity:.6;cursor:not-allowed}
 <div class="page" id="stock">
 <div class="card">
 <h2>现货库存查询</h2>
-<input placeholder="输入型号搜索（支持忽略横杠/点/空格）" oninput="searchStock()" style="width:300px;margin-bottom:10px;">
+
+<div class="search-row">
+  <div class="search-left">
+    <label style="font-weight:500;">查询：</label>
+    <input id="front-search" placeholder="输入型号搜索（支持忽略横杠/点/空格）" oninput="searchStock()" style="width:300px;">
+  </div>
+  <div class="update-time" id="update-time"></div>
+</div>
+
 <table class="table">
 <thead><tr><th>型号</th><th>数量</th><th>批次</th><th>仓库</th><th>备注</th></tr></thead>
 <tbody id="stock-table"></tbody>
@@ -199,7 +210,12 @@ button:disabled{opacity:.6;cursor:not-allowed}
 <button class="btn-green" onclick="addStock()">添加</button>
 </div>
 <div style="margin:10px 0;"><input type="file" id="excel" style="width:auto;"><button onclick="importExcel()">Excel导入</button><button class="btn-red" onclick="clearStock()">清空库存</button></div>
-<div class="search-above-table"><input placeholder="输入型号搜索（支持忽略横杠/点/空格）" oninput="searchAdminStock()" style="width:300px;"></div>
+
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+<label style="font-weight:500;">查询：</label>
+<input id="admin-search" placeholder="输入型号搜索（支持忽略横杠/点/空格）" oninput="searchAdminStock()" style="width:300px;">
+</div>
+
 <table class="table">
 <thead><tr><th>型号</th><th>数量</th><th>批次</th><th>仓库</th><th>备注</th><th>操作</th></tr></thead>
 <tbody id="admin-stock-table"></tbody>
@@ -246,42 +262,45 @@ const pageSize = 10
 let frontPage = 1
 let adminPage = 1
 
-// 清洗：去掉 - . 空格，转小写
+// 最后更新时间
+function getUpdateTime() { return localStorage.getItem('lastUpdateTime') || '' }
+function setUpdateTime() {
+  let now = new Date()
+  let timeStr = now.getFullYear() + '-' +
+    String(now.getMonth()+1).padStart(2,'0') + '-' +
+    String(now.getDate()).padStart(2,'0') + ' ' +
+    String(now.getHours()).padStart(2,'0') + ':' +
+    String(now.getMinutes()).padStart(2,'0')
+  localStorage.setItem('lastUpdateTime', timeStr)
+  showUpdateTime()
+}
+function showUpdateTime() {
+  let t = getUpdateTime()
+  let el = document.getElementById('update-time')
+  if (el && t) el.textContent = '最后更新：' + t
+}
+
 function cleanText(s) {
   if (!s) return ''
   return s.toString().replace(/[- .]/g, '').toLowerCase()
 }
 
-// 高亮匹配的文字（智能匹配，忽略符号，精准只高亮数字/字母）
 function highlightMatch(original, keyword) {
   if (!keyword) return original
   let cleanOriginal = cleanText(original)
   let cleanKey = cleanText(keyword)
   let idx = cleanOriginal.indexOf(cleanKey)
   if (idx === -1) return original
-
-  // 遍历原字符串，找到对应清洗后位置的 start 和 end（只算数字/字母）
   let count = 0, start = -1, end = -1
   for (let i = 0; i < original.length; i++) {
     let c = original[i]
-    // 只统计数字/字母为有效字符，跳过 - . 空格
     if (!/[0-9a-zA-Z]/.test(c)) continue
-
     if (count === idx) start = i
-    if (count === idx + cleanKey.length - 1) {
-      end = i + 1 // 修正：包含当前字符
-      break
-    }
+    if (count === idx + cleanKey.length - 1) { end = i + 1; break }
     count++
   }
-  // 边界：匹配到最后一个字符
   if (end === -1) end = original.length
-
-  return (
-    original.slice(0, start) +
-    '<span class="highlight">' + original.slice(start, end) + '</span>' +
-    original.slice(end)
-  )
+  return original.slice(0, start) + '<span class="highlight">' + original.slice(start, end) + '</span>' + original.slice(end)
 }
 
 function show(id) {
@@ -302,18 +321,20 @@ function login() {
 }
 function logout() { isLogin = false; show('home') }
 
+// 前台搜索
 function searchStock() {
   frontPage = 1
   renderStock()
 }
+// 后台搜索
 function searchAdminStock() {
   adminPage = 1
   renderAdminStock()
 }
 
-// 前台列表
+// ====================== 前台分页渲染 ======================
 function renderStock() {
-  let keyword = cleanText(document.querySelector('#stock input')?.value || '')
+  let keyword = cleanText(document.getElementById('front-search')?.value || '')
   let list = stock.filter(item => cleanText(item.model).includes(keyword))
   let total = list.length
   let totalPage = Math.ceil(total / pageSize)
@@ -322,7 +343,7 @@ function renderStock() {
 
   let html = pageList.map(i => `
   <tr>
-    <td>${highlightMatch(i.model, document.querySelector('#stock input')?.value || '')}</td>
+    <td>${highlightMatch(i.model, document.getElementById('front-search')?.value || '')}</td>
     <td>${i.num}</td>
     <td>${i.batch}</td>
     <td>${i.ware}</td>
@@ -330,12 +351,12 @@ function renderStock() {
   </tr>`).join('')
 
   document.getElementById('stock-table').innerHTML = html || '<tr><td colspan="5">暂无数据</td></tr>'
-  renderPagination('front', totalPage)
+  renderPagination('front', totalPage, frontPage)
 }
 
-// 后台列表
+// ====================== 后台分页渲染 ======================
 function renderAdminStock() {
-  let keyword = cleanText(document.querySelector('#admin-stock input')?.value || '')
+  let keyword = cleanText(document.getElementById('admin-search')?.value || '')
   let list = stock.filter(item => cleanText(item.model).includes(keyword))
   let total = list.length
   let totalPage = Math.ceil(total / pageSize)
@@ -346,7 +367,7 @@ function renderAdminStock() {
     let k = start + idxInPage
     return `
     <tr id="row-${k}">
-      <td><span ondblclick="editCell(this,'model',${k})">${highlightMatch(i.model, document.querySelector('#admin-stock input')?.value || '')}</span><input style="display:none" onblur="saveCell(this,'model',${k})"></td>
+      <td><span ondblclick="editCell(this,'model',${k})">${highlightMatch(i.model, document.getElementById('admin-search')?.value || '')}</span><input style="display:none" onblur="saveCell(this,'model',${k})"></td>
       <td><span ondblclick="editCell(this,'num',${k})">${i.num}</span><input style="display:none" onblur="saveCell(this,'num',${k})"></td>
       <td><span ondblclick="editCell(this,'batch',${k})">${i.batch}</span><input style="display:none" onblur="saveCell(this,'batch',${k})"></td>
       <td><span ondblclick="editCell(this,'ware',${k})">${i.ware}</span><input style="display:none" onblur="saveCell(this,'ware',${k})"></td>
@@ -356,22 +377,34 @@ function renderAdminStock() {
   }).join('')
 
   document.getElementById('admin-stock-table').innerHTML = html || '<tr><td colspan="6">暂无数据</td></tr>'
-  renderPagination('admin', totalPage)
+  renderPagination('admin', totalPage, adminPage)
 }
 
-function renderPagination(which, totalPage) {
-  let current = which === 'front' ? frontPage : adminPage
+// ====================== 统一分页条 ======================
+function renderPagination(which, totalPage, current) {
   let bar = ''
   if (totalPage > 1) {
-    bar += `<button ${current<=1?'disabled':''} onclick="${which}Page=1;render${which.charAt(0).toUpperCase()+which.slice(1)}Stock()">首页</button>`
-    bar += `<button ${current<=1?'disabled':''} onclick="${which}Page--;render${which.charAt(0).toUpperCase()+which.slice(1)}Stock()">上一页</button>`
+    bar += `<button ${current<=1?'disabled':''} onclick="goPage('${which}',1)">首页</button>`
+    bar += `<button ${current<=1?'disabled':''} onclick="goPage('${which}',${current-1})">上一页</button>`
     bar += `<span> ${current}/${totalPage} </span>`
-    bar += `<button ${current>=totalPage?'disabled':''} onclick="${which}Page++;render${which.charAt(0).toUpperCase()+which.slice(1)}Stock()">下一页</button>`
-    bar += `<button ${current>=totalPage?'disabled':''} onclick="${which}Page=${totalPage};render${which.charAt(0).toUpperCase()+which.slice(1)}Stock()">尾页</button>`
+    bar += `<button ${current>=totalPage?'disabled':''} onclick="goPage('${which}',${current+1})">下一页</button>`
+    bar += `<button ${current>=totalPage?'disabled':''} onclick="goPage('${which}',${totalPage})">尾页</button>`
   }
   document.getElementById(which === 'front' ? 'page-front' : 'page-admin').innerHTML = bar
 }
 
+// ====================== 分页跳转（修复点） ======================
+function goPage(which, page) {
+  if (which === 'front') {
+    frontPage = page
+    renderStock()
+  } else {
+    adminPage = page
+    renderAdminStock()
+  }
+}
+
+// ====================== 库存操作 ======================
 function addStock() {
   let model = document.getElementById('m').value.trim()
   if (!model) { alert('型号不能为空'); return }
@@ -381,6 +414,7 @@ function addStock() {
     remark: document.getElementById('r').value
   })
   localStorage.setItem('stock', JSON.stringify(stock))
+  setUpdateTime()
   document.getElementById('m').value=''
   document.getElementById('n').value=''
   document.getElementById('b').value=''
@@ -393,6 +427,7 @@ function delRow(k) {
   if (!confirm('确定删除？')) return
   stock.splice(k,1)
   localStorage.setItem('stock',JSON.stringify(stock))
+  setUpdateTime()
   renderAdminStock();renderStock()
 }
 
@@ -400,6 +435,7 @@ function clearStock() {
   if (!confirm('确定清空所有库存？')) return
   stock=[]
   localStorage.setItem('stock','[]')
+  setUpdateTime()
   renderAdminStock();renderStock()
 }
 
@@ -420,6 +456,7 @@ function importExcel() {
       }
       stock=res
       localStorage.setItem('stock',JSON.stringify(stock))
+      setUpdateTime()
       alert(`导入成功 ${res.length} 条`)
       adminPage=1;frontPage=1;renderAdminStock();renderStock()
     }catch(e){alert('导入失败：'+e.message)}
@@ -440,6 +477,7 @@ function saveCell(input,field,index){
   let val=input.value.trim()
   stock[index][field]=val
   localStorage.setItem('stock',JSON.stringify(stock))
+  setUpdateTime()
   input.previousElementSibling.innerText=val
   input.style.display='none'
   input.previousElementSibling.style.display='inline'
@@ -447,6 +485,7 @@ function saveCell(input,field,index){
   renderAdminStock()
 }
 
+// ====================== 联系信息 ======================
 function loadContact(){
   let addr=localStorage.getItem('addr')||'陕西省咸阳市秦都区'
   let tel=localStorage.getItem('tel')||'17729514427'
@@ -480,6 +519,7 @@ function changePwd(){
 }
 
 window.onload=function(){
+  showUpdateTime()
   renderStock()
   loadContact()
 }
