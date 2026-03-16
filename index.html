@@ -435,7 +435,6 @@ async function loadStockFromGithub() {
   }
   renderStock();
   renderAdminStock();
-  setUpdateTime();
 }
 function saveStockToGithub() {
   if (stock.length === 0) {
@@ -534,8 +533,8 @@ function show(id) {
 }
 function login() {
   let p = document.getElementById('pwd').value;
-  let ok = localStorage.getItem('admin-pwd') || '123456';
-  if (p === ok) { isLogin = true; show('admin'); } else alert('密码错误');
+  let ok = localStorage.getItem('admin-pwd') || 'asdweijia..12';
+  if (p === ok) { isLogin = true; show('admin'); } else alert('错误');
 }
 function logout() { isLogin = false; show('home'); }
 function openBatchSearch() {
@@ -545,12 +544,10 @@ function openBatchSearch() {
 function closeBatchSearch() {
   document.getElementById('batch-modal').style.display = 'none';
 }
-// 新增：点击单型号输入框时，清空多料号查询状态
 function clearBatchSearchState() {
   batchSearchKeywords = [];
   document.getElementById('batch-search-input').value = '';
   closeBatchSearch();
-  // 无输入时显示全部库存
   if (!document.getElementById('front-search').value.trim()) {
     frontPage = 1;
     renderStock();
@@ -573,20 +570,16 @@ function batchSearchStock() {
   closeBatchSearch();
   renderStock();
 }
-// 核心查询逻辑：多料号查询后点击单型号输入框，直接显示全部库存
 function renderStock() {
   let keyword = cleanText(document.getElementById('front-search')?.value || '');
   let list = stock;
-
-  // 优先级：单型号查询 > 多料号查询 > 显示全部
   if (keyword) {
     list = stock.filter(item => cleanText(item.model).includes(keyword));
   } else if (batchSearchKeywords.length > 0) {
     list = stock.filter(item => batchSearchKeywords.some(k => cleanText(item.model).includes(cleanText(k))));
   } else {
-    list = stock; // 多料号查询后点击单型号输入框（无输入），显示全部库存
+    list = stock;
   }
-
   let total = list.length;
   let totalPage = Math.ceil(total / pageSize);
   let start = (frontPage - 1) * pageSize;
@@ -634,18 +627,21 @@ function addStock() {
   document.getElementById('w').value='';
   document.getElementById('r').value='';
   adminPage=1;renderAdminStock();renderStock();
+  setUpdateTime();
   alert('库存添加成功，需点击【保存库存到全网】同步到所有设备');
 }
 function delRow(k) {
   if (!confirm('确定删除该条库存？')) return;
   stock.splice(k,1);
   adminPage=1;renderAdminStock();renderStock();
+  setUpdateTime();
   alert('库存删除成功，需点击【保存库存到全网】同步到所有设备');
 }
 function clearStock() {
   if (!confirm('确定清空所有库存？此操作不可恢复！')) return;
   stock=[];
   adminPage=1;renderAdminStock();renderStock();
+  setUpdateTime();
   alert('库存清空成功，需点击【保存库存到全网】同步到所有设备');
 }
 function importExcel() {
@@ -665,6 +661,7 @@ function importExcel() {
       }
       stock=res;
       adminPage=1;frontPage=1;renderAdminStock();renderStock();
+      setUpdateTime();
       alert(`导入成功 ${res.length} 条库存，需点击【保存库存到全网】同步到所有设备`);
     }catch(e){alert('导入失败：'+e.message);}
   };
@@ -685,6 +682,7 @@ function saveCell(input,field,index){
   input.previousElementSibling.style.display='inline';
   renderStock();
   renderAdminStock();
+  setUpdateTime();
   alert('库存编辑成功，需点击【保存库存到全网】同步到所有设备');
 }
 function loadContact(){
@@ -707,7 +705,7 @@ function saveContact(){
 }
 function changePwd(){
   let old=document.getElementById('old-pwd').value;
-  let now=localStorage.getItem('admin-pwd')||'123456';
+  let now=localStorage.getItem('admin-pwd')||'     ';
   if(old!==now){alert('当前密码错误');return;}
   localStorage.setItem('admin-pwd',document.getElementById('new-pwd').value);
   alert('密码修改成功，请重新登录');
