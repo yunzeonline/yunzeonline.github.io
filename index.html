@@ -7,8 +7,8 @@
 <title>进口连接器现货库存查询-TE/Molex/JST连接器-陕西云泽在线科技有限公司</title>
 <meta name="keywords" content="进口连接器,连接器现货,TE连接器,Molex连接器,JST连接器,进口连接器库存查询,陕西云泽在线">
 <meta name="description" content="陕西云泽在线科技专注进口连接器现货供应，主营TE、Molex、JST、Aptiv等品牌连接器，提供现货库存实时查询，原厂正品保障、极速响应、现货快速交付，一站式进口连接器供应链服务。">
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Content-Language" content="zh-CN" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Content-Language" content="zh-CN">
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
@@ -193,6 +193,24 @@ button:disabled{opacity:.6}
 .visit-count .total{font-size:16px;font-weight:700;color:#003366;}
 .save-stock-btn{margin-top:10px;background:#28a745!important;}
 .save-stock-btn:hover{background:#218838!important;}
+
+/* 新加：加载提示样式 */
+.loading-tip {
+  padding: 14px;
+  background: #e6f7ff;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #004085;
+}
+.error-tip {
+  padding: 14px;
+  background: #fff2f2;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #dc3545;
+}
 </style>
 </head>
 <body>
@@ -240,9 +258,14 @@ button:disabled{opacity:.6}
 </div>
 </div>
 </div>
+
 <div class="page" id="stock">
 <div class="card">
 <h2>现货库存查询</h2>
+
+<!-- 自动加载提示 -->
+<div id="load-status"></div>
+
 <div class="search-row">
   <div class="search-left">
     <label style="font-weight:500;">单型号查询：</label>
@@ -251,6 +274,7 @@ button:disabled{opacity:.6}
   </div>
   <div class="update-time" id="update-time"></div>
 </div>
+
 <div class="modal" id="batch-modal">
   <div class="modal-content">
     <div class="modal-header">
@@ -263,6 +287,7 @@ button:disabled{opacity:.6}
     <button onclick="closeBatchSearch()" style="background:#CCCCCC;color:#333;">取消</button>
   </div>
 </div>
+
 <table class="table">
 <thead><tr><th>型号</th><th>数量</th><th>批次</th><th>备注</th></tr></thead>
 <tbody id="stock-table"></tbody>
@@ -270,6 +295,7 @@ button:disabled{opacity:.6}
 <div class="pagination" id="page-front"></div>
 </div>
 </div>
+
 <div class="page" id="contact">
 <div class="card">
 <h2>联系我们</h2>
@@ -292,7 +318,7 @@ button:disabled{opacity:.6}
       <div style="width:36px;height:36px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#004085;font-size:18px;">👤</div>
       <div>
         <div style="font-size:16px;font-weight:600;">李经理</div>
-        <div style="font-size:12px;opacity:0.9;">业务经理</div>
+        <div style="font-size:12px;opacity:0.9;">销售经理</div>
       </div>
     </div>
     <div style="padding:14px;font-size:14px;color:#666;line-height:1.8;">
@@ -315,6 +341,7 @@ button:disabled{opacity:.6}
 </div>
 </div>
 </div>
+
 <div class="page" id="login">
 <div class="card" style="max-width:400px;margin:0 auto;">
 <h2>管理员登录</h2>
@@ -323,6 +350,7 @@ button:disabled{opacity:.6}
 <button class="btn-red" onclick="show('home')">返回</button>
 </div>
 </div>
+
 <div class="page" id="admin">
 <div class="card">
 <h2>后台管理</h2>
@@ -338,6 +366,7 @@ button:disabled{opacity:.6}
 <button class="btn-red" onclick="logout()">退出登录</button>
 </div>
 </div>
+
 <div class="page" id="admin-stock">
 <div class="card">
 <h2>库存管理</h2>
@@ -379,6 +408,7 @@ button:disabled{opacity:.6}
 </div>
 <button onclick="show('admin')">返回后台</button>
 </div>
+
 <div class="page" id="admin-contact">
 <div class="card">
 <h2>联系信息</h2>
@@ -391,6 +421,7 @@ button:disabled{opacity:.6}
 </div>
 <button onclick="show('admin')">返回后台</button>
 </div>
+
 <div class="page" id="admin-pwd">
 <div class="card">
 <h2>修改密码</h2>
@@ -402,9 +433,8 @@ button:disabled{opacity:.6}
 </div>
 </div>
 </div>
-<div class="footer">
-  © 2026 陕西云泽在线科技有限公司 版权所有
-</div>
+
+<div class="footer">© 2026 陕西云泽在线科技有限公司 版权所有</div>
 
 <script>
 let stock = [];
@@ -413,6 +443,32 @@ let adminPage = 1;
 const pageSize = 10;
 let isBatchSearch = false;
 let batchSearchResult = [];
+
+// ==============================================
+// 【核心优化】自动从服务器拉取最新 stock.json，强制不缓存
+// ==============================================
+async function loadRemoteStock() {
+  const statusEl = document.getElementById("load-status");
+  statusEl.className = "loading-tip";
+  statusEl.innerText = "🔄 正在从全网同步最新库存数据...";
+
+  try {
+    const timestamp = new Date().getTime();
+    const res = await fetch(`/stock.json?v=${timestamp}`);
+    if (!res.ok) throw new Error("文件加载失败");
+    
+    const data = await res.json();
+    stock = data;
+    
+    statusEl.innerText = "✅ 库存已同步完成";
+    setTimeout(() => { statusEl.style.display = "none"; }, 1500);
+    renderStock();
+  } catch (err) {
+    statusEl.className = "error-tip";
+    statusEl.innerText = "⚠️ 库存加载失败，请刷新页面重试";
+    console.error(err);
+  }
+}
 
 function show(pageId) {
   document.querySelectorAll('.page').forEach(page => {
@@ -614,7 +670,7 @@ function saveStockToGithub() {
   navigator.clipboard.writeText(j).then(()=>alert('JSON已复制')).catch(()=>alert('复制失败：'+j));
 }
 
-// ========== 完整 Excel 导入功能 ==========
+// Excel 导入
 function importExcel() {
   const fileInput = document.getElementById('excel');
   const file = fileInput.files[0];
@@ -714,8 +770,7 @@ function changePwd() {
 
 // 初始化
 window.onload=function(){
-  const s=localStorage.getItem('stockData');
-  if(s)stock=JSON.parse(s);
+  loadRemoteStock(); // 【关键】页面打开自动拉最新库存
   renderStock();
   recordVisit('home');
   window.addEventListener('resize',()=>{
