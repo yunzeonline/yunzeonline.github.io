@@ -270,7 +270,11 @@ button:disabled{opacity:.6}
 <div class="search-row">
   <div class="search-left">
     <label style="font-weight:500;">单型号查询：</label>
-    <input id="front-search" placeholder="输入单个型号搜索（支持忽略横杠/点/空格）" oninput="searchStock()" onclick="clearBatchSearchState()" style="flex:1;">
+    <!-- 【修复1】新增focus事件，点击时重置并显示全部数据 -->
+    <input id="front-search" placeholder="输入单个型号搜索（支持忽略横杠/点/空格）" 
+           oninput="searchStock()" 
+           onfocus="resetToAllStock()" 
+           style="flex:1;">
     <button onclick="openBatchSearch()" style="margin-left:8px;">多料号查询</button>
   </div>
   <div class="update-time" id="update-time"></div>
@@ -385,7 +389,11 @@ button:disabled{opacity:.6}
 <div class="search-row">
   <div class="search-left">
     <label style="font-weight:500;">单型号查询：</label>
-    <input id="admin-search" placeholder="输入单个型号搜索（支持忽略横杠/点/空格）" oninput="searchAdminStock()" style="width:300px;">
+    <!-- 【修复2】后台单料号框也添加同样的focus事件 -->
+    <input id="admin-search" placeholder="输入单个型号搜索（支持忽略横杠/点/空格）" 
+           oninput="searchAdminStock()" 
+           onfocus="resetToAllAdminStock()" 
+           style="width:300px;">
     <button onclick="openAdminBatchSearch()" style="margin-left:8px;">多料号查询</button>
   </div>
 </div>
@@ -440,6 +448,7 @@ button:disabled{opacity:.6}
 <script>
 // 全局变量
 let stock = [];          // 库存数据核心数组
+let originalStock = [];  // 【新增】保存原始完整库存数据，用于重置
 let frontPage = 1;       // 前台分页页码
 let adminPage = 1;       // 后台分页页码
 const pageSize = 10;     // 每页显示条数
@@ -471,6 +480,9 @@ async function loadRemoteStock() {
       remark: item.remark || ""
     }));
 
+    // 【新增】保存原始完整数据
+    originalStock = [...stock];
+
     statusEl.innerText = `✅ 库存同步完成，共 ${stock.length} 条数据`;
     setTimeout(() => statusEl.style.display = "none", 1500);
   } catch (error) {
@@ -480,6 +492,8 @@ async function loadRemoteStock() {
       {"model":"281934-2","num":"632281","price":"","batch":"","warehouse":"H1","remark":"","id":"1774305061830hwxbr"},
       {"model":"7-1452668-1","num":"623512","price":"","batch":"","warehouse":"H1","remark":"","id":"1774305061830hwxbr1"}
     ];
+    // 【新增】保存测试数据到原始数组
+    originalStock = [...stock];
     statusEl.className = "error-tip";
     statusEl.innerText = "⚠️ 远程库存加载失败，已显示本地测试数据（数量字段正常）";
   }
@@ -581,7 +595,7 @@ function batchSearchStock() {
   const cleanKeywords = keywords.map(k => k.replace(/[-._\s]/g, ''));
   
   // 筛选匹配的库存
-  batchSearchResult = stock.filter(item => {
+  batchSearchResult = originalStock.filter(item => {
     const cleanModel = item.model.replace(/[-._\s]/g, '');
     return cleanKeywords.some(k => cleanModel.includes(k));
   });
@@ -607,11 +621,13 @@ function adminBatchSearchStock() {
   const keywords = input.split(/[\n, \s]+/).filter(k => k.trim());
   const cleanKeywords = keywords.map(k => k.replace(/[-._\s]/g, ''));
   
-  const filteredStock = stock.filter(item => {
+  // 【修复】从原始数据筛选，避免覆盖stock
+  const filteredStock = originalStock.filter(item => {
     const cleanModel = item.model.replace(/[-._\s]/g, '');
     return cleanKeywords.some(k => cleanModel.includes(k));
   });
   
+  // 临时替换用于显示
   stock = filteredStock;
   adminPage = 1;
   renderAdminStock();
@@ -625,7 +641,31 @@ function openBatchSearch() { document.getElementById("batch-modal").style.displa
 function closeBatchSearch() { document.getElementById("batch-modal").style.display = "none"; }
 function openAdminBatchSearch() { document.getElementById("admin-batch-modal").style.display = "flex"; }
 function closeAdminBatchSearch() { document.getElementById("admin-batch-modal").style.display = "none"; }
-function clearBatchSearchState() { isBatchSearch = false; batchSearchResult = []; }
+
+// 【核心修复1】前台点击单料号框时，重置为显示全部数据
+function resetToAllStock() {
+  // 清空搜索框
+  document.getElementById("front-search").value = "";
+  // 重置批量搜索状态
+  isBatchSearch = false;
+  batchSearchResult = [];
+  // 重置页码
+  frontPage = 1;
+  // 重新渲染全部数据
+  renderStock();
+}
+
+// 【核心修复2】后台点击单料号框时，重置为显示全部数据
+function resetToAllAdminStock() {
+  // 清空搜索框
+  document.getElementById("admin-search").value = "";
+  // 恢复原始完整数据
+  stock = [...originalStock];
+  // 重置页码
+  adminPage = 1;
+  // 重新渲染全部数据
+  renderAdminStock();
+}
 
 // 【核心】渲染前台库存表格 - 强制显示num字段
 function renderStock() {
@@ -633,7 +673,7 @@ function renderStock() {
   const paginationEl = document.getElementById("page-front");
   
   // 确定数据源（批量搜索/普通搜索）
-  let dataSource = isBatchSearch ? batchSearchResult : [...stock];
+  let dataSource = isBatchSearch ? batchSearchResult : [...originalStock];
   
   // 单型号搜索过滤
   const searchKeyword = document.getElementById("front-search").value.trim().replace(/[-._\s]/g, "");
@@ -684,7 +724,7 @@ function renderAdminStock() {
   const tableEl = document.getElementById("admin-stock-table");
   const paginationEl = document.getElementById("page-admin");
   
-  // 复制数据源
+  // 复制数据源（优先用原始数据）
   let dataSource = [...stock];
   
   // 单型号搜索过滤
@@ -743,7 +783,7 @@ function addStock() {
   }
   
   // 新增库存项（强制使用num字段）
-  stock.push({
+  const newItem = {
     id: Math.random().toString(36).substr(2, 9),
     model: model,
     num: document.getElementById("n").value.trim() || "", // 数量存为num
@@ -751,7 +791,11 @@ function addStock() {
     batch: document.getElementById("b").value.trim() || "",
     warehouse: document.getElementById("w").value.trim() || "",
     remark: document.getElementById("r").value.trim() || ""
-  });
+  };
+  
+  // 添加到两个数组（当前和原始）
+  stock.push(newItem);
+  originalStock.push(newItem);
   
   // 清空输入框
   document.getElementById("m").value = "";
@@ -770,7 +814,16 @@ function addStock() {
 // 删除库存
 function delStock(index) {
   if (confirm("确定要删除这条库存数据吗？")) {
+    // 从当前数组删除
+    const deletedItem = stock[index];
     stock.splice(index, 1);
+    
+    // 从原始数组删除对应项
+    const originalIndex = originalStock.findIndex(item => item.id === deletedItem.id);
+    if (originalIndex !== -1) {
+      originalStock.splice(originalIndex, 1);
+    }
+    
     renderAdminStock();
     updateStockTime();
   }
@@ -780,6 +833,7 @@ function delStock(index) {
 function clearStock() {
   if (confirm("⚠️ 确定要清空所有库存数据吗？此操作不可恢复！")) {
     stock = [];
+    originalStock = [];
     renderAdminStock();
     updateStockTime();
   }
@@ -804,7 +858,7 @@ function importExcel() {
       const excelData = XLSX.utils.sheet_to_json(worksheet);
       
       // 转换为库存数据格式（强制使用num字段）
-      stock = excelData.map(item => ({
+      const newStock = excelData.map(item => ({
         id: Math.random().toString(36).substr(2, 9),
         model: item['型号'] || item['model'] || "",
         num: item['数量'] || item['num'] || item['qty'] || "", // 优先映射到num
@@ -813,6 +867,10 @@ function importExcel() {
         warehouse: item['仓库'] || item['warehouse'] || "",
         remark: item['备注'] || item['remark'] || ""
       })).filter(item => item.model); // 过滤空型号
+      
+      // 更新两个数组
+      stock = [...newStock];
+      originalStock = [...newStock];
       
       // 更新时间并渲染
       updateStockTime();
@@ -830,7 +888,8 @@ function importExcel() {
 
 // 保存库存为JSON文件
 function saveStockToGithub() {
-  const jsonContent = `const stock = ${JSON.stringify(stock, null, 2)};`;
+  // 保存原始完整数据
+  const jsonContent = `const stock = ${JSON.stringify(originalStock, null, 2)};`;
   const blob = new Blob([jsonContent], { type: "text/plain" });
   const url = URL.createObjectURL(blob);
   
