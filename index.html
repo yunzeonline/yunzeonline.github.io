@@ -439,30 +439,40 @@ const pageSize = 10;
 let isBatchSearch = false;
 let batchSearchResult = [];
 
+// 【核心修改1】适配你的num字段，增加本地测试数据兜底
 async function loadRemoteStock(){
   const el = document.getElementById("load-status");
   el.className="loading-tip";el.innerText="正在同步最新库存数据...";
   try{
     const t = Date.now();
     const res = await fetch("/stock.json?v="+t);
-    if(!res.ok) throw 1;
+    if(!res.ok) throw new Error("接口返回异常");
     stock = await res.json();
-    el.innerText="✅ 库存已同步完成";
+    // 调试：打印加载的数据结构，方便排查
+    console.log("加载的库存数据：", stock);
+    el.innerText="✅ 库存已同步完成，共 "+stock.length+" 条数据";
     setTimeout(()=>el.style.display="none",1500);
-    
-    const now = new Date();
-    const timeStr = now.getFullYear() + "-" +
-    String(now.getMonth()+1).padStart(2,'0') + "-" +
-    String(now.getDate()).padStart(2,'0') + " " +
-    String(now.getHours()).padStart(2,'0') + ":" +
-    String(now.getMinutes()).padStart(2,'0');
-    localStorage.setItem('stockUpdateTime', timeStr);
-    
-    renderStock();
-    showUpdateTime();
-  }catch{
-    el.className="error-tip";el.innerText="⚠️ 库存加载失败，请刷新页面重试";
+  }catch(e){
+    // 加载失败时，使用你提供的测试数据兜底，确保功能可用
+    console.log("远程数据加载失败，使用本地测试数据：", e);
+    stock = [
+      {"model":"281934-2","num":"632281","price":"","batch":"","warehouse":"H1","remark":"","id":"1774305061830hwxbr"},
+      {"model":"7-1452668-1","num":"623512","price":"","batch":"","warehouse":"H1","remark":"","id":"xxx"}
+    ];
+    el.className="error-tip";el.innerText="⚠️ 远程库存加载失败，已显示本地测试数据";
   }
+  
+  // 更新最后修改时间
+  const now = new Date();
+  const timeStr = now.getFullYear() + "-" +
+  String(now.getMonth()+1).padStart(2,'0') + "-" +
+  String(now.getDate()).padStart(2,'0') + " " +
+  String(now.getHours()).padStart(2,'0') + ":" +
+  String(now.getMinutes()).padStart(2,'0');
+  localStorage.setItem('stockUpdateTime', timeStr);
+  
+  renderStock();
+  showUpdateTime();
 }
 
 function show(pageId) {
@@ -548,7 +558,7 @@ function openAdminBatchSearch(){document.getElementById("admin-batch-modal").sty
 function closeAdminBatchSearch(){document.getElementById("admin-batch-modal").style.display="none";}
 function clearBatchSearchState(){isBatchSearch=false;batchSearchResult=[];}
 
-// ========== 已修复：数量 100% 显示 ==========
+// 【核心修改2】优先显示num字段，确保数量100%展示
 function renderStock(){
   const t=document.getElementById("stock-table");
   const p=document.getElementById("page-front");
@@ -559,10 +569,11 @@ function renderStock(){
   const st=(frontPage-1)*pageSize;
   const show=d.slice(st,st+pageSize);
   
+  // 优先取num字段，兼容其他字段
   t.innerHTML=show.map(i=>`
   <tr>
-    <td>${i.model}</td>
-    <td>${i.qty || i.qty2 || i.数量 || i.num || ''}</td>
+    <td>${i.model || ''}</td>
+    <td>${i.num || i.qty || i.qty2 || i.数量 || ''}</td>
     <td>${i.batch || i.批次 || ''}</td>
     <td>${i.remark || i.备注 || ''}</td>
   </tr>`).join("");
@@ -576,6 +587,7 @@ function renderStock(){
 
 function searchStock(){frontPage=1;renderStock();}
 
+// 【核心修改3】后台库存表格同样优先显示num字段
 function renderAdminStock(){
   const t=document.getElementById("admin-stock-table");
   const p=document.getElementById("page-admin");
@@ -588,8 +600,8 @@ function renderAdminStock(){
   
   t.innerHTML=show.map((i,idx)=>`
   <tr>
-    <td>${i.model}</td>
-    <td>${i.qty || i.qty2 || i.数量 || i.num || ''}</td>
+    <td>${i.model || ''}</td>
+    <td>${i.num || i.qty || i.qty2 || i.数量 || ''}</td>
     <td>${i.price || i.单价 || ''}</td>
     <td>${i.batch || i.批次 || ''}</td>
     <td>${i.warehouse || i.仓库 || ''}</td>
@@ -610,7 +622,7 @@ function addStock(){
   if(!m){alert("型号不能为空");return;}
   stock.push({
     model:m,
-    qty:document.getElementById("n").value,
+    num:document.getElementById("n").value, // 新增时存储为num字段
     price:document.getElementById("p").value,
     batch:document.getElementById("b").value,
     warehouse:document.getElementById("w").value,
@@ -622,6 +634,7 @@ function addStock(){
 function delStock(i){stock.splice(i,1);renderAdminStock();}
 function clearStock(){if(confirm("确定要清空所有库存数据吗？"))stock=[];renderAdminStock();}
 
+// 【核心修改4】Excel导入时，将"数量"字段映射到num
 function importExcel() {
   const file = document.getElementById('excel').files[0];
   if(!file) return;
@@ -632,7 +645,7 @@ function importExcel() {
     const data = XLSX.utils.sheet_to_json(ws);
     stock = data.map(item=>({
       model: item['型号'] || '',
-      qty: item['数量'] || item['qty'] || '',
+      num: item['数量'] || item['num'] || item['qty'] || '', // 优先映射到num
       price: item['单价'] || '',
       batch: item['批次'] || '',
       warehouse: item['仓库'] || '',
@@ -648,7 +661,7 @@ function importExcel() {
     localStorage.setItem('stockUpdateTime', timeStr);
     
     renderAdminStock();
-    alert('Excel导入成功！');
+    alert('Excel导入成功！共导入 '+stock.length+' 条数据');
   };
   reader.readAsBinaryString(file);
 }
