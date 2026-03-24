@@ -6,55 +6,36 @@
 <title>进口连接器现货库存查询-TE/Molex/JST连接器-陕西云泽在线科技有限公司</title>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
-html{overflow-y:scroll}
-body{background:#F5F7FA;color:#333;line-height:1.8;padding-bottom:60px;width:100%;overflow-x:hidden}
-.top-banner {background: #004085;color: #fff;padding: 10px 0;box-shadow: 0 2px 6px rgba(0,0,0,0.1);position: relative;}
-.banner-inner {max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 20px;gap:30px;}
-.company-info {display:flex;flex-direction:column;gap:2px;white-space:nowrap;}
-.company-name {font-size:20px;font-weight:700;letter-spacing:0.5px;}
-.company-slogan {font-size:12px;opacity:0.9;color:#cce0ff;}
-.nav {display:flex;gap:0;}
-.nav button {background:none;border:none;color:#cce0ff;padding:10px 18px;font-size:15px;cursor:pointer;border-radius:4px 4px 0 0;transition:all 0.2s;}
-.nav button.active {background:#0056b3;color:#fff;}
-.nav button:hover {background:#0056b3;color:#fff;}
-.hamburger {display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;margin-left:auto;}
-.mobile-menu {display:none;flex-direction:column;width:100%;position:absolute;top:100%;left:0;background:#004085;z-index:999;}
-.mobile-menu button {background:none;border:none;color:#cce0ff;padding:12px 20px;text-align:left;font-size:15px;border-bottom:1px solid #0056b3;cursor:pointer;}
-.mobile-menu button.active {background:#0056b3;color:#fff;}
-@media (max-width:768px){.nav{display:none;}.hamburger{display:block;}.company-name{font-size:16px;}.company-slogan{display:none;}}
-@media (min-width:769px){.mobile-menu{display:none !important;}}
-.container{max-width:1200px;margin:0 auto;padding:20px}
-.card{background:#fff;border-radius:8px;padding:24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
-.card h2{font-size:22px;color:#222;margin-bottom:16px}
-.page{display:none}
-.page.show{display:block}
-.table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px;table-layout:fixed}
-.table th,.table td{padding:10px 8px;text-align:center;border:1px solid #E2E8F0;word-break:break-all}
-.table th{background:#F8FAFC;color:#003366}
-#stock .table th:nth-child(1){width:40%}
-#stock .table th:nth-child(2){width:20%}
-#stock .table th:nth-child(3){width:20%}
-#stock .table th:nth-child(4){width:20%}
-input{padding:10px;width:100%;border:1px solid #E2E8F0;border-radius:6px;margin-bottom:10px;background:#fff}
-textarea{padding:10px;width:100%;border:1px solid #E2E8F0;border-radius:6px;margin-bottom:10px;min-height:100px;resize:vertical;font-size:14px;background:#fff}
-button{padding:8px 16px;background:#007bff;color:#fff;border:none;border-radius:6px;cursor:pointer;margin:0 3px;font-size:14px;transition:all 0.2s}
-button:hover{background:#0056b3}
-.btn-red{background:#dc3545}
-.btn-red:hover{background:#c82333}
-.btn-green{background:#28a745}
-.btn-green:hover{background:#218838}
-.pagination{margin-top:12px;text-align:center}
-.search-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:10px}
-.search-left{display:flex;align-items:center;gap:8px;flex:1}
-.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.1);z-index:9999;display:none;align-items:center;justify-content:center}
-.modal-content{background:#fff;border-radius:10px;padding:24px;width:90%;max-width:500px;max-height:80vh;overflow-y:auto;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
-.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;border-bottom:1px solid #E2E8F0;padding-bottom:8px}
-.modal-close{background:none;border:none;font-size:20px;cursor-pointer;color:#666}
-.update-time{font-size:14px;color:#666}
-.loading-tip{padding:14px;background:#e6f7ff;border-radius:6px;margin-bottom:10px;text-align:center;color:#004085;}
-.error-tip{padding:14px;background:#fff2f2;border-radius:6px;margin-bottom:10px;text-align:center;color:#dc3545;}
-.footer{background:#343a40;color:#aaa;text-align:center;padding:16px 0;font-size:13px;position:fixed;left:0;right:0;bottom:0}
+* {margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
+body {background:#F5F7FA;color:#333;line-height:1.8;padding-bottom:60px}
+.top-banner {background:#004085;color:#fff;padding:10px 0}
+.banner-inner {max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 20px;gap:30px}
+.company-name {font-size:20px;font-weight:bold}
+.company-slogan {font-size:12px;color:#cce0ff}
+.nav button {background:none;border:none;color:#cce0ff;padding:10px 16px;font-size:15px;cursor:pointer}
+.nav button.active {background:#0056b3;color:#fff}
+.hamburger {display:none;background:none;border:none;color:#fff;font-size:22px}
+.mobile-menu {display:none;flex-direction:column;background:#004085}
+.mobile-menu button {color:#cce0ff;padding:12px 20px;text-align:left;border:none;background:none}
+@media (max-width:768px){.nav{display:none}.hamburger{display:block}}
+.container {max-width:1200px;margin:0 auto;padding:20px}
+.card {background:#fff;border-radius:8px;padding:24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
+.page {display:none}
+.page.show {display:block}
+.search-row {display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.update-time {font-size:14px;color:#666}
+table.table {width:100%;border-collapse:collapse;font-size:14px}
+.table th,.table td {border:1px solid #E2E8F0;padding:10px;text-align:center}
+.table th {background:#F8FAFC;color:#003366}
+input,textarea {padding:10px;border:1px solid #E2E8F0;border-radius:6px;width:100%}
+button {padding:8px 16px;background:#007bff;color:#fff;border:none;border-radius:6px;cursor:pointer;margin:0 3px}
+.btn-green {background:#28a745}
+.btn-red {background:#dc3545}
+.modal {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.1);display:none;align-items:center;justify-content:center;z-index:999}
+.modal-content {background:#fff;border-radius:10px;padding:24px;width:90%;max-width:500px}
+.modal-header {display:flex;justify-content:space-between;margin-bottom:12px}
+.footer {background:#343a40;color:#aaa;text-align:center;padding:16px;position:fixed;left:0;right:0;bottom:0;font-size:13px}
+.pagination {margin-top:12px;text-align:center}
 </style>
 </head>
 <body>
@@ -66,35 +47,120 @@ button:hover{background:#0056b3}
       <div class="company-slogan">进口连接器现货供应链专家</div>
     </div>
     <div class="nav">
-      <button class="active" onclick="show('home')">首页</button>
-      <button onclick="show('stock')">现货库存</button>
+      <button onclick="show('home')">首页</button>
+      <button class="active" onclick="show('stock')">现货库存</button>
       <button onclick="show('contact')">联系我们</button>
     </div>
-    <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="active" onclick="show('home');closeMobileMenu()">首页</button>
-    <button onclick="show('stock');closeMobileMenu()">现货库存</button>
-    <button onclick="show('contact');closeMobileMenu()">联系我们</button>
   </div>
 </div>
 
 <div class="container">
-  <div class="page show" id="home">
-    <div class="card">
-      <h2>欢迎光临陕西云泽在线科技有限公司</h2>
-      <p>主营 TE、Molex、JST、Aptiv 等进口连接器现货查询</p>
-    </div>
-  </div>
 
-  <div class="page" id="stock">
-    <div class="card">
-      <h2>现货库存查询</h2>
-      <div id="load-status"></div>
-      <div class="search-row">
-        <div class="search-left">
-          <label>单型号查询：</label>
-          <input id="front-search" placeholder="输入型号搜索(忽略横杠/空格)" oninput="searchStock()" onclick="clearBatchSearchState()" style="flex:1;">
-          <button onclick="openBatchSearch()">多料号查询</button>
-        </div>
-        <div class="update-time" id="update-time">
+<div class="page" id="home"><div class="card"><h2>欢迎光临</h2><p>主营 TE、Molex、JST、Aptiv 进口连接器现货</p></div></div>
+
+<div class="page show" id="stock">
+<div class="card">
+<h2>现货库存查询</h2>
+<div class="search-row">
+  <div>
+    <input id="front-search" style="width:320px" placeholder="单个型号搜索" oninput="searchStock()" onclick="clearBatchSearchState()">
+    <button onclick="openBatchSearch()">多料号查询</button>
+  </div>
+  <div class="update-time" id="update-time"></div>
+</div>
+
+<!-- 多料号弹窗 -->
+<div class="modal" id="batch-modal">
+  <div class="modal-content">
+    <div class="modal-header"><h3>多料号批量查询</h3><button onclick="closeBatchSearch()">×</button></div>
+    <textarea id="batch-search-input" placeholder="换行/逗号/空格分隔"></textarea>
+    <button class="btn-green" onclick="batchSearchStock()">立即查询</button>
+    <button onclick="closeBatchSearch()">关闭</button>
+  </div>
+</div>
+
+<table class="table">
+<thead><tr><th>型号</th><th>数量</th><th>批次</th><th>备注</th></tr></thead>
+<tbody id="stock-table"></tbody>
+</table>
+<div class="pagination" id="page-front"></div>
+</div>
+</div>
+
+<div class="page" id="contact"><div class="card"><h2>联系我们</h2></div></div>
+
+</div>
+
+<div class="footer">© 2026 陕西云泽在线科技有限公司</div>
+
+<script>
+let stock = [];
+let frontPage = 1;
+const pageSize = 10;
+let isBatchSearch = false, batchSearchResult = [];
+
+// 显示页面 + 带出最后更新时间
+function show(id){
+  document.querySelectorAll(".page").forEach(p=>p.classList.remove("show"));
+  document.getElementById(id).classList.add("show");
+  if(id==="stock"){
+    renderStock();
+    let t = localStorage.getItem("stockUpdateTime");
+    document.getElementById("update-time").innerText = t ? "最后更新(Excel导入)："+t : "";
+  }
+}
+
+// ========== 关键：批量查询【无弹窗 + 查询完自动清空输入框】 ==========
+function batchSearchStock(){
+  let val = document.getElementById("batch-search-input").value.trim();
+  if(!val){alert("请输入料号");return;}
+  let keys = val.split(/[\n, \s]+/).filter(x=>x);
+  let nk = keys.map(k=>k.replace(/[-._\s]/g,""));
+  batchSearchResult = stock.filter(it=>{
+    let m = it.model.replace(/[-._\s]/g,"");
+    return nk.some(x=>m.includes(x));
+  });
+  isBatchSearch=true;frontPage=1;renderStock();closeBatchSearch();
+
+  // 查询完成 → 自动清空多料号输入框
+  document.getElementById("batch-search-input").value = "";
+}
+
+function openBatchSearch(){document.getElementById("batch-modal").style.display="flex"}
+function closeBatchSearch(){document.getElementById("batch-modal").style.display="none"}
+function clearBatchSearchState(){isBatchSearch=false;batchSearchResult=[]}
+
+function renderStock(){
+  let data = isBatchSearch ? batchSearchResult : [...stock];
+  let kw = document.getElementById("front-search").value.replace(/[-._\s]/g,"");
+  if(kw) data=data.filter(x=>x.model.replace(/[-._\s]/g,"").includes(kw));
+  let total = data.length;
+  let totalPage = Math.ceil(total/pageSize);
+  let s = (frontPage-1)*pageSize;
+  let list = data.slice(s,s+pageSize);
+  document.getElementById("stock-table").innerHTML = list.map(i=>
+    `<tr><td>${i.model}</td><td>${i.qty}</td><td>${i.batch||""}</td><td>${i.remark||""}</td></tr>`
+  ).join("");
+  document.getElementById("page-front").innerHTML =
+  `<button ${frontPage===1?"disabled":""} onclick="frontPage--;renderStock()">上一页</button>
+   <span> ${frontPage}/${totalPage||1} </span>
+   <button ${frontPage>=total?"disabled":""} onclick="frontPage++;renderStock()">下一页</button>`;
+}
+function searchStock(){frontPage=1;renderStock()}
+
+// Excel导入自动记录更新时间（不变）
+function setUpdateTime(){
+  let now = new Date();
+  let t = now.getFullYear()+"-"+
+  String(now.getMonth()+1).padStart(2,"0")+"-"+
+  String(now.getDate()).padStart(2,"0")+" "+
+  String(now.getHours()).padStart(2,"0")+":"+
+  String(now.getMinutes()).padStart(2,"0");
+  localStorage.setItem("stockUpdateTime",t);
+}
+
+window.onload=()=>{show("stock")}
+</script>
+
+</body>
+</html>
