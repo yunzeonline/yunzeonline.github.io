@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="baidu-site-verification" content="codeva-RA2ujgKxzy" />
-<title>进口连接器现货库存查询-TE/Molex/JST连接器-陕西云泽在线</title>
+<title>进口连接器现货库存查询-TE/Molex/JST连接器-陕西云泽在线科技有限公司</title>
 <meta name="keywords" content="进口连接器,连接器现货,TE连接器,Molex连接器,JST连接器,进口连接器库存查询,陕西云泽在线">
 <meta name="description" content="陕西云泽在线科技专注进口连接器现货供应，主营TE、Molex、JST、Aptiv等品牌连接器，提供现货库存实时查询，原厂正品保障、极速响应、现货快速交付，一站式进口连接器供应链服务。">
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Content-Language" content="zh-CN" />
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif}
 html{overflow-y:scroll}
@@ -449,18 +450,12 @@ function closeMobileMenu() {
 
 function recordVisit(pageId) {
   let visitData = JSON.parse(localStorage.getItem('visitData')) || {
-    total: 0,
-    home: 0,
-    stock: 0,
-    contact: 0
+    total: 0, home: 0, stock: 0, contact: 0
   };
-  
   if(['home', 'stock', 'contact'].includes(pageId)) {
-    visitData.total++;
-    visitData[pageId]++;
+    visitData.total++; visitData[pageId]++;
     localStorage.setItem('visitData', JSON.stringify(visitData));
   }
-  
   if(document.getElementById('total-visit')) {
     document.getElementById('total-visit').textContent = visitData.total;
     document.getElementById('home-visit').textContent = visitData.home;
@@ -472,175 +467,109 @@ function recordVisit(pageId) {
 function renderStock() {
   const table = document.getElementById('stock-table');
   const pagination = document.getElementById('page-front');
-  
   let filteredStock = [...stock];
   const searchText = document.getElementById('front-search').value.trim().replace(/[-._\s]/g, '');
   
-  if(isBatchSearch && batchSearchResult.length > 0) {
+  if(isBatchSearch && batchSearchResult.length>0) {
     filteredStock = batchSearchResult;
   } else if(searchText) {
-    filteredStock = stock.filter(item => 
+    filteredStock = stock.filter(item =>
       item.model.replace(/[-._\s]/g, '').includes(searchText)
     );
   }
   
   const totalPage = Math.ceil(filteredStock.length / pageSize);
   frontPage = Math.min(Math.max(1, frontPage), totalPage);
-  const pageData = filteredStock.slice((frontPage - 1) * pageSize, frontPage * pageSize);
+  const pageData = filteredStock.slice((frontPage-1)*pageSize, frontPage*pageSize);
   
-  table.innerHTML = pageData.length > 0 ? pageData.map(item => `
-    <tr>
-      <td>${item.model}</td>
-      <td>${item.num}</td>
-      <td>${item.batch || '-'}</td>
-      <td>${item.remark || '-'}</td>
-    </tr>
-  `).join('') : '<tr><td colspan="4">暂无库存数据</td></tr>';
+  table.innerHTML = pageData.length>0 ? pageData.map(item=>`
+  <tr>
+    <td>${item.model}</td>
+    <td>${item.num}</td>
+    <td>${item.batch||'-'}</td>
+    <td>${item.remark||'-'}</td>
+  </tr>`).join('') : '<tr><td colspan="4">暂无库存数据</td></tr>';
   
   pagination.innerHTML = `
-    <button onclick="changePage(1, 'front')" ${frontPage === 1 ? 'disabled' : ''}>首页</button>
-    <button onclick="changePage(${frontPage - 1}, 'front')" ${frontPage === 1 ? 'disabled' : ''}>上一页</button>
+    <button onclick="changePage(1,'front')" ${frontPage===1?'disabled':''}>首页</button>
+    <button onclick="changePage(${frontPage-1},'front')" ${frontPage===1?'disabled':''}>上一页</button>
     <span>第 ${frontPage} 页 / 共 ${totalPage} 页</span>
-    <button onclick="changePage(${frontPage + 1}, 'front')" ${frontPage === totalPage ? 'disabled' : ''}>下一页</button>
-    <button onclick="changePage(${totalPage}, 'front')" ${frontPage === totalPage ? 'disabled' : ''}>尾页</button>
+    <button onclick="changePage(${frontPage+1},'front')" ${frontPage===totalPage?'disabled':''}>下一页</button>
+    <button onclick="changePage(${totalPage},'front')" ${frontPage===totalPage?'disabled':''}>尾页</button>
   `;
 }
 
 function renderAdminStock() {
   const table = document.getElementById('admin-stock-table');
   const pagination = document.getElementById('page-admin');
-  
   let filteredStock = [...stock];
   const searchText = document.getElementById('admin-search').value.trim().replace(/[-._\s]/g, '');
-  
   if(searchText) {
-    filteredStock = stock.filter(item => 
+    filteredStock = stock.filter(item=>
       item.model.replace(/[-._\s]/g, '').includes(searchText)
     );
   }
+  const totalPage = Math.ceil(filteredStock.length/pageSize);
+  adminPage = Math.min(Math.max(1,adminPage), totalPage);
+  const pageData = filteredStock.slice((adminPage-1)*pageSize, adminPage*pageSize);
   
-  const totalPage = Math.ceil(filteredStock.length / pageSize);
-  adminPage = Math.min(Math.max(1, adminPage), totalPage);
-  const pageData = filteredStock.slice((adminPage - 1) * pageSize, adminPage * pageSize);
-  
-  table.innerHTML = pageData.length > 0 ? pageData.map((item, index) => `
-    <tr>
-      <td><input value="${item.model}" onchange="updateStock('${item.id}', 'model', this.value)"></td>
-      <td><input value="${item.num}" onchange="updateStock('${item.id}', 'num', this.value)"></td>
-      <td><input value="${item.price || ''}" onchange="updateStock('${item.id}', 'price', this.value)"></td>
-      <td><input value="${item.batch || ''}" onchange="updateStock('${item.id}', 'batch', this.value)"></td>
-      <td><input value="${item.warehouse || ''}" onchange="updateStock('${item.id}', 'warehouse', this.value)"></td>
-      <td><input value="${item.remark || ''}" onchange="updateStock('${item.id}', 'remark', this.value)"></td>
-      <td>
-        <button class="btn-red" onclick="deleteStock('${item.id}')">删除</button>
-      </td>
-    </tr>
-  `).join('') : '<tr><td colspan="7">暂无库存数据</td></tr>';
+  table.innerHTML = pageData.length>0 ? pageData.map((item,index)=>`
+  <tr>
+    <td><input value="${item.model}" onchange="updateStock('${item.id}','model',this.value)"></td>
+    <td><input value="${item.num}" onchange="updateStock('${item.id}','num',this.value)"></td>
+    <td><input value="${item.price||''}" onchange="updateStock('${item.id}','price',this.value)"></td>
+    <td><input value="${item.batch||''}" onchange="updateStock('${item.id}','batch',this.value)"></td>
+    <td><input value="${item.warehouse||''}" onchange="updateStock('${item.id}','warehouse',this.value)"></td>
+    <td><input value="${item.remark||''}" onchange="updateStock('${item.id}','remark',this.value)"></td>
+    <td><button class="btn-red" onclick="deleteStock('${item.id}')">删除</button></td>
+  </tr>`).join('') : '<tr><td colspan="7">暂无库存数据</td></tr>';
   
   pagination.innerHTML = `
-    <button onclick="changePage(1, 'admin')" ${adminPage === 1 ? 'disabled' : ''}>首页</button>
-    <button onclick="changePage(${adminPage - 1}, 'admin')" ${adminPage === 1 ? 'disabled' : ''}>上一页</button>
+    <button onclick="changePage(1,'admin')" ${adminPage===1?'disabled':''}>首页</button>
+    <button onclick="changePage(${adminPage-1},'admin')" ${adminPage===1?'disabled':''}>上一页</button>
     <span>第 ${adminPage} 页 / 共 ${totalPage} 页</span>
-    <button onclick="changePage(${adminPage + 1}, 'admin')" ${adminPage === totalPage ? 'disabled' : ''}>下一页</button>
-    <button onclick="changePage(${totalPage}, 'admin')" ${adminPage === totalPage ? 'disabled' : ''}>尾页</button>
+    <button onclick="changePage(${adminPage+1},'admin')" ${adminPage===totalPage?'disabled':''}>下一页</button>
+    <button onclick="changePage(${totalPage},'admin')" ${adminPage===totalPage?'disabled':''}>尾页</button>
   `;
 }
 
 function changePage(page, type) {
-  if(type === 'front') {
-    frontPage = page;
-    renderStock();
-  } else {
-    adminPage = page;
-    renderAdminStock();
-  }
+  if(type==='front') {frontPage=page;renderStock();}
+  else {adminPage=page;renderAdminStock();}
 }
 
-function searchStock() {
-  isBatchSearch = false;
-  frontPage = 1;
-  renderStock();
-}
-
-function clearBatchSearchState() {
-  isBatchSearch = false;
-  batchSearchResult = [];
-  frontPage = 1;
-  renderStock();
-}
-
-function openBatchSearch() {
-  document.getElementById('batch-modal').style.display = 'flex';
-}
-
-function closeBatchSearch() {
-  document.getElementById('batch-modal').style.display = 'none';
-}
+function searchStock() {isBatchSearch=false;frontPage=1;renderStock();}
+function clearBatchSearchState() {isBatchSearch=false;batchSearchResult=[];frontPage=1;renderStock();}
+function openBatchSearch() {document.getElementById('batch-modal').style.display='flex';}
+function closeBatchSearch() {document.getElementById('batch-modal').style.display='none';}
 
 function batchSearchStock() {
   const input = document.getElementById('batch-search-input').value.trim();
-  if(!input) {
-    alert('请输入要查询的料号');
-    return;
-  }
-  
-  const keywords = input.split(/[\n, \s]+/).filter(k => k.trim());
-  if(keywords.length === 0) {
-    alert('请输入有效的料号');
-    return;
-  }
-  
-  const normalizedKeywords = keywords.map(k => k.replace(/[-._\s]/g, ''));
-  
-  batchSearchResult = stock.filter(item => {
-    const normalizedModel = item.model.replace(/[-._\s]/g, '');
-    return normalizedKeywords.some(k => normalizedModel.includes(k));
+  if(!input) {alert('请输入要查询的料号');return;}
+  const keywords = input.split(/[\n, \s]+/).filter(k=>k.trim());
+  if(keywords.length===0) {alert('请输入有效的料号');return;}
+  const nk = keywords.map(k=>k.replace(/[-._\s]/g,''));
+  batchSearchResult = stock.filter(item=>{
+    const nm = item.model.replace(/[-._\s]/g,'');
+    return nk.some(k=>nm.includes(k));
   });
-  
-  isBatchSearch = true;
-  frontPage = 1;
-  renderStock();
-  closeBatchSearch();
+  isBatchSearch=true;frontPage=1;renderStock();closeBatchSearch();
   alert(`批量查询完成，共找到 ${batchSearchResult.length} 条匹配数据`);
 }
 
-function searchAdminStock() {
-  adminPage = 1;
-  renderAdminStock();
-}
-
-function openAdminBatchSearch() {
-  document.getElementById('admin-batch-modal').style.display = 'flex';
-}
-
-function closeAdminBatchSearch() {
-  document.getElementById('admin-batch-modal').style.display = 'none';
-}
-
+function searchAdminStock() {adminPage=1;renderAdminStock();}
+function openAdminBatchSearch() {document.getElementById('admin-batch-modal').style.display='flex';}
+function closeAdminBatchSearch() {document.getElementById('admin-batch-modal').style.display='none';}
 function adminBatchSearchStock() {
   const input = document.getElementById('admin-batch-search-input').value.trim();
-  if(!input) {
-    alert('请输入要查询的料号');
-    return;
-  }
-  
-  const keywords = input.split(/[\n, \s]+/).filter(k => k.trim());
-  if(keywords.length === 0) {
-    alert('请输入有效的料号');
-    return;
-  }
-  
-  const normalizedKeywords = keywords.map(k => k.replace(/[-._\s]/g, ''));
-  
-  const result = stock.filter(item => {
-    const normalizedModel = item.model.replace(/[-._\s]/g, '');
-    return normalizedKeywords.some(k => normalizedModel.includes(k));
+  if(!input) {alert('请输入要查询的料号');return;}
+  const keywords = input.split(/[\n, \s]+/).filter(k=>k.trim());
+  const nk = keywords.map(k=>k.replace(/[-._\s]/g,''));
+  const result = stock.filter(item=>{
+    const nm = item.model.replace(/[-._\s]/g,'');
+    return nk.some(k=>nm.includes(k));
   });
-  
-  stock = result;
-  adminPage = 1;
-  renderAdminStock();
-  closeAdminBatchSearch();
+  stock=result;adminPage=1;renderAdminStock();closeAdminBatchSearch();
   alert(`批量查询完成，共找到 ${result.length} 条匹配数据`);
 }
 
@@ -651,173 +580,154 @@ function addStock() {
   const batch = document.getElementById('b').value.trim();
   const warehouse = document.getElementById('w').value.trim();
   const remark = document.getElementById('r').value.trim();
-  
-  if(!model || !num) {
-    alert('型号和数量不能为空');
-    return;
-  }
-  
-  stock.push({
-    model,
-    num,
-    price,
-    batch,
-    warehouse,
-    remark,
-    id: Date.now().toString()
-  });
-  
+  if(!model||!num) {alert('型号和数量不能为空');return;}
+  stock.push({model,num,price,batch,warehouse,remark,id:Date.now().toString()});
   saveStock();
-  
-  document.getElementById('m').value = '';
-  document.getElementById('n').value = '';
-  document.getElementById('p').value = '';
-  document.getElementById('b').value = '';
-  document.getElementById('w').value = '';
-  document.getElementById('r').value = '';
-  
+  document.getElementById('m').value='';
+  document.getElementById('n').value='';
+  document.getElementById('p').value='';
+  document.getElementById('b').value='';
+  document.getElementById('w').value='';
+  document.getElementById('r').value='';
   renderAdminStock();
   localStorage.setItem('stockUpdateTime', new Date().toLocaleString());
 }
 
-function updateStock(id, key, value) {
-  const index = stock.findIndex(item => item.id === id);
-  if(index !== -1) {
-    stock[index][key] = value;
-    saveStock();
-  }
+function updateStock(id,key,value) {
+  const i=stock.findIndex(x=>x.id===id);
+  if(i!==-1){stock[i][key]=value;saveStock();}
 }
-
 function deleteStock(id) {
-  if(confirm('确定要删除这条库存吗？')) {
-    stock = stock.filter(item => item.id !== id);
-    saveStock();
-    renderAdminStock();
+  if(confirm('确定删除？')){
+    stock=stock.filter(x=>x.id!==id);saveStock();renderAdminStock();
   }
 }
-
 function clearStock() {
-  if(confirm('确定要清空所有库存吗？此操作不可恢复！')) {
-    stock = [];
-    saveStock();
-    renderAdminStock();
+  if(confirm('确定清空所有库存？不可恢复！')){
+    stock=[];saveStock();renderAdminStock();
   }
 }
 
-function saveStock() {
-  localStorage.setItem('stockData', JSON.stringify(stock));
-}
-
+function saveStock() {localStorage.setItem('stockData',JSON.stringify(stock));}
 function saveStockToGithub() {
-  const stockJson = JSON.stringify(stock, null, 2);
-  navigator.clipboard.writeText(stockJson).then(() => {
-    alert('库存JSON已复制到剪贴板！');
-  }).catch(err => {
-    alert('复制失败，请手动复制：\n' + stockJson);
-  });
+  const j=JSON.stringify(stock,null,2);
+  navigator.clipboard.writeText(j).then(()=>alert('JSON已复制')).catch(()=>alert('复制失败：'+j));
 }
 
+// ========== 完整 Excel 导入功能 ==========
 function importExcel() {
-  alert('Excel导入功能暂未实现，可先使用批量添加或手动添加');
-}
+  const fileInput = document.getElementById('excel');
+  const file = fileInput.files[0];
+  if (!file) {
+    alert('请先选择Excel文件！仅支持 .xlsx');
+    return;
+  }
+  if (!file.name.endsWith('.xlsx')) {
+    alert('仅支持 .xlsx 格式！');
+    return;
+  }
 
-function loadContact() {
-  const contact = JSON.parse(localStorage.getItem('contactData')) || {};
-  document.getElementById('set-addr').value = contact.addr || '';
-  document.getElementById('set-tel').value = contact.tel || '';
-  document.getElementById('set-wx').value = contact.wx || '';
-  document.getElementById('set-qq').value = contact.qq || '';
-  document.getElementById('set-mail').value = contact.mail || '';
-}
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(data, { type: 'array' });
+      const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+      const jsonData = XLSX.utils.sheet_to_json(firstSheet);
 
-function saveContact() {
-  const contact = {
-    addr: document.getElementById('set-addr').value.trim(),
-    tel: document.getElementById('set-tel').value.trim(),
-    wx: document.getElementById('set-wx').value.trim(),
-    qq: document.getElementById('set-qq').value.trim(),
-    mail: document.getElementById('set-mail').value.trim()
+      if (!jsonData || jsonData.length === 0) {
+        alert('Excel中未读取到有效数据！');
+        return;
+      }
+
+      let success = 0;
+      jsonData.forEach(row => {
+        const model = (row['型号'] || row['model'] || '').toString().trim();
+        const num = (row['数量'] || row['num'] || '0').toString().trim();
+        const price = (row['单价'] || row['price'] || '').toString().trim();
+        const batch = (row['批次'] || row['batch'] || '').toString().trim();
+        const warehouse = (row['仓库'] || row['warehouse'] || '').toString().trim();
+        const remark = (row['备注'] || row['remark'] || '').toString().trim();
+
+        if (model && num) {
+          stock.push({
+            model, num, price, batch, warehouse, remark,
+            id: Date.now() + Math.random().toString(36).substr(2, 5)
+          });
+          success++;
+        }
+      });
+
+      saveStock();
+      renderAdminStock();
+      localStorage.setItem('stockUpdateTime', new Date().toLocaleString());
+      alert(`Excel导入完成！\n成功导入：${success} 条数据`);
+      fileInput.value = '';
+    } catch (err) {
+      console.error(err);
+      alert('Excel解析失败，请检查文件格式！');
+    }
   };
-  
-  localStorage.setItem('contactData', JSON.stringify(contact));
-  alert('联系信息保存成功！');
-  show('admin');
+  reader.readAsArrayBuffer(file);
 }
 
+// 联系信息
+function loadContact() {
+  const c=JSON.parse(localStorage.getItem('contactData'))||{};
+  document.getElementById('set-addr').value=c.addr||'';
+  document.getElementById('set-tel').value=c.tel||'';
+  document.getElementById('set-wx').value=c.wx||'';
+  document.getElementById('set-qq').value=c.qq||'';
+  document.getElementById('set-mail').value=c.mail||'';
+}
+function saveContact() {
+  const c={
+    addr:document.getElementById('set-addr').value.trim(),
+    tel:document.getElementById('set-tel').value.trim(),
+    wx:document.getElementById('set-wx').value.trim(),
+    qq:document.getElementById('set-qq').value.trim(),
+    mail:document.getElementById('set-mail').value.trim()
+  };
+  localStorage.setItem('contactData',JSON.stringify(c));
+  alert('保存成功！');show('admin');
+}
+
+// 登录/改密
 function login() {
-  const pwd = document.getElementById('pwd').value;
-  const adminPwd = localStorage.getItem('adminPwd') || 'admin123';
-  
-  if(pwd === adminPwd) {
-    show('admin');
-    const visitData = JSON.parse(localStorage.getItem('visitData')) || {
-      total: 0,
-      home: 0,
-      stock: 0,
-      contact: 0
-    };
-    document.getElementById('total-visit').textContent = visitData.total;
-    document.getElementById('home-visit').textContent = visitData.home;
-    document.getElementById('stock-visit').textContent = visitData.stock;
-    document.getElementById('contact-visit').textContent = visitData.contact;
-  } else {
-    alert('密码错误！');
-  }
+  const p=document.getElementById('pwd').value;
+  const ap=localStorage.getItem('adminPwd')||'admin123';
+  if(p===ap){show('admin');recordVisit('admin');}
+  else{alert('密码错误！');}
 }
-
-function logout() {
-  show('home');
-}
-
+function logout(){show('home');}
 function changePwd() {
-  const oldPwd = document.getElementById('old-pwd').value;
-  const newPwd = document.getElementById('new-pwd').value;
-  const confirmPwd = document.getElementById('confirm-pwd').value;
-  
-  const adminPwd = localStorage.getItem('adminPwd') || 'admin123';
-  
-  if(oldPwd !== adminPwd) {
-    alert('原密码错误！');
-    return;
-  }
-  
-  if(newPwd.length < 6) {
-    alert('新密码长度不能少于6位！');
-    return;
-  }
-  
-  if(newPwd !== confirmPwd) {
-    alert('两次输入的密码不一致！');
-    return;
-  }
-  
-  localStorage.setItem('adminPwd', newPwd);
-  alert('密码修改成功！请重新登录');
-  show('login');
+  const old=document.getElementById('old-pwd').value;
+  const n=document.getElementById('new-pwd').value;
+  const c=document.getElementById('confirm-pwd').value;
+  const ap=localStorage.getItem('adminPwd')||'admin123';
+  if(old!==ap){alert('原密码错误');return;}
+  if(n.length<6){alert('密码至少6位');return;}
+  if(n!==c){alert('两次不一致');return;}
+  localStorage.setItem('adminPwd',n);
+  alert('修改成功，请重新登录');show('login');
 }
 
-window.onload = function() {
-  const savedStock = localStorage.getItem('stockData');
-  if(savedStock) {
-    stock = JSON.parse(savedStock);
-  }
-  
+// 初始化
+window.onload=function(){
+  const s=localStorage.getItem('stockData');
+  if(s)stock=JSON.parse(s);
   renderStock();
   recordVisit('home');
-  
-  window.addEventListener('resize', function() {
-    if(window.innerWidth >= 769) {
-      document.getElementById('mobileMenu').style.display = 'none';
-    }
+  window.addEventListener('resize',()=>{
+    if(window.innerWidth>=769)document.getElementById('mobileMenu').style.display='none';
   });
-
   document.querySelectorAll('.nav button, .mobile-menu button').forEach(btn => {
     btn.classList.remove('active');
     if(btn.onclick && btn.onclick.toString().includes(`show('home')`)) {
       btn.classList.add('active');
     }
   });
-};
+}
 </script>
 </body>
 </html>
