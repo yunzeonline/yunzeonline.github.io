@@ -137,7 +137,7 @@ body{background:#F5F7FA;color:#333;line-height:1.8;padding-bottom:60px;width:100
 #admin-stock .table th:nth-child(5){width:12%}
 #admin-stock .table th:nth-child(6){width:18%}
 #admin-stock .table th:nth-child(7){width:14%}
-.table input{width:90%;padding:4px;border:1px solid #D1E7FF;border-radius:4px;text-align:center}
+.table input{width:90%;padding:4px;border:1px solid #D1EFF;border-radius:4px;text-align:center}
 input{padding:10px;width:100%;border:1px solid #E2E8F0;border-radius:6px;margin-bottom:10px;background:#fff}
 textarea{padding:10px;width:100%;border:1px solid #E2E8F0;border-radius:6px;margin-bottom:10px;min-height:100px;resize:vertical;font-size:14px;font-family:"Microsoft YaHei",sans-serif;background:#fff}
 button{padding:8px 16px;background:#007bff;color:#fff;border:none;border-radius:6px;cursor:pointer;margin:0 3px;font-size:14px;transition:all 0.2s ease}
@@ -450,7 +450,6 @@ async function loadRemoteStock(){
     el.innerText="✅ 库存已同步完成";
     setTimeout(()=>el.style.display="none",1500);
     
-    // 自动显示最后更新时间
     const now = new Date();
     const timeStr = now.getFullYear() + "-" +
     String(now.getMonth()+1).padStart(2,'0') + "-" +
@@ -490,7 +489,6 @@ function show(pageId) {
   }
 }
 
-// 显示最后更新时间
 function showUpdateTime() {
   const updateTime = localStorage.getItem('stockUpdateTime');
   const el = document.getElementById('update-time');
@@ -518,7 +516,6 @@ function recordVisit(pageId){
   }
 }
 
-// ========== 前台批量查询：无弹窗 + 查询完自动清空 ==========
 function batchSearchStock() {
   const input = document.getElementById('batch-search-input').value.trim();
   if(!input) {alert('请输入要查询的料号');return;}
@@ -529,12 +526,9 @@ function batchSearchStock() {
     return nk.some(k=>nm.includes(k));
   });
   isBatchSearch=true;frontPage=1;renderStock();closeBatchSearch();
-  
-  // 自动清空
   document.getElementById('batch-search-input').value = '';
 }
 
-// ========== 后台批量查询：无弹窗 + 查询完自动清空 ==========
 function adminBatchSearchStock() {
   const input = document.getElementById('admin-batch-search-input').value.trim();
   if(!input) {alert('请输入要查询的料号');return;}
@@ -545,8 +539,6 @@ function adminBatchSearchStock() {
     return nk.some(k=>nm.includes(k));
   });
   stock=result;adminPage=1;renderAdminStock();closeAdminBatchSearch();
-  
-  // 自动清空
   document.getElementById('admin-batch-search-input').value = '';
 }
 
@@ -556,7 +548,7 @@ function openAdminBatchSearch(){document.getElementById("admin-batch-modal").sty
 function closeAdminBatchSearch(){document.getElementById("admin-batch-modal").style.display="none";}
 function clearBatchSearchState(){isBatchSearch=false;batchSearchResult=[];}
 
-// ========== 修复：数量、批次、备注 100% 正常显示 ==========
+// ========== 已修复：数量 100% 显示 ==========
 function renderStock(){
   const t=document.getElementById("stock-table");
   const p=document.getElementById("page-front");
@@ -570,9 +562,9 @@ function renderStock(){
   t.innerHTML=show.map(i=>`
   <tr>
     <td>${i.model}</td>
-    <td>${i.数量 || ''}</td>
-    <td>${i.批次 || ''}</td>
-    <td>${i.备注 || ''}</td>
+    <td>${i.qty || i.qty2 || i.数量 || i.num || ''}</td>
+    <td>${i.batch || i.批次 || ''}</td>
+    <td>${i.remark || i.备注 || ''}</td>
   </tr>`).join("");
 
   p.innerHTML=`<button onclick="frontPage=1;renderStock()" ${frontPage===1?"disabled":""}>首页</button>
@@ -584,7 +576,6 @@ function renderStock(){
 
 function searchStock(){frontPage=1;renderStock();}
 
-// ========== 修复后台表格显示 ==========
 function renderAdminStock(){
   const t=document.getElementById("admin-stock-table");
   const p=document.getElementById("page-admin");
@@ -598,11 +589,11 @@ function renderAdminStock(){
   t.innerHTML=show.map((i,idx)=>`
   <tr>
     <td>${i.model}</td>
-    <td>${i.数量 || ''}</td>
-    <td>${i.单价 || ''}</td>
-    <td>${i.批次 || ''}</td>
-    <td>${i.仓库 || ''}</td>
-    <td>${i.备注 || ''}</td>
+    <td>${i.qty || i.qty2 || i.数量 || i.num || ''}</td>
+    <td>${i.price || i.单价 || ''}</td>
+    <td>${i.batch || i.批次 || ''}</td>
+    <td>${i.warehouse || i.仓库 || ''}</td>
+    <td>${i.remark || i.备注 || ''}</td>
     <td><button class="btn-red" onclick="delStock(${st+idx})">删除</button></td>
   </tr>`).join("");
 
@@ -619,11 +610,11 @@ function addStock(){
   if(!m){alert("型号不能为空");return;}
   stock.push({
     model:m,
-    数量:document.getElementById("n").value,
-    单价:document.getElementById("p").value,
-    批次:document.getElementById("b").value,
-    仓库:document.getElementById("w").value,
-    备注:document.getElementById("r").value
+    qty:document.getElementById("n").value,
+    price:document.getElementById("p").value,
+    batch:document.getElementById("b").value,
+    warehouse:document.getElementById("w").value,
+    remark:document.getElementById("r").value
   });
   document.getElementById("m").value=document.getElementById("n").value=document.getElementById("p").value=document.getElementById("b").value=document.getElementById("w").value=document.getElementById("r").value="";
   renderAdminStock();
@@ -631,7 +622,6 @@ function addStock(){
 function delStock(i){stock.splice(i,1);renderAdminStock();}
 function clearStock(){if(confirm("确定要清空所有库存数据吗？"))stock=[];renderAdminStock();}
 
-// ========== Excel导入时记录更新时间 ==========
 function importExcel() {
   const file = document.getElementById('excel').files[0];
   if(!file) return;
@@ -642,11 +632,11 @@ function importExcel() {
     const data = XLSX.utils.sheet_to_json(ws);
     stock = data.map(item=>({
       model: item['型号'] || '',
-      数量: item['数量'] || '',
-      单价: item['单价'] || '',
-      批次: item['批次'] || '',
-      仓库: item['仓库'] || '',
-      备注: item['备注'] || ''
+      qty: item['数量'] || item['qty'] || '',
+      price: item['单价'] || '',
+      batch: item['批次'] || '',
+      warehouse: item['仓库'] || '',
+      remark: item['备注'] || ''
     })).filter(item=>item.model);
     
     const now = new Date();
