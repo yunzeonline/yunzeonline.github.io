@@ -452,6 +452,7 @@ let adminPage = 1;
 const pageSize = 10;
 let isBatchSearch = false;
 let batchSearchResult = [];
+let excelImportTime = ''; // 专门存储Excel导入时间
 
 async function loadRemoteStock() {
   const statusEl = document.getElementById("load-status");
@@ -475,6 +476,8 @@ async function loadRemoteStock() {
     }));
 
     originalStock = [...stock];
+    // 初始化导入时间（无导入记录时显示当前时间）
+    excelImportTime = localStorage.getItem('excelImportTime') || new Date().toLocaleString();
     statusEl.innerText = `✅ 库存同步完成，共 ${stock.length} 条数据`;
     setTimeout(() => statusEl.style.display = "none", 1500);
   } catch (error) {
@@ -484,19 +487,30 @@ async function loadRemoteStock() {
       {"model":"7-1452668-1","num":"623512","price":"","batch":"","warehouse":"H1","remark":"","id":"1774305061830hwxbr1"}
     ];
     originalStock = [...stock];
+    // 初始化导入时间
+    excelImportTime = localStorage.getItem('excelImportTime') || new Date().toLocaleString();
     statusEl.className = "error-tip";
     statusEl.innerText = "⚠️ 远程库存加载失败，已显示本地测试数据（数量字段正常）";
   }
 
-  updateStockTime();
+  showUpdateTime(); // 显示导入时间
   renderStock();
+}
+
+// 【核心优化1】仅Excel导入时更新时间
+function updateExcelImportTime() {
+  const now = new Date();
+  excelImportTime = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}:${String(now.getSeconds()).padStart(2,'0')}`;
+  localStorage.setItem('excelImportTime', excelImportTime);
   showUpdateTime();
 }
 
-function updateStockTime() {
-  const now = new Date();
-  const timeStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
-  localStorage.setItem('stockUpdateTime', timeStr);
+// 显示Excel导入时间（替代原更新时间）
+function showUpdateTime() {
+  const el = document.getElementById('update-time');
+  if (el && excelImportTime) {
+    el.textContent = `最后导入时间：${excelImportTime}`;
+  }
 }
 
 function show(pageId) {
@@ -521,14 +535,6 @@ function show(pageId) {
   }
   if (pageId === 'admin-contact') {
     loadContact();
-  }
-}
-
-function showUpdateTime() {
-  const updateTime = localStorage.getItem('stockUpdateTime');
-  const el = document.getElementById('update-time');
-  if (el && updateTime) {
-    el.textContent = `最后更新：${updateTime}`;
   }
 }
 
@@ -557,22 +563,38 @@ function recordVisit(pageId) {
   }
 }
 
-// ==============================================
-// 【核心修复】点击单型号输入框 → 立刻清空多料号查询状态，显示全部库存
-// ==============================================
+// 点击单型号输入框 → 显示全部库存
 function resetToAllStock() {
   document.getElementById("front-search").value = "";
-  isBatchSearch = false;         // 关闭多料号查询状态
-  batchSearchResult = [];        // 清空多料号结果
-  frontPage = 1;                 // 回到第一页
-  renderStock();                 // 重新渲染全部库存
+  isBatchSearch = false;
+  batchSearchResult = [];
+  frontPage = 1;
+  renderStock();
 }
 
 function resetToAllAdminStock() {
   document.getElementById("admin-search").value = "";
-  stock = [...originalStock];    // 恢复全部库存
+  stock = [...originalStock];
   adminPage = 1;
   renderAdminStock();
+}
+
+// 【核心优化2】点击多料号查询按钮 → 清空单料号输入框 + 显示全部库存
+function openBatchSearch() {
+  document.getElementById("front-search").value = ""; // 清空单料号文本框
+  isBatchSearch = false; // 重置多料号状态
+  batchSearchResult = [];
+  frontPage = 1;
+  renderStock(); // 显示全部库存
+  document.getElementById("batch-modal").style.display = "flex"; // 打开弹窗
+}
+
+function openAdminBatchSearch() {
+  document.getElementById("admin-search").value = ""; // 后台同步优化
+  stock = [...originalStock];
+  adminPage = 1;
+  renderAdminStock();
+  document.getElementById("admin-batch-modal").style.display = "flex";
 }
 
 function batchSearchStock() {
@@ -619,9 +641,7 @@ function adminBatchSearchStock() {
   document.getElementById('admin-batch-search-input').value = '';
 }
 
-function openBatchSearch() { document.getElementById("batch-modal").style.display = "flex"; }
 function closeBatchSearch() { document.getElementById("batch-modal").style.display = "none"; }
-function openAdminBatchSearch() { document.getElementById("admin-batch-modal").style.display = "flex"; }
 function closeAdminBatchSearch() { document.getElementById("admin-batch-modal").style.display = "none"; }
 
 function renderStock() {
@@ -745,7 +765,7 @@ function addStock() {
   document.getElementById("r").value = "";
   
   renderAdminStock();
-  updateStockTime();
+  // 不更新导入时间
 }
 
 function delStock(index) {
@@ -759,7 +779,7 @@ function delStock(index) {
     }
     
     renderAdminStock();
-    updateStockTime();
+    // 不更新导入时间
   }
 }
 
@@ -768,10 +788,11 @@ function clearStock() {
     stock = [];
     originalStock = [];
     renderAdminStock();
-    updateStockTime();
+    // 不更新导入时间
   }
 }
 
+// 【核心优化3】Excel导入时更新时间
 function importExcel() {
   const fileInput = document.getElementById('excel');
   const file = fileInput.files[0];
@@ -801,8 +822,9 @@ function importExcel() {
       stock = [...newStock];
       originalStock = [...newStock];
       
-      updateStockTime();
+      updateExcelImportTime(); // 导入成功才更新时间
       renderAdminStock();
+      renderStock();
       
       alert(`✅ Excel导入成功！共导入 ${stock.length} 条库存数据`);
     } catch (error) {
@@ -891,6 +913,8 @@ function changePwd() {
 }
 
 window.onload = function() {
+  // 页面加载时读取保存的导入时间
+  excelImportTime = localStorage.getItem('excelImportTime') || new Date().toLocaleString();
   loadRemoteStock();
   recordVisit('home');
 };
