@@ -125,11 +125,11 @@ body{background:#F5F7FA;color:#333;line-height:1.8;padding-bottom:60px;width:100
 .table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px;table-layout:fixed}
 .table th,.table td{padding:10px 8px;text-align:center;border:1px solid #E2E8F0;word-break:break-all}
 .table th{background:#F8FAFC;color:#003366}
-#stock .table th:nth-child(1){width:32%}
-#stock .table th:nth-child(2){width:17%}
-#stock .table th:nth-child(3){width:17%}
-#stock .table th:nth-child(4){width:17%}
-#stock .table th:nth-child(5){width:17%}
+/* 前台库存表格宽度（移除仓库列后，调整为4列） */
+#stock .table th:nth-child(1){width:40%}
+#stock .table th:nth-child(2){width:20%}
+#stock .table th:nth-child(3){width:20%}
+#stock .table th:nth-child(4){width:20%}
 /* 后台库存表格宽度（适配单价列） */
 #admin-stock .table th:nth-child(1){width:20%}
 #admin-stock .table th:nth-child(2){width:12%}
@@ -266,8 +266,9 @@ button:disabled{opacity:.6}
     <button onclick="closeBatchSearch()" style="background:#CCCCCC;color:#333;">取消</button>
   </div>
 </div>
+<!-- 移除仓库列头 -->
 <table class="table">
-<thead><tr><th>型号</th><th>数量</th><th>批次</th><th>仓库</th><th>备注</th></tr></thead>
+<thead><tr><th>型号</th><th>数量</th><th>批次</th><th>备注</th></tr></thead>
 <tbody id="stock-table"></tbody>
 </table>
 <div class="pagination" id="page-front"></div>
@@ -430,24 +431,27 @@ function show(pageId) {
   });
   // 显示目标页面
   document.getElementById(pageId).classList.add('show');
-  
-  // 更新导航按钮激活状态
+  // 切换导航激活状态（仅前台导航）
   document.querySelectorAll('.nav button, .mobile-menu button').forEach(btn => {
     btn.classList.remove('active');
     if(btn.onclick && btn.onclick.toString().includes(`show('${pageId}')`)) {
       btn.classList.add('active');
     }
   });
-  
   // 统计页面访问次数
-  updateVisitCount(pageId);
-  
-  // 初始化对应页面数据
+  recordVisit(pageId);
+  // 渲染对应页面数据
   if(pageId === 'stock') {
     renderStock();
-    document.getElementById('update-time').textContent = `最后更新：${new Date().toLocaleString()}`;
-  } else if(pageId === 'admin-stock') {
+    // 更新库存最后修改时间
+    const updateTime = localStorage.getItem('stockUpdateTime');
+    document.getElementById('update-time').textContent = updateTime ? `最后更新：${updateTime}` : '';
+  }
+  if(pageId === 'admin-stock') {
     renderAdminStock();
+  }
+  if(pageId === 'admin-contact') {
+    loadContact();
   }
 }
 
@@ -457,64 +461,37 @@ function toggleMobileMenu() {
   mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
 }
 
-// 关闭移动端菜单
 function closeMobileMenu() {
   document.getElementById('mobileMenu').style.display = 'none';
 }
 
-// 管理员登录
-function login() {
-  const pwd = document.getElementById('pwd').value;
-  // 简易密码验证（可自行修改）
-  if(pwd === 'admin123') {
-    show('admin');
-    alert('登录成功！');
-  } else {
-    alert('密码错误，请重试！');
+// 访问次数统计
+function recordVisit(pageId) {
+  // 初始化访问数据
+  let visitData = JSON.parse(localStorage.getItem('visitData')) || {
+    total: 0,
+    home: 0,
+    stock: 0,
+    contact: 0
+  };
+  
+  // 总访问量+1（仅前台页面）
+  if(['home', 'stock', 'contact'].includes(pageId)) {
+    visitData.total++;
+    visitData[pageId]++;
+    localStorage.setItem('visitData', JSON.stringify(visitData));
+  }
+  
+  // 更新后台访问统计显示
+  if(document.getElementById('total-visit')) {
+    document.getElementById('total-visit').textContent = visitData.total;
+    document.getElementById('home-visit').textContent = visitData.home;
+    document.getElementById('stock-visit').textContent = visitData.stock;
+    document.getElementById('contact-visit').textContent = visitData.contact;
   }
 }
 
-// 退出登录
-function logout() {
-  if(confirm('确定要退出后台吗？')) {
-    show('home');
-  }
-}
-
-// 添加库存
-function addStock() {
-  const model = document.getElementById('m').value.trim();
-  const num = document.getElementById('n').value.trim();
-  const price = document.getElementById('p').value.trim();
-  const batch = document.getElementById('b').value.trim();
-  const warehouse = document.getElementById('w').value.trim();
-  const remark = document.getElementById('r').value.trim();
-  
-  if(!model || !num) {
-    alert('型号和数量不能为空！');
-    return;
-  }
-  
-  // 添加到库存数组
-  stock.push({
-    model, num, price, batch, warehouse, remark,
-    id: Date.now() // 唯一ID
-  });
-  
-  // 清空输入框
-  document.getElementById('m').value = '';
-  document.getElementById('n').value = '';
-  document.getElementById('p').value = '';
-  document.getElementById('b').value = '';
-  document.getElementById('w').value = '';
-  document.getElementById('r').value = '';
-  
-  // 重新渲染库存表格
-  renderAdminStock();
-  alert('库存添加成功！');
-}
-
-// 渲染前台库存表格
+// 前台库存渲染
 function renderStock() {
   const table = document.getElementById('stock-table');
   const pagination = document.getElementById('page-front');
@@ -534,26 +511,29 @@ function renderStock() {
   // 分页处理
   const totalPage = Math.ceil(filteredStock.length / pageSize);
   frontPage = Math.min(Math.max(1, frontPage), totalPage);
-  const start = (frontPage - 1) * pageSize;
-  const end = start + pageSize;
-  const pageData = filteredStock.slice(start, end);
+  const pageData = filteredStock.slice((frontPage - 1) * pageSize, frontPage * pageSize);
   
-  // 渲染表格
+  // 渲染表格（移除仓库列，colspan改为4）
   table.innerHTML = pageData.length > 0 ? pageData.map(item => `
     <tr>
       <td>${item.model}</td>
       <td>${item.num}</td>
       <td>${item.batch || '-'}</td>
-      <td>${item.warehouse || '-'}</td>
       <td>${item.remark || '-'}</td>
     </tr>
-  `).join('') : '<tr><td colspan="5">暂无库存数据</td></tr>';
+  `).join('') : '<tr><td colspan="4">暂无库存数据</td></tr>';
   
   // 渲染分页
-  renderPagination('front', totalPage, frontPage);
+  pagination.innerHTML = `
+    <button onclick="changePage(1, 'front')" ${frontPage === 1 ? 'disabled' : ''}>首页</button>
+    <button onclick="changePage(${frontPage - 1}, 'front')" ${frontPage === 1 ? 'disabled' : ''}>上一页</button>
+    <span>第 ${frontPage} 页 / 共 ${totalPage} 页</span>
+    <button onclick="changePage(${frontPage + 1}, 'front')" ${frontPage === totalPage ? 'disabled' : ''}>下一页</button>
+    <button onclick="changePage(${totalPage}, 'front')" ${frontPage === totalPage ? 'disabled' : ''}>尾页</button>
+  `;
 }
 
-// 渲染后台库存表格
+// 后台库存渲染
 function renderAdminStock() {
   const table = document.getElementById('admin-stock-table');
   const pagination = document.getElementById('page-admin');
@@ -571,70 +551,42 @@ function renderAdminStock() {
   // 分页处理
   const totalPage = Math.ceil(filteredStock.length / pageSize);
   adminPage = Math.min(Math.max(1, adminPage), totalPage);
-  const start = (adminPage - 1) * pageSize;
-  const end = start + pageSize;
-  const pageData = filteredStock.slice(start, end);
+  const pageData = filteredStock.slice((adminPage - 1) * pageSize, adminPage * pageSize);
   
-  // 渲染表格
-  table.innerHTML = pageData.length > 0 ? pageData.map(item => `
+  // 渲染表格（保留仓库列）
+  table.innerHTML = pageData.length > 0 ? pageData.map((item, index) => `
     <tr>
-      <td>${item.model}</td>
-      <td>${item.num}</td>
-      <td>${item.price || '-'}</td>
-      <td>${item.batch || '-'}</td>
-      <td>${item.warehouse || '-'}</td>
-      <td>${item.remark || '-'}</td>
+      <td><input value="${item.model}" onchange="updateStock('${item.id}', 'model', this.value)"></td>
+      <td><input value="${item.num}" onchange="updateStock('${item.id}', 'num', this.value)"></td>
+      <td><input value="${item.price || ''}" onchange="updateStock('${item.id}', 'price', this.value)"></td>
+      <td><input value="${item.batch || ''}" onchange="updateStock('${item.id}', 'batch', this.value)"></td>
+      <td><input value="${item.warehouse || ''}" onchange="updateStock('${item.id}', 'warehouse', this.value)"></td>
+      <td><input value="${item.remark || ''}" onchange="updateStock('${item.id}', 'remark', this.value)"></td>
       <td>
-        <button onclick="editStock(${item.id})">编辑</button>
-        <button class="btn-red" onclick="deleteStock(${item.id})">删除</button>
+        <button class="btn-red" onclick="deleteStock('${item.id}')">删除</button>
       </td>
     </tr>
   `).join('') : '<tr><td colspan="7">暂无库存数据</td></tr>';
   
   // 渲染分页
-  renderPagination('admin', totalPage, adminPage);
+  pagination.innerHTML = `
+    <button onclick="changePage(1, 'admin')" ${adminPage === 1 ? 'disabled' : ''}>首页</button>
+    <button onclick="changePage(${adminPage - 1}, 'admin')" ${adminPage === 1 ? 'disabled' : ''}>上一页</button>
+    <span>第 ${adminPage} 页 / 共 ${totalPage} 页</span>
+    <button onclick="changePage(${adminPage + 1}, 'admin')" ${adminPage === totalPage ? 'disabled' : ''}>下一页</button>
+    <button onclick="changePage(${totalPage}, 'admin')" ${adminPage === totalPage ? 'disabled' : ''}>尾页</button>
+  `;
 }
 
-// 通用分页渲染（最多显示3个页码）
-function renderPagination(type, totalPage, currentPage) {
-  const container = document.getElementById(`page-${type}`);
-  if(totalPage <= 1) {
-    container.innerHTML = '';
-    return;
+// 切换页码
+function changePage(page, type) {
+  if(type === 'front') {
+    frontPage = page;
+    renderStock();
+  } else {
+    adminPage = page;
+    renderAdminStock();
   }
-
-  let html = '';
-  // 首页/上一页
-  html += `<button onclick="change${type.replace(/^\w/, c => c.toUpperCase())}Page(1)" ${currentPage === 1 ? 'disabled' : ''}>首页</button>`;
-  html += `<button onclick="change${type.replace(/^\w/, c => c.toUpperCase())}Page(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>上一页</button>`;
-  
-  // 页码（只显示当前页前后1页，最多3页）
-  const startPage = Math.max(1, currentPage - 1);
-  const endPage = Math.min(totalPage, currentPage + 1);
-  for(let i = startPage; i <= endPage; i++) {
-    html += `<button onclick="change${type.replace(/^\w/, c => c.toUpperCase())}Page(${i})" ${i === currentPage ? 'style="background:#0056b3"' : ''}>${i}</button>`;
-  }
-  
-  // 下一页/尾页
-  html += `<button onclick="change${type.replace(/^\w/, c => c.toUpperCase())}Page(${currentPage + 1})" ${currentPage === totalPage ? 'disabled' : ''}>下一页</button>`;
-  html += `<button onclick="change${type.replace(/^\w/, c => c.toUpperCase())}Page(${totalPage})" ${currentPage === totalPage ? 'disabled' : ''}>尾页</button>`;
-  
-  // 页码信息
-  html += `<span style="margin-left:10px;">${currentPage}/${totalPage}</span>`;
-  
-  container.innerHTML = html;
-}
-
-// 前台分页切换
-function changeFrontPage(page) {
-  frontPage = page;
-  renderStock();
-}
-
-// 后台分页切换
-function changeAdminPage(page) {
-  adminPage = page;
-  renderAdminStock();
 }
 
 // 前台搜索
@@ -644,10 +596,12 @@ function searchStock() {
   renderStock();
 }
 
-// 后台搜索
-function searchAdminStock() {
-  adminPage = 1;
-  renderAdminStock();
+// 清空批量搜索状态
+function clearBatchSearchState() {
+  isBatchSearch = false;
+  batchSearchResult = [];
+  frontPage = 1;
+  renderStock();
 }
 
 // 打开批量搜索弹窗
@@ -660,51 +614,43 @@ function closeBatchSearch() {
   document.getElementById('batch-modal').style.display = 'none';
 }
 
-// 清空批量搜索状态
-function clearBatchSearchState() {
-  isBatchSearch = false;
-  frontPage = 1;
-  renderStock();
-}
-
 // 批量搜索库存
 function batchSearchStock() {
   const input = document.getElementById('batch-search-input').value.trim();
   if(!input) {
-    alert('请输入要查询的料号！');
+    alert('请输入要查询的料号');
     return;
   }
   
-  // 解析输入的料号（支持换行、逗号、空格分隔）
-  const keywords = input.split(/[\n, \t]+/).filter(k => k.trim());
+  // 分割多料号（支持换行、逗号、空格）
+  const keywords = input.split(/[\n, \s]+/).filter(k => k.trim());
   if(keywords.length === 0) {
-    alert('请输入有效的料号！');
+    alert('请输入有效的料号');
     return;
   }
   
-  // 搜索匹配的库存
-  batchSearchResult = [];
-  keywords.forEach(keyword => {
-    const cleanKeyword = keyword.replace(/[-._\s]/g, '');
-    const matches = stock.filter(item => 
-      item.model.replace(/[-._\s]/g, '').includes(cleanKeyword)
-    );
-    batchSearchResult.push(...matches);
-  });
+  // 统一格式（移除特殊字符）
+  const normalizedKeywords = keywords.map(k => k.replace(/[-._\s]/g, ''));
   
-  // 去重
-  batchSearchResult = batchSearchResult.filter((item, index, self) => 
-    self.findIndex(i => i.id === item.id) === index
-  );
+  // 筛选匹配的库存
+  batchSearchResult = stock.filter(item => {
+    const normalizedModel = item.model.replace(/[-._\s]/g, '');
+    return normalizedKeywords.some(k => normalizedModel.includes(k));
+  });
   
   isBatchSearch = true;
   frontPage = 1;
   renderStock();
   closeBatchSearch();
   
-  if(batchSearchResult.length === 0) {
-    alert('未找到匹配的库存数据！');
-  }
+  // 提示结果
+  alert(`批量查询完成，共找到 ${batchSearchResult.length} 条匹配数据`);
+}
+
+// 后台搜索
+function searchAdminStock() {
+  adminPage = 1;
+  renderAdminStock();
 }
 
 // 打开后台批量搜索弹窗
@@ -717,114 +663,182 @@ function closeAdminBatchSearch() {
   document.getElementById('admin-batch-modal').style.display = 'none';
 }
 
-// 后台批量搜索库存
+// 后台批量搜索
 function adminBatchSearchStock() {
   const input = document.getElementById('admin-batch-search-input').value.trim();
   if(!input) {
-    alert('请输入要查询的料号！');
+    alert('请输入要查询的料号');
     return;
   }
   
-  // 解析输入的料号
-  const keywords = input.split(/[\n, \t]+/).filter(k => k.trim());
+  // 分割多料号
+  const keywords = input.split(/[\n, \s]+/).filter(k => k.trim());
   if(keywords.length === 0) {
-    alert('请输入有效的料号！');
+    alert('请输入有效的料号');
     return;
   }
   
-  // 搜索匹配的库存
-  const result = [];
-  keywords.forEach(keyword => {
-    const cleanKeyword = keyword.replace(/[-._\s]/g, '');
-    const matches = stock.filter(item => 
-      item.model.replace(/[-._\s]/g, '').includes(cleanKeyword)
-    );
-    result.push(...matches);
+  // 统一格式
+  const normalizedKeywords = keywords.map(k => k.replace(/[-._\s]/g, ''));
+  
+  // 筛选匹配的库存
+  const result = stock.filter(item => {
+    const normalizedModel = item.model.replace(/[-._\s]/g, '');
+    return normalizedKeywords.some(k => normalizedModel.includes(k));
   });
   
-  // 去重
-  const uniqueResult = result.filter((item, index, self) => 
-    self.findIndex(i => i.id === item.id) === index
-  );
-  
-  // 更新后台搜索结果
-  stock = uniqueResult;
+  // 直接替换后台筛选结果（简化处理）
+  stock = result;
   adminPage = 1;
   renderAdminStock();
   closeAdminBatchSearch();
   
-  if(uniqueResult.length === 0) {
-    alert('未找到匹配的库存数据！');
-  }
+  alert(`批量查询完成，共找到 ${result.length} 条匹配数据`);
 }
 
-// 编辑库存
-function editStock(id) {
-  const item = stock.find(item => item.id === id);
-  if(!item) return;
+// 添加库存
+function addStock() {
+  const model = document.getElementById('m').value.trim();
+  const num = document.getElementById('n').value.trim();
+  const price = document.getElementById('p').value.trim();
+  const batch = document.getElementById('b').value.trim();
+  const warehouse = document.getElementById('w').value.trim();
+  const remark = document.getElementById('r').value.trim();
   
-  // 填充到输入框
-  document.getElementById('m').value = item.model;
-  document.getElementById('n').value = item.num;
-  document.getElementById('p').value = item.price;
-  document.getElementById('b').value = item.batch;
-  document.getElementById('w').value = item.warehouse;
-  document.getElementById('r').value = item.remark;
+  if(!model || !num) {
+    alert('型号和数量不能为空');
+    return;
+  }
   
-  // 删除原数据（编辑后重新添加）
-  stock = stock.filter(item => item.id !== id);
+  // 添加库存
+  stock.push({
+    model,
+    num,
+    price,
+    batch,
+    warehouse,
+    remark,
+    id: Date.now().toString() // 唯一ID
+  });
   
-  // 滚动到添加区域
-  document.getElementById('m').scrollIntoView({ behavior: 'smooth' });
+  // 保存到本地存储
+  saveStock();
+  
+  // 清空输入框
+  document.getElementById('m').value = '';
+  document.getElementById('n').value = '';
+  document.getElementById('p').value = '';
+  document.getElementById('b').value = '';
+  document.getElementById('w').value = '';
+  document.getElementById('r').value = '';
+  
+  // 重新渲染
+  renderAdminStock();
+  
+  // 更新前台最后修改时间
+  localStorage.setItem('stockUpdateTime', new Date().toLocaleString());
+}
+
+// 更新库存
+function updateStock(id, key, value) {
+  const index = stock.findIndex(item => item.id === id);
+  if(index !== -1) {
+    stock[index][key] = value;
+    saveStock();
+  }
 }
 
 // 删除库存
 function deleteStock(id) {
-  if(confirm('确定要删除这条库存数据吗？')) {
+  if(confirm('确定要删除这条库存吗？')) {
     stock = stock.filter(item => item.id !== id);
+    saveStock();
     renderAdminStock();
-    alert('删除成功！');
   }
 }
 
 // 清空库存
 function clearStock() {
-  if(confirm('确定要清空所有库存数据吗？此操作不可恢复！')) {
+  if(confirm('确定要清空所有库存吗？此操作不可恢复！')) {
     stock = [];
+    saveStock();
     renderAdminStock();
-    alert('库存已清空！');
   }
 }
 
-// 保存库存到Github（模拟）
+// 保存库存到本地存储
+function saveStock() {
+  localStorage.setItem('stockData', JSON.stringify(stock));
+}
+
+// 保存库存到全网（复制JSON）
 function saveStockToGithub() {
-  const json = JSON.stringify(stock, null, 2);
+  const stockJson = JSON.stringify(stock, null, 2);
   // 复制到剪贴板
-  navigator.clipboard.writeText(json).then(() => {
-    alert('库存数据已复制到剪贴板！');
-  }).catch(() => {
-    alert('复制失败，请手动复制：\n' + json);
+  navigator.clipboard.writeText(stockJson).then(() => {
+    alert('库存JSON已复制到剪贴板！');
+  }).catch(err => {
+    alert('复制失败，请手动复制：\n' + stockJson);
   });
 }
 
-// 导入Excel（模拟）
+// 导入Excel（占位函数）
 function importExcel() {
-  alert('Excel导入功能需结合后端实现，此处仅为演示！');
+  alert('Excel导入功能暂未实现，可先使用批量添加或手动添加');
+}
+
+// 加载联系信息
+function loadContact() {
+  const contact = JSON.parse(localStorage.getItem('contactData')) || {};
+  document.getElementById('set-addr').value = contact.addr || '';
+  document.getElementById('set-tel').value = contact.tel || '';
+  document.getElementById('set-wx').value = contact.wx || '';
+  document.getElementById('set-qq').value = contact.qq || '';
+  document.getElementById('set-mail').value = contact.mail || '';
 }
 
 // 保存联系信息
 function saveContact() {
-  const addr = document.getElementById('set-addr').value.trim();
-  const tel = document.getElementById('set-tel').value.trim();
-  const wx = document.getElementById('set-wx').value.trim();
-  const qq = document.getElementById('set-qq').value.trim();
-  const mail = document.getElementById('set-mail').value.trim();
+  const contact = {
+    addr: document.getElementById('set-addr').value.trim(),
+    tel: document.getElementById('set-tel').value.trim(),
+    wx: document.getElementById('set-wx').value.trim(),
+    qq: document.getElementById('set-qq').value.trim(),
+    mail: document.getElementById('set-mail').value.trim()
+  };
   
-  // 保存到本地存储
-  localStorage.setItem('contactInfo', JSON.stringify({ addr, tel, wx, qq, mail }));
-  
+  localStorage.setItem('contactData', JSON.stringify(contact));
   alert('联系信息保存成功！');
   show('admin');
+}
+
+// 管理员登录
+function login() {
+  const pwd = document.getElementById('pwd').value;
+  // 默认密码：admin123
+  const adminPwd = localStorage.getItem('adminPwd') || 'admin123';
+  
+  if(pwd === adminPwd) {
+    show('admin');
+    // 加载访问统计
+    const visitData = JSON.parse(localStorage.getItem('visitData')) || {
+      total: 0,
+      home: 0,
+      stock: 0,
+      contact: 0
+    };
+    document.getElementById('total-visit').textContent = visitData.total;
+    document.getElementById('home-visit').textContent = visitData.home;
+    document.getElementById('stock-visit').textContent = visitData.stock;
+    document.getElementById('contact-visit').textContent = visitData.contact;
+  } else {
+    alert('密码错误！');
+  }
+}
+
+// 退出登录
+function logout() {
+  show('home');
 }
 
 // 修改密码
@@ -833,13 +847,10 @@ function changePwd() {
   const newPwd = document.getElementById('new-pwd').value;
   const confirmPwd = document.getElementById('confirm-pwd').value;
   
-  if(oldPwd !== 'admin123') {
-    alert('原密码错误！');
-    return;
-  }
+  const adminPwd = localStorage.getItem('adminPwd') || 'admin123';
   
-  if(newPwd !== confirmPwd) {
-    alert('两次输入的新密码不一致！');
+  if(oldPwd !== adminPwd) {
+    alert('原密码错误！');
     return;
   }
   
@@ -848,78 +859,37 @@ function changePwd() {
     return;
   }
   
-  alert('密码修改成功！新密码：' + newPwd);
-  // 实际项目中应保存到后端，此处仅演示
-  show('admin');
-}
-
-// 更新访问次数
-function updateVisitCount(pageId) {
-  // 从本地存储获取访问次数
-  let visitCount = JSON.parse(localStorage.getItem('visitCount')) || {
-    total: 0,
-    home: 0,
-    stock: 0,
-    contact: 0
-  };
-  
-  // 更新总访问次数
-  visitCount.total++;
-  // 更新当前页面访问次数
-  if(visitCount[pageId] !== undefined) {
-    visitCount[pageId]++;
+  if(newPwd !== confirmPwd) {
+    alert('两次输入的密码不一致！');
+    return;
   }
   
-  // 保存到本地存储
-  localStorage.setItem('visitCount', JSON.stringify(visitCount));
-  
-  // 更新后台显示
-  if(document.getElementById('total-visit')) {
-    document.getElementById('total-visit').textContent = visitCount.total;
-    document.getElementById('home-visit').textContent = visitCount.home;
-    document.getElementById('stock-visit').textContent = visitCount.stock;
-    document.getElementById('contact-visit').textContent = visitCount.contact;
-  }
+  localStorage.setItem('adminPwd', newPwd);
+  alert('密码修改成功！请重新登录');
+  show('login');
 }
 
-// 页面加载完成初始化
+// 初始化
 window.onload = function() {
-  // 初始化访问次数显示
-  const visitCount = JSON.parse(localStorage.getItem('visitCount')) || {
-    total: 0,
-    home: 0,
-    stock: 0,
-    contact: 0
-  };
-  
-  if(document.getElementById('total-visit')) {
-    document.getElementById('total-visit').textContent = visitCount.total;
-    document.getElementById('home-visit').textContent = visitCount.home;
-    document.getElementById('stock-visit').textContent = visitCount.stock;
-    document.getElementById('contact-visit').textContent = visitCount.contact;
-  }
-  
-  // 初始化联系信息
-  const contactInfo = JSON.parse(localStorage.getItem('contactInfo')) || {};
-  if(document.getElementById('set-addr')) {
-    document.getElementById('set-addr').value = contactInfo.addr || '';
-    document.getElementById('set-tel').value = contactInfo.tel || '';
-    document.getElementById('set-wx').value = contactInfo.wx || '';
-    document.getElementById('set-qq').value = contactInfo.qq || '';
-    document.getElementById('set-mail').value = contactInfo.mail || '';
-  }
-  
-  // 初始化库存数据（从本地存储加载）
+  // 加载库存数据
   const savedStock = localStorage.getItem('stockData');
   if(savedStock) {
     stock = JSON.parse(savedStock);
   }
+  
+  // 初始化前台库存
+  renderStock();
+  
+  // 统计首页访问
+  recordVisit('home');
+  
+  // 移动端适配
+  window.addEventListener('resize', function() {
+    if(window.innerWidth >= 769) {
+      document.getElementById('mobileMenu').style.display = 'none';
+    }
+  });
 };
-
-// 监听库存数据变化，自动保存到本地存储
-setInterval(() => {
-  localStorage.setItem('stockData', JSON.stringify(stock));
-}, 3000);
 </script>
 </body>
 </html>
